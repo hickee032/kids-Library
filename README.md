@@ -1,2 +1,2 @@
-# kids_Library
-C# Winform kids_Library program
+# Library_Project
+Library_manager

@@ -1,4 +1,4 @@
-﻿namespace library_Project {
+﻿namespace Team1_Project {
     partial class FormMain {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -192,7 +192,7 @@
             // cbxSlider
             // 
             this.cbxSlider.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbxSlider.BackgroundImage = global::library_Project.Properties.Resources.arrow_left;
+            this.cbxSlider.BackgroundImage = global::Team1_Project.Properties.Resources.arrow_left;
             this.cbxSlider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.cbxSlider.Dock = System.Windows.Forms.DockStyle.Top;
             this.cbxSlider.FlatAppearance.BorderSize = 0;
@@ -218,7 +218,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::library_Project.Properties.Resources.bord_Pink;
+            this.panel1.BackgroundImage = global::Team1_Project.Properties.Resources.bord_Pink;
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(84, 60);
@@ -228,7 +228,7 @@
             // 
             // button8
             // 
-            this.button8.BackgroundImage = global::library_Project.Properties.Resources.icon_profile;
+            this.button8.BackgroundImage = global::Team1_Project.Properties.Resources.icon_profile;
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.ForeColor = System.Drawing.Color.Transparent;
@@ -248,7 +248,7 @@
             // 
             // btnMainExit
             // 
-            this.btnMainExit.BackgroundImage = global::library_Project.Properties.Resources.icon_cancel;
+            this.btnMainExit.BackgroundImage = global::Team1_Project.Properties.Resources.icon_cancel;
             this.btnMainExit.FlatAppearance.BorderSize = 0;
             this.btnMainExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMainExit.Location = new System.Drawing.Point(1246, 12);

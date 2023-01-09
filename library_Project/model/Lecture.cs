@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace library_Project.model {
+namespace Team1_Project.model {
     internal class Lecture {
 
         string lNum;
@@ -14,8 +14,9 @@ namespace library_Project.model {
         string lPer;
         string lTime;
         string lDay;
+        string lteacher;
 
-        public Lecture(string lNum, string lName, string lLoc, string lTar, string lPer, string lTime, string lDay) {
+        public Lecture(string lNum, string lName, string lLoc, string lTar, string lPer, string lTime, string lDay, string lteacher) {
             this.lNum = lNum;
             this.lName = lName;
             this.lLoc = lLoc;
@@ -23,6 +24,7 @@ namespace library_Project.model {
             this.lPer = lPer;
             this.lTime = lTime;
             this.lDay = lDay;
+            this.lteacher = lteacher;
         }
 
         public string LNum { get => lNum; set => lNum = value; }
@@ -32,5 +34,6 @@ namespace library_Project.model {
         public string LPer { get => lPer; set => lPer = value; }
         public string LTime { get => lTime; set => lTime = value; }
         public string LDay { get => lDay; set => lDay = value; }
+        public string LTeacher { get => lteacher; set => lteacher = value; }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace library_Project.ui {
+﻿namespace Team1_Project.ui {
     partial class FormStory {
         /// <summary>
         /// Required designer variable.
@@ -68,7 +68,7 @@
             // 
             // btnStoryExit
             // 
-            this.btnStoryExit.BackgroundImage = global::library_Project.Properties.Resources.icon_cancel;
+            this.btnStoryExit.BackgroundImage = global::Team1_Project.Properties.Resources.icon_cancel;
             this.btnStoryExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnStoryExit.FlatAppearance.BorderSize = 0;
             this.btnStoryExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -81,7 +81,7 @@
             // 
             // btnStoryBack
             // 
-            this.btnStoryBack.BackgroundImage = global::library_Project.Properties.Resources.icon_back;
+            this.btnStoryBack.BackgroundImage = global::Team1_Project.Properties.Resources.icon_back;
             this.btnStoryBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStoryBack.FlatAppearance.BorderSize = 0;
             this.btnStoryBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -94,7 +94,7 @@
             // 
             // btnStoryNext
             // 
-            this.btnStoryNext.BackgroundImage = global::library_Project.Properties.Resources.icon_next;
+            this.btnStoryNext.BackgroundImage = global::Team1_Project.Properties.Resources.icon_next;
             this.btnStoryNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStoryNext.FlatAppearance.BorderSize = 0;
             this.btnStoryNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -108,7 +108,7 @@
             // btnStoryExit1
             // 
             this.btnStoryExit1.BackColor = System.Drawing.Color.Transparent;
-            this.btnStoryExit1.BackgroundImage = global::library_Project.Properties.Resources.icon_exit;
+            this.btnStoryExit1.BackgroundImage = global::Team1_Project.Properties.Resources.icon_exit;
             this.btnStoryExit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnStoryExit1.FlatAppearance.BorderSize = 0;
             this.btnStoryExit1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

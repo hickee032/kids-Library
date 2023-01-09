@@ -1,4 +1,4 @@
-﻿namespace library_Project.ui {
+﻿namespace Team1_Project.ui {
     partial class FormAddLecture {
         /// <summary>
         /// Required designer variable.
@@ -42,10 +42,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lTechCbx = new System.Windows.Forms.ComboBox();
-            this.btnLectAdd = new System.Windows.Forms.Button();
-            this.btnLectCancel = new System.Windows.Forms.Button();
-            this.piclecPoster = new System.Windows.Forms.PictureBox();
             this.lNumLabel = new System.Windows.Forms.Label();
+            this.btnLecImgDel = new System.Windows.Forms.Button();
+            this.btnLecImgAdd = new System.Windows.Forms.Button();
+            this.piclecPoster = new System.Windows.Forms.PictureBox();
+            this.btnLectCancel = new System.Windows.Forms.Button();
+            this.btnLectAdd = new System.Windows.Forms.Button();
+            this.openFileImg = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.piclecPoster)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,25 +142,37 @@
             // lLocCbx
             // 
             this.lLocCbx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lLocCbx.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lLocCbx.FormattingEnabled = true;
-            this.lLocCbx.Location = new System.Drawing.Point(140, 189);
+            this.lLocCbx.Items.AddRange(new object[] {
+            "문화강좌실",
+            "상상놀이터"});
+            this.lLocCbx.Location = new System.Drawing.Point(140, 192);
             this.lLocCbx.Name = "lLocCbx";
-            this.lLocCbx.Size = new System.Drawing.Size(121, 20);
+            this.lLocCbx.Size = new System.Drawing.Size(121, 21);
             this.lLocCbx.TabIndex = 9;
             this.lLocCbx.Text = "교실 선택";
             // 
             // lAgeCbx
             // 
             this.lAgeCbx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lAgeCbx.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lAgeCbx.FormattingEnabled = true;
-            this.lAgeCbx.Location = new System.Drawing.Point(140, 232);
+            this.lAgeCbx.Items.AddRange(new object[] {
+            "유아",
+            "5~6세",
+            "7~8세",
+            "초등학생",
+            "성인"});
+            this.lAgeCbx.Location = new System.Drawing.Point(140, 235);
             this.lAgeCbx.Name = "lAgeCbx";
-            this.lAgeCbx.Size = new System.Drawing.Size(121, 20);
+            this.lAgeCbx.Size = new System.Drawing.Size(121, 21);
             this.lAgeCbx.TabIndex = 10;
             this.lAgeCbx.Text = "연령 선택";
             // 
             // PickerStartDay
             // 
+            this.PickerStartDay.CustomFormat = "yy년 MM월 dd일";
             this.PickerStartDay.Location = new System.Drawing.Point(141, 277);
             this.PickerStartDay.Name = "PickerStartDay";
             this.PickerStartDay.Size = new System.Drawing.Size(109, 21);
@@ -165,6 +180,7 @@
             // 
             // PickerEndDay
             // 
+            this.PickerEndDay.CustomFormat = "yy년 MM월 dd일";
             this.PickerEndDay.Location = new System.Drawing.Point(276, 277);
             this.PickerEndDay.Name = "PickerEndDay";
             this.PickerEndDay.Size = new System.Drawing.Size(109, 21);
@@ -173,15 +189,24 @@
             // weekCbx
             // 
             this.weekCbx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.weekCbx.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.weekCbx.FormattingEnabled = true;
-            this.weekCbx.Location = new System.Drawing.Point(140, 316);
+            this.weekCbx.Items.AddRange(new object[] {
+            "월요일",
+            "화요일",
+            "수요일",
+            "목요일",
+            "금요일",
+            "토요일"});
+            this.weekCbx.Location = new System.Drawing.Point(140, 319);
             this.weekCbx.Name = "weekCbx";
-            this.weekCbx.Size = new System.Drawing.Size(121, 20);
+            this.weekCbx.Size = new System.Drawing.Size(121, 21);
             this.weekCbx.TabIndex = 13;
             this.weekCbx.Text = "요일 선택";
             // 
             // PickerStartTime
             // 
+            this.PickerStartTime.CustomFormat = "HH : mm";
             this.PickerStartTime.Location = new System.Drawing.Point(140, 358);
             this.PickerStartTime.Name = "PickerStartTime";
             this.PickerStartTime.Size = new System.Drawing.Size(110, 21);
@@ -189,6 +214,7 @@
             // 
             // PickerEndTime
             // 
+            this.PickerEndTime.CustomFormat = "HH : mm";
             this.PickerEndTime.Location = new System.Drawing.Point(276, 358);
             this.PickerEndTime.Name = "PickerEndTime";
             this.PickerEndTime.Size = new System.Drawing.Size(109, 21);
@@ -215,38 +241,13 @@
             // lTechCbx
             // 
             this.lTechCbx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lTechCbx.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lTechCbx.FormattingEnabled = true;
-            this.lTechCbx.Location = new System.Drawing.Point(140, 407);
+            this.lTechCbx.Location = new System.Drawing.Point(140, 410);
             this.lTechCbx.Name = "lTechCbx";
-            this.lTechCbx.Size = new System.Drawing.Size(121, 20);
+            this.lTechCbx.Size = new System.Drawing.Size(121, 21);
             this.lTechCbx.TabIndex = 18;
             this.lTechCbx.Text = "강사 선택";
-            // 
-            // btnLectAdd
-            // 
-            this.btnLectAdd.Location = new System.Drawing.Point(254, 490);
-            this.btnLectAdd.Name = "btnLectAdd";
-            this.btnLectAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnLectAdd.TabIndex = 19;
-            this.btnLectAdd.Text = "button1";
-            this.btnLectAdd.UseVisualStyleBackColor = true;
-            // 
-            // btnLectCancel
-            // 
-            this.btnLectCancel.Location = new System.Drawing.Point(335, 490);
-            this.btnLectCancel.Name = "btnLectCancel";
-            this.btnLectCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnLectCancel.TabIndex = 20;
-            this.btnLectCancel.Text = "button2";
-            this.btnLectCancel.UseVisualStyleBackColor = true;
-            // 
-            // piclecPoster
-            // 
-            this.piclecPoster.Location = new System.Drawing.Point(466, 108);
-            this.piclecPoster.Name = "piclecPoster";
-            this.piclecPoster.Size = new System.Drawing.Size(190, 246);
-            this.piclecPoster.TabIndex = 21;
-            this.piclecPoster.TabStop = false;
             // 
             // lNumLabel
             // 
@@ -258,11 +259,77 @@
             this.lNumLabel.TabIndex = 22;
             this.lNumLabel.Text = "label11";
             // 
+            // btnLecImgDel
+            // 
+            this.btnLecImgDel.BackColor = System.Drawing.Color.Transparent;
+            this.btnLecImgDel.BackgroundImage = global::Team1_Project.Properties.Resources.icon_minus;
+            this.btnLecImgDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLecImgDel.FlatAppearance.BorderSize = 0;
+            this.btnLecImgDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLecImgDel.Location = new System.Drawing.Point(624, 315);
+            this.btnLecImgDel.Name = "btnLecImgDel";
+            this.btnLecImgDel.Size = new System.Drawing.Size(32, 32);
+            this.btnLecImgDel.TabIndex = 24;
+            this.btnLecImgDel.UseVisualStyleBackColor = false;
+            this.btnLecImgDel.Click += new System.EventHandler(this.btnLecImgDel_Click);
+            // 
+            // btnLecImgAdd
+            // 
+            this.btnLecImgAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnLecImgAdd.BackgroundImage = global::Team1_Project.Properties.Resources.icon_plus;
+            this.btnLecImgAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLecImgAdd.FlatAppearance.BorderSize = 0;
+            this.btnLecImgAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLecImgAdd.Location = new System.Drawing.Point(586, 315);
+            this.btnLecImgAdd.Name = "btnLecImgAdd";
+            this.btnLecImgAdd.Size = new System.Drawing.Size(32, 32);
+            this.btnLecImgAdd.TabIndex = 23;
+            this.btnLecImgAdd.UseVisualStyleBackColor = false;
+            this.btnLecImgAdd.Click += new System.EventHandler(this.btnLecImgAdd_Click);
+            // 
+            // piclecPoster
+            // 
+            this.piclecPoster.BackColor = System.Drawing.Color.Transparent;
+            this.piclecPoster.BackgroundImage = global::Team1_Project.Properties.Resources.pic_needPoster;
+            this.piclecPoster.Location = new System.Drawing.Point(466, 63);
+            this.piclecPoster.Name = "piclecPoster";
+            this.piclecPoster.Size = new System.Drawing.Size(190, 246);
+            this.piclecPoster.TabIndex = 21;
+            this.piclecPoster.TabStop = false;
+            // 
+            // btnLectCancel
+            // 
+            this.btnLectCancel.BackgroundImage = global::Team1_Project.Properties.Resources.icon_addC;
+            this.btnLectCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLectCancel.Location = new System.Drawing.Point(342, 495);
+            this.btnLectCancel.Name = "btnLectCancel";
+            this.btnLectCancel.Size = new System.Drawing.Size(107, 36);
+            this.btnLectCancel.TabIndex = 20;
+            this.btnLectCancel.UseVisualStyleBackColor = true;
+            this.btnLectCancel.Click += new System.EventHandler(this.btnLectCancel_Click);
+            // 
+            // btnLectAdd
+            // 
+            this.btnLectAdd.BackgroundImage = global::Team1_Project.Properties.Resources.icon_addN;
+            this.btnLectAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLectAdd.Location = new System.Drawing.Point(229, 495);
+            this.btnLectAdd.Name = "btnLectAdd";
+            this.btnLectAdd.Size = new System.Drawing.Size(107, 36);
+            this.btnLectAdd.TabIndex = 19;
+            this.btnLectAdd.UseVisualStyleBackColor = true;
+            this.btnLectAdd.Click += new System.EventHandler(this.btnLectAdd_Click);
+            // 
+            // openFileImg
+            // 
+            this.openFileImg.FileName = "openFileImg";
+            // 
             // FormAddLecture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 581);
+            this.Controls.Add(this.btnLecImgDel);
+            this.Controls.Add(this.btnLecImgAdd);
             this.Controls.Add(this.lNumLabel);
             this.Controls.Add(this.piclecPoster);
             this.Controls.Add(this.btnLectCancel);
@@ -319,5 +386,8 @@
         private System.Windows.Forms.Button btnLectCancel;
         private System.Windows.Forms.PictureBox piclecPoster;
         private System.Windows.Forms.Label lNumLabel;
+        private System.Windows.Forms.Button btnLecImgAdd;
+        private System.Windows.Forms.Button btnLecImgDel;
+        private System.Windows.Forms.OpenFileDialog openFileImg;
     }
 }

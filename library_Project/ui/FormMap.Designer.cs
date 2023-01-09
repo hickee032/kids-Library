@@ -1,4 +1,4 @@
-﻿namespace library_Project.ui {
+﻿namespace Team1_Project.ui {
     partial class FormMap {
         /// <summary>
         /// Required designer variable.
@@ -157,7 +157,7 @@
             // 
             // btnMapExit
             // 
-            this.btnMapExit.BackgroundImage = global::library_Project.Properties.Resources.icon_cancel;
+            this.btnMapExit.BackgroundImage = global::Team1_Project.Properties.Resources.icon_cancel;
             this.btnMapExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnMapExit.FlatAppearance.BorderSize = 0;
             this.btnMapExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -170,7 +170,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::library_Project.Properties.Resources.icon_map;
+            this.pictureBox3.BackgroundImage = global::Team1_Project.Properties.Resources.icon_map;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(23, 21);
             this.pictureBox3.Name = "pictureBox3";
@@ -180,7 +180,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::library_Project.Properties.Resources.icon_bus;
+            this.pictureBox2.BackgroundImage = global::Team1_Project.Properties.Resources.icon_bus;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Location = new System.Drawing.Point(534, 222);
             this.pictureBox2.Name = "pictureBox2";
@@ -190,7 +190,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::library_Project.Properties.Resources.icon_train;
+            this.pictureBox1.BackgroundImage = global::Team1_Project.Properties.Resources.icon_train;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(534, 63);
             this.pictureBox1.Name = "pictureBox1";

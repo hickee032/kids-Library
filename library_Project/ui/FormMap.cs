@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace library_Project.ui {
+namespace Team1_Project.ui {
     public partial class FormMap : MetroFramework.Forms.MetroForm {
 
         public FormMap() {

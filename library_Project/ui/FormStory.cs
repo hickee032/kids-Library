@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace library_Project.ui {
+namespace Team1_Project.ui {
     public partial class FormStory : MetroFramework.Forms.MetroForm {
 
         List<Bitmap> pageS = new List<Bitmap> { Properties.Resources._0, Properties.Resources._1, Properties.Resources._2, Properties.Resources._3, Properties.Resources._4 };

@@ -7,29 +7,14 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5B411B35-0519-4FFE-9723-4132A8B2DDEA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>library_Project</RootNamespace>
-    <AssemblyName>library_Project</AssemblyName>
+    <RootNamespace>Team1_Project</RootNamespace>
+    <AssemblyName>Team1_Project</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>게시\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -143,13 +128,8 @@
   <ItemGroup>
     <Compile Include="adapter\BaseAdapter.cs" />
     <Compile Include="dao\DaoOra.cs" />
+    <Compile Include="model\Book.cs" />
     <Compile Include="model\Lecture.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="ui\FormAddLecture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,9 +143,7 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ui\FormMap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +155,12 @@
     </Compile>
     <Compile Include="ui\FormStory.Designer.cs">
       <DependentUpon>FormStory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\UcBookSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\UcBookSearch.Designer.cs">
+      <DependentUpon>UcBookSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="ui\UcHome.cs">
       <SubType>UserControl</SubType>
@@ -200,15 +184,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <EmbeddedResource Include="ui\FormMap.resx">
       <DependentUpon>FormMap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ui\FormStory.resx">
       <DependentUpon>FormStory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\UcBookSearch.resx">
+      <DependentUpon>UcBookSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ui\UcHome.resx">
       <DependentUpon>UcHome.cs</DependentUpon>
@@ -351,16 +342,19 @@
     <None Include="Resources\YesoRYes.wmv" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2%28x86 및 x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
+    <None Include="Resources\icon_addN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_addC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_needPoster.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

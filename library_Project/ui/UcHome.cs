@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using library_Project.utill;
+using Team1_Project.utill;
 using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
-namespace library_Project.ui {
+namespace Team1_Project.ui {
     public partial class UcHome : UserControl {
 
         VideoPlay video;

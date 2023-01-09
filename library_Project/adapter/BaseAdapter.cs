@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using library_Project.dao;
+using Team1_Project.dao;
 
-namespace library_Project.adapter {
+namespace Team1_Project.adapter {
     internal class BaseAdapter {
 
         DaoOra ora;

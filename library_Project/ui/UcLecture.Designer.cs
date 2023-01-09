@@ -1,4 +1,4 @@
-﻿namespace library_Project.ui {
+﻿namespace Team1_Project.ui {
     partial class UcLecture {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -33,7 +33,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnLecAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -43,11 +43,12 @@
             // imageList1
             // 
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.ImageSize = new System.Drawing.Size(219, 256);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(48, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(219, 259);
@@ -114,21 +115,21 @@
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
             // 
-            // button5
+            // btnLecAdd
             // 
-            this.button5.Location = new System.Drawing.Point(48, 510);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(64, 64);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnLecAdd.Location = new System.Drawing.Point(48, 510);
+            this.btnLecAdd.Name = "btnLecAdd";
+            this.btnLecAdd.Size = new System.Drawing.Size(64, 64);
+            this.btnLecAdd.TabIndex = 15;
+            this.btnLecAdd.Text = "button5";
+            this.btnLecAdd.UseVisualStyleBackColor = true;
+            this.btnLecAdd.Click += new System.EventHandler(this.btnLecAdd_Click);
             // 
             // UcLecture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnLecAdd);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.button3);
@@ -158,6 +159,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnLecAdd;
     }
 }

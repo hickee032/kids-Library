@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace library_Project.utill {
+namespace Team1_Project.utill {
     internal class VideoPlay {
 
         string filePath = "D:\\YesoRYes.wmv";

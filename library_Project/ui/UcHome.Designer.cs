@@ -1,4 +1,4 @@
-﻿namespace library_Project.ui {
+﻿namespace Team1_Project.ui {
     partial class UcHome {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -154,7 +154,7 @@
             // 
             // picLibStory
             // 
-            this.picLibStory.BackgroundImage = global::library_Project.Properties.Resources.libStory12;
+            this.picLibStory.BackgroundImage = global::Team1_Project.Properties.Resources.libStory12;
             this.picLibStory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picLibStory.Location = new System.Drawing.Point(16, 76);
             this.picLibStory.Name = "picLibStory";
@@ -164,9 +164,9 @@
             this.picLibStory.Click += new System.EventHandler(this.picLibStory_Click);
             // 
             // button1
-            //
+            // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::library_Project.Properties.Resources.Icon_youtube;
+            this.button1.BackgroundImage = global::Team1_Project.Properties.Resources.Icon_youtube;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -180,7 +180,7 @@
             // btnMap
             // 
             this.btnMap.BackColor = System.Drawing.Color.Transparent;
-            this.btnMap.BackgroundImage = global::library_Project.Properties.Resources.icon_map;
+            this.btnMap.BackgroundImage = global::Team1_Project.Properties.Resources.icon_map;
             this.btnMap.FlatAppearance.BorderSize = 0;
             this.btnMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMap.Location = new System.Drawing.Point(906, 513);
@@ -192,7 +192,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackgroundImage = global::library_Project.Properties.Resources.icon_book;
+            this.pictureBox4.BackgroundImage = global::Team1_Project.Properties.Resources.icon_book;
             this.pictureBox4.Location = new System.Drawing.Point(16, 31);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(34, 34);
@@ -219,7 +219,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::library_Project.Properties.Resources.pic_pook;
+            this.pictureBox3.BackgroundImage = global::Team1_Project.Properties.Resources.pic_pook;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox3.Location = new System.Drawing.Point(0, 3);
             this.pictureBox3.Name = "pictureBox3";
@@ -229,7 +229,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::library_Project.Properties.Resources.pic_reko;
+            this.pictureBox2.BackgroundImage = global::Team1_Project.Properties.Resources.pic_reko;
             this.pictureBox2.Location = new System.Drawing.Point(299, 31);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 34);
@@ -248,7 +248,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::library_Project.Properties.Resources.pic_lesson;
+            this.pictureBox1.BackgroundImage = global::Team1_Project.Properties.Resources.pic_lesson;
             this.pictureBox1.Location = new System.Drawing.Point(693, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(34, 34);

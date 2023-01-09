@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using library_Project.adapter;
+using Team1_Project.adapter;
+using Team1_Project.model;
+using static System.Net.Mime.MediaTypeNames;
 
 
-namespace library_Project.ui {
+namespace Team1_Project.ui {
 
     partial class UcLecture : UserControl {
 
@@ -18,10 +20,6 @@ namespace library_Project.ui {
 
         BaseAdapter ba;
 
-        public UcLecture() {
-            InitializeComponent();
-            this.Load += UcLecture_Load;
-        }
         public UcLecture (BaseAdapter ba) {
             InitializeComponent();
             this.ba = ba;
@@ -32,33 +30,25 @@ namespace library_Project.ui {
         private void UcLecture_Load(object sender, EventArgs e) {
             GetImageListView();
         }
-
+        
         public void GetImageListView() {
-            this.Invoke(new MethodInvoker(delegate () {
+            
+                List<PictureBox> picBoxList = new List<PictureBox>();
 
-                Image image1 = Properties.Resources.icon_cancel;
-                Image image2 = Properties.Resources.icon_profile;
-                Image image3 = Properties.Resources.icon_home;
+                List<string> ImgNameList = ba.Ora.tableGetColumn("lnum", "lecture");
 
-                imageList1.Images.Add(image1);
-                imageList1.Images.Add(image2);
-                imageList1.Images.Add(image3);
+                for (int i = 0; i < ImgNameList.Count; i++) {
+                    imageList1.Images.Add(ba.Ora.tableGetimage(ImgNameList[i], "lectureImg"));
+                }
+               this.pictureBox1.Image = this.imageList1.Images[0];
 
-                imageList1.ImageSize = new Size(64, 64);
-                imageList1.ColorDepth = ColorDepth.Depth32Bit;
-
-               this.pictureBox1.Image = (Image)this.imageList1.Images[0];
-               this.pictureBox2.Image = (Image)this.imageList1.Images[1];
-               this.pictureBox3.Image = (Image)this.imageList1.Images[2];
                     
-
-
                 this.Refresh();
-            }));
+            
         }
 
-        //강좌 등록 창
-        private void button5_Click(object sender, EventArgs e) {
+        //강좌 등록
+        private void btnLecAdd_Click(object sender, EventArgs e) {
             FormAddLecture fal = new FormAddLecture(ba);
             fal.ShowDialog();
         }

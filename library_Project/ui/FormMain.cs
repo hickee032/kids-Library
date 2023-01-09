@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using library_Project.adapter;
-using library_Project.ui;
+using Team1_Project.adapter;
+using Team1_Project.ui;
 
-namespace library_Project {
+namespace Team1_Project {
     public partial class FormMain : MetroFramework.Forms.MetroForm {
 
         //슬라이더 변수
@@ -98,7 +98,7 @@ namespace library_Project {
                 btnHome.BackgroundImage = Properties.Resources.icon_home;
                 btnHome.Text = string.Empty;
                 btnLogin.BackgroundImage= Properties.Resources.icon_login;
-                btnLogin.Text = string.Empty;   
+                btnLogin.Text = string.Empty;
                 btnSearch.Text = string.Empty;
                 btnSearch.BackgroundImage = Properties.Resources.icon_search;
                 btnReBook.Text= string.Empty;

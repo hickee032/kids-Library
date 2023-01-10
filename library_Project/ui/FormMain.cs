@@ -22,8 +22,10 @@ namespace Team1_Project {
         int _posSliding = 264;
 
         //유저 컨트롤 변수
-        const string UC_HOMEUSER = "UcHome";
+        public const string UC_HOMEUSER = "UcHome";
         const string UC_LECTURE = "UcLecture";
+        public const string UC_LOGIN = "UcLogIn";
+        public const string UC_ADDUSER = "UcAddUser";
         /*
         const string UC_SIGNUSER = "UCSign";
         const string UC_GRADEUSER = "UCGrade";
@@ -38,7 +40,7 @@ namespace Team1_Project {
 
         public FormMain() {
             InitializeComponent();
-            controllView(new UcHome(), UC_HOMEUSER);
+            controllView(new UcHome(ba), UC_HOMEUSER);
         }
 
         //슬라이더 동작
@@ -70,20 +72,18 @@ namespace Team1_Project {
         private void checkBoxHide_CheckedChanged(object sender, EventArgs e) {
             if (cbxSlider.Checked == false) {
                 //슬라이딩 메뉴가 보였을 때, 메뉴 버튼의 표시
-                cbxSlider.BackgroundImage = Properties.Resources.arrow_left;
+                cbxSlider.BackgroundImage = Properties.Resources.icon_backward;
 
                 btnHome.Text = "메인";
                 btnHome.BackgroundImage = null;
-                btnLogin.Text = "로그인";
-                btnLogin.BackgroundImage = null;
+
                 btnSearch.Text = "책 검색";
                 btnSearch.BackgroundImage= null;
                 btnReBook.Text = "책 반납";
                 btnReBook.BackgroundImage = null;
                 btnLesson.Text = "교실";
                 btnLesson.BackgroundImage= null;
-                btnModify.Text = "정보수정";
-                btnModify.BackgroundImage= null;
+
                 btnMedia.Text = "영상관";
                 btnMedia.BackgroundImage= null;
                 btnExit.Text = "종료";
@@ -93,18 +93,17 @@ namespace Team1_Project {
             }
             else {
                 //슬라이딩 메뉴가 접혔을 때, 메뉴 버튼의 표시
-                cbxSlider.BackgroundImage = Properties.Resources.arrow_right;
+                
+                cbxSlider.BackgroundImage = Properties.Resources.icon_forward;
 
                 btnHome.BackgroundImage = Properties.Resources.icon_home;
                 btnHome.Text = string.Empty;
-                btnLogin.BackgroundImage= Properties.Resources.icon_login;
-                btnLogin.Text = string.Empty;
+
                 btnSearch.Text = string.Empty;
-                btnSearch.BackgroundImage = Properties.Resources.icon_search;
+                btnSearch.BackgroundImage = Properties.Resources.icon_searchBook;
                 btnReBook.Text= string.Empty;
-                btnReBook.BackgroundImage = Properties.Resources.icon_rebook;
-                btnModify.Text= string.Empty;
-                btnModify.BackgroundImage = Properties.Resources.icon_modify;
+                btnReBook.BackgroundImage = Properties.Resources.icon_returnBook;
+               
                 btnLesson.Text = string.Empty;
                 btnLesson.BackgroundImage = Properties.Resources.icon_lesson;
                 btnMedia.Text = string.Empty;
@@ -122,7 +121,7 @@ namespace Team1_Project {
         }
 
         //패널에 유저 컨트롤 세팅
-        private void controllView(UserControl uc, string viewName) {
+        public void controllView(UserControl uc, string viewName) {
 
             panelCenter.Controls.Clear();
 
@@ -161,7 +160,25 @@ namespace Team1_Project {
 
         }
 
+
+
+        private void btnLogIn_Click(object sender, EventArgs e) {
+
+            if (btnLogIn.Text.Equals("로그인")) {
+                controllView(new UcLogin(ba, this), UC_HOMEUSER);
+            }
+            else {
+                
+                controllView(new UcHome(ba), UC_HOMEUSER);
+            }
+            
+        }
+
         private void btnMainExit_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e) {
             Application.Exit();
         }
     }

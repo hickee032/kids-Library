@@ -27,12 +27,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelVideo = new System.Windows.Forms.Panel();
             this.panelHome = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelHomeBC = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.postChange = new System.Windows.Forms.Timer(this.components);
-            this.label4 = new System.Windows.Forms.Label();
             this.picLibStory = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnMap = new System.Windows.Forms.Button();
@@ -93,36 +93,47 @@
             this.panelHome.Size = new System.Drawing.Size(987, 600);
             this.panelHome.TabIndex = 12;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(61, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 23);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "도서관 이야기";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.picBook2);
             this.panel2.Controls.Add(this.picBook1);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.labelHomeBC);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Location = new System.Drawing.Point(299, 328);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(382, 249);
             this.panel2.TabIndex = 9;
             // 
-            // label3
+            // labelHomeBC
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(42, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "사서의 추천책";
+            this.labelHomeBC.AutoSize = true;
+            this.labelHomeBC.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelHomeBC.Location = new System.Drawing.Point(42, 11);
+            this.labelHomeBC.Name = "labelHomeBC";
+            this.labelHomeBC.Size = new System.Drawing.Size(130, 23);
+            this.labelHomeBC.TabIndex = 10;
+            this.labelHomeBC.Text = "사서의 추천책";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(341, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 20);
+            this.label2.Size = new System.Drawing.Size(136, 23);
             this.label2.TabIndex = 5;
             this.label2.Text = "이 달의 추천책";
             // 
@@ -130,27 +141,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(738, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 20);
+            this.label1.Size = new System.Drawing.Size(155, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "현재 모집중 강좌";
             // 
             // postChange
             // 
             this.postChange.Tick += new System.EventHandler(this.postChange_Tick);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(61, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "도서관 이야기";
             // 
             // picLibStory
             // 
@@ -245,6 +245,7 @@
             this.pbHomeBan1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbHomeBan1.TabIndex = 0;
             this.pbHomeBan1.TabStop = false;
+            this.pbHomeBan1.Click += new System.EventHandler(this.pbHomeBan1_Click);
             // 
             // pictureBox1
             // 
@@ -292,7 +293,7 @@
         private System.Windows.Forms.Panel panelVideo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelHomeBC;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox picBook2;
         private System.Windows.Forms.PictureBox picBook1;

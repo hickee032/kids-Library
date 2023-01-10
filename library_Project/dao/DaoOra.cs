@@ -99,25 +99,7 @@ namespace Team1_Project.dao {
             return count;
         }
 
-        //Lecture 테이블에 넣기
-        public void insertData(Lecture lec) {
-            try {
-                string insert_sql = "insert into lecture VALUES" +
-                    $"('{lec.LNum}', '{lec.LName}', '{lec.LLoc}', " +
-                    $"'{lec.LTar}', '{lec.LPer}', '{lec.LTime}', '{lec.LDay}', '{lec.LTeacher}')";
-                cmd.Transaction = conn.BeginTransaction();
-                cmd.Connection = conn;
-                cmd.CommandText = insert_sql;
-                cmd.ExecuteNonQuery();
-                cmd.Transaction.Commit();
-                Console.WriteLine("데이터 추가 성공!");
-            }
-            catch (Exception e) {
-                Console.WriteLine("데이터 추가 Err:" + e.Message);
-                cmd.Transaction.Rollback();
-            }
 
-        }
 
         //테이블에서 칼럼 데이터를 가져오기
         public List<string> tableGetColumn(string column , string table) {
@@ -148,6 +130,8 @@ namespace Team1_Project.dao {
 
             return comList;
         }
+
+        
 
         public Image tableGetimage(string num, string imageTable) {
 
@@ -200,7 +184,10 @@ namespace Team1_Project.dao {
             else {
                 Console.WriteLine("데이터가 존재하지 않습니다");
 
-            }          
+            }
+
+            Console.WriteLine(getColumn);
+
             return getColumn;
         }
 
@@ -294,6 +281,26 @@ namespace Team1_Project.dao {
         #endregion
 
         #region 강좌 LECTURE TABLE
+
+        //Lecture 테이블에 넣기
+        public void insertData(Lecture lec) {
+            try {
+                string insert_sql = "insert into lecture VALUES" +
+                    $"('{lec.LNum}', '{lec.LName}', '{lec.LLoc}', " +
+                    $"'{lec.LTar}', '{lec.LPer}', '{lec.LTime}', '{lec.LDay}', '{lec.LTeacher}')";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = insert_sql;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                Console.WriteLine("데이터 추가 성공!");
+            }
+            catch (Exception e) {
+                Console.WriteLine("데이터 추가 Err:" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+
+        }
 
         public List<Lecture> lectureShow() {
             string query = "select * from lecture";

@@ -7,47 +7,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Team1_Project.adapter;
 using Team1_Project.utill;
 using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Team1_Project.ui {
-    public partial class UcHome : UserControl {
+    partial class UcHome : UserControl {
+
+        int checkCtype = 0;
+
+        // 1 어린이 2 선생님 3 일반
+        FormMain formMain;
 
         VideoPlay video;
-
+        BaseAdapter ba;
         //이미지 플래그 변수 
         int changeCount = 0;
         
         //배너에 이미지URL 보여주기
-        string [] panelimageAdd = new string[] { "https://www.nlcy.go.kr/popups/f20220308A05x.jpg", "https://www.nlcy.go.kr/popups/f20210601kvqy.jpg","https://www.nlcy.go.kr/popups/f202212215cQT.png" };
+        string [] panelimageAdd = new string[] { "https://raw.githubusercontent.com/hickee032/ImageRepo/main/f20220308A05x.jpg", "https://www.nlcy.go.kr/popups/f20210601kvqy.jpg","https://www.nlcy.go.kr/popups/f202212215cQT.png" };
 
-        public UcHome() {
+        public UcHome(BaseAdapter ba) {
             InitializeComponent();
-            suggestBook(0);
+            this.ba = ba;
             video = new VideoPlay(panelVideo);
+            suggestBook(0);
         }
 
+        public UcHome(BaseAdapter ba,FormMain formMain,int checkCtype) {
+            InitializeComponent();
+            this.ba = ba;
+            this.checkCtype = checkCtype;
+            video = new VideoPlay(panelVideo);
+
+
+
+            if (checkCtype == 1) {
+                labelHomeBC.Text = "선생님의 추천 책";
+            }
+            suggestBook(0);
+        }
 
         private void UcHome_Load(object sender, EventArgs e) {
             
             postChange.Start();
-            
+
         }
 
         //추천 책 추후 선생님의 추천 으로 바꿀수 있도록 설정
         private void suggestBook(int n) {
 
-            if (n == 0) {
+            if (n == 2) {
+                //선생님
                 
-                //picBook1.ImageLocation = "https://user-images.githubusercontent.com/114325862/209761586-7815396b-15d0-4491-8ae2-0678d00f83b5.jpg";
-                //picBook1.Load("https://user-images.githubusercontent.com/114325862/209761586-7815396b-15d0-4491-8ae2-0678d00f83b5.jpg");
-                /*
-                picBook2.ImageLocation = "https://www.nlcy.go.kr/afile/previewThumbnail/22113029512Dtl9R";
-                picBook2.Load("https://www.nlcy.go.kr/afile/previewThumbnail/22113029512Dtl9R");
-                */
             }
             else {
+
 
             }
             
@@ -91,6 +107,10 @@ namespace Team1_Project.ui {
         private void picLibStory_Click(object sender, EventArgs e) {
             FormStory fs = new FormStory();
             fs.ShowDialog();
+        }
+
+        private void pbHomeBan1_Click(object sender, EventArgs e) {
+
         }
     }
 }

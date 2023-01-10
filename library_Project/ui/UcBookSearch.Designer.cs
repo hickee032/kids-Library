@@ -168,9 +168,9 @@
             this.bookLView.FullRowSelect = true;
             this.bookLView.GridLines = true;
             this.bookLView.HideSelection = false;
-            this.bookLView.Location = new System.Drawing.Point(49, 107);
+            this.bookLView.Location = new System.Drawing.Point(264, 107);
             this.bookLView.Name = "bookLView";
-            this.bookLView.Size = new System.Drawing.Size(880, 220);
+            this.bookLView.Size = new System.Drawing.Size(665, 220);
             this.bookLView.TabIndex = 23;
             this.bookLView.UseCompatibleStateImageBehavior = false;
             this.bookLView.View = System.Windows.Forms.View.Details;

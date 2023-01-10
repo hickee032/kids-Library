@@ -55,80 +55,80 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(53, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 16);
+            this.label1.Size = new System.Drawing.Size(73, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "강좌 번호";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(53, 152);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.Size = new System.Drawing.Size(73, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "강좌 이름";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(53, 193);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 16);
+            this.label3.Size = new System.Drawing.Size(73, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "강좌 교실";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(53, 236);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 16);
+            this.label4.Size = new System.Drawing.Size(73, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "대상 연령";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.Location = new System.Drawing.Point(53, 277);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 16);
+            this.label5.Size = new System.Drawing.Size(73, 19);
             this.label5.TabIndex = 4;
             this.label5.Text = "강좌 기간";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.Location = new System.Drawing.Point(53, 320);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 16);
+            this.label6.Size = new System.Drawing.Size(73, 19);
             this.label6.TabIndex = 5;
             this.label6.Text = "강좌 요일";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.Location = new System.Drawing.Point(53, 363);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 16);
+            this.label7.Size = new System.Drawing.Size(73, 19);
             this.label7.TabIndex = 6;
             this.label7.Text = "강좌 시간";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label8.Location = new System.Drawing.Point(53, 411);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 16);
+            this.label8.Size = new System.Drawing.Size(73, 19);
             this.label8.TabIndex = 7;
             this.label8.Text = "강좌 강사";
             // 
@@ -142,21 +142,21 @@
             // lLocCbx
             // 
             this.lLocCbx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lLocCbx.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lLocCbx.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lLocCbx.FormattingEnabled = true;
             this.lLocCbx.Items.AddRange(new object[] {
             "문화강좌실",
             "상상놀이터"});
             this.lLocCbx.Location = new System.Drawing.Point(140, 192);
             this.lLocCbx.Name = "lLocCbx";
-            this.lLocCbx.Size = new System.Drawing.Size(121, 21);
+            this.lLocCbx.Size = new System.Drawing.Size(121, 23);
             this.lLocCbx.TabIndex = 9;
             this.lLocCbx.Text = "교실 선택";
             // 
             // lAgeCbx
             // 
             this.lAgeCbx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lAgeCbx.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lAgeCbx.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lAgeCbx.FormattingEnabled = true;
             this.lAgeCbx.Items.AddRange(new object[] {
             "유아",
@@ -166,30 +166,32 @@
             "성인"});
             this.lAgeCbx.Location = new System.Drawing.Point(140, 235);
             this.lAgeCbx.Name = "lAgeCbx";
-            this.lAgeCbx.Size = new System.Drawing.Size(121, 21);
+            this.lAgeCbx.Size = new System.Drawing.Size(121, 23);
             this.lAgeCbx.TabIndex = 10;
             this.lAgeCbx.Text = "연령 선택";
             // 
             // PickerStartDay
             // 
             this.PickerStartDay.CustomFormat = "yy년 MM월 dd일";
+            this.PickerStartDay.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.PickerStartDay.Location = new System.Drawing.Point(141, 277);
             this.PickerStartDay.Name = "PickerStartDay";
-            this.PickerStartDay.Size = new System.Drawing.Size(109, 21);
+            this.PickerStartDay.Size = new System.Drawing.Size(115, 21);
             this.PickerStartDay.TabIndex = 11;
             // 
             // PickerEndDay
             // 
             this.PickerEndDay.CustomFormat = "yy년 MM월 dd일";
+            this.PickerEndDay.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.PickerEndDay.Location = new System.Drawing.Point(276, 277);
             this.PickerEndDay.Name = "PickerEndDay";
-            this.PickerEndDay.Size = new System.Drawing.Size(109, 21);
+            this.PickerEndDay.Size = new System.Drawing.Size(115, 21);
             this.PickerEndDay.TabIndex = 12;
             // 
             // weekCbx
             // 
             this.weekCbx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.weekCbx.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.weekCbx.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.weekCbx.FormattingEnabled = true;
             this.weekCbx.Items.AddRange(new object[] {
             "월요일",
@@ -200,30 +202,32 @@
             "토요일"});
             this.weekCbx.Location = new System.Drawing.Point(140, 319);
             this.weekCbx.Name = "weekCbx";
-            this.weekCbx.Size = new System.Drawing.Size(121, 21);
+            this.weekCbx.Size = new System.Drawing.Size(121, 23);
             this.weekCbx.TabIndex = 13;
             this.weekCbx.Text = "요일 선택";
             // 
             // PickerStartTime
             // 
             this.PickerStartTime.CustomFormat = "HH : mm";
+            this.PickerStartTime.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.PickerStartTime.Location = new System.Drawing.Point(140, 358);
             this.PickerStartTime.Name = "PickerStartTime";
-            this.PickerStartTime.Size = new System.Drawing.Size(110, 21);
+            this.PickerStartTime.Size = new System.Drawing.Size(116, 21);
             this.PickerStartTime.TabIndex = 14;
             // 
             // PickerEndTime
             // 
             this.PickerEndTime.CustomFormat = "HH : mm";
+            this.PickerEndTime.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.PickerEndTime.Location = new System.Drawing.Point(276, 358);
             this.PickerEndTime.Name = "PickerEndTime";
-            this.PickerEndTime.Size = new System.Drawing.Size(109, 21);
+            this.PickerEndTime.Size = new System.Drawing.Size(115, 21);
             this.PickerEndTime.TabIndex = 15;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(256, 363);
+            this.label9.Location = new System.Drawing.Point(259, 363);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(14, 12);
             this.label9.TabIndex = 16;
@@ -232,7 +236,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(256, 281);
+            this.label10.Location = new System.Drawing.Point(259, 281);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(14, 12);
             this.label10.TabIndex = 17;
@@ -241,21 +245,21 @@
             // lTechCbx
             // 
             this.lTechCbx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lTechCbx.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lTechCbx.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lTechCbx.FormattingEnabled = true;
             this.lTechCbx.Location = new System.Drawing.Point(140, 410);
             this.lTechCbx.Name = "lTechCbx";
-            this.lTechCbx.Size = new System.Drawing.Size(121, 21);
+            this.lTechCbx.Size = new System.Drawing.Size(121, 23);
             this.lTechCbx.TabIndex = 18;
             this.lTechCbx.Text = "강사 선택";
             // 
             // lNumLabel
             // 
             this.lNumLabel.AutoSize = true;
-            this.lNumLabel.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold);
+            this.lNumLabel.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lNumLabel.Location = new System.Drawing.Point(140, 108);
             this.lNumLabel.Name = "lNumLabel";
-            this.lNumLabel.Size = new System.Drawing.Size(63, 16);
+            this.lNumLabel.Size = new System.Drawing.Size(65, 19);
             this.lNumLabel.TabIndex = 22;
             this.lNumLabel.Text = "label11";
             // 

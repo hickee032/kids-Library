@@ -129,6 +129,7 @@
     <Compile Include="adapter\BaseAdapter.cs" />
     <Compile Include="dao\DaoOra.cs" />
     <Compile Include="model\Book.cs" />
+    <Compile Include="model\Customer.cs" />
     <Compile Include="model\Lecture.cs" />
     <Compile Include="ui\FormAddLecture.cs">
       <SubType>Form</SubType>
@@ -156,6 +157,12 @@
     <Compile Include="ui\FormStory.Designer.cs">
       <DependentUpon>FormStory.cs</DependentUpon>
     </Compile>
+    <Compile Include="ui\UcAddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\UcAddUser.Designer.cs">
+      <DependentUpon>UcAddUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="ui\UcBookSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +180,12 @@
     </Compile>
     <Compile Include="ui\UcLecture.Designer.cs">
       <DependentUpon>UcLecture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\UcLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\UcLogin.Designer.cs">
+      <DependentUpon>UcLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="utill\DbImage.cs" />
     <Compile Include="utill\VideoPlay.cs" />
@@ -198,6 +211,9 @@
     <EmbeddedResource Include="ui\FormStory.resx">
       <DependentUpon>FormStory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ui\UcAddUser.resx">
+      <DependentUpon>UcAddUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ui\UcBookSearch.resx">
       <DependentUpon>UcBookSearch.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ui\UcLecture.resx">
       <DependentUpon>UcLecture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\UcLogin.resx">
+      <DependentUpon>UcLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
@@ -243,9 +262,6 @@
     <None Include="Resources\icon_login.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icon_home.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icon_modify.png" />
   </ItemGroup>
   <ItemGroup>
@@ -256,12 +272,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_rebook.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icon_lesson.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icon_media.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pic_lesson.png" />
@@ -355,6 +365,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pic_needPoster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-backward.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_searchBook.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_returnBook.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_forward.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_backward.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_backward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_SearchBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_returnBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_lesson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_media.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

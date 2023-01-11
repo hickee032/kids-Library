@@ -11,7 +11,9 @@ using Team1_Project.adapter;
 using Team1_Project.ui;
 
 namespace Team1_Project {
+    
     public partial class FormMain : MetroFramework.Forms.MetroForm {
+        public static int checkCtype = 0;
 
         //슬라이더 변수
         const int MAX_SLIDING_WIDTH = 264;
@@ -120,56 +122,40 @@ namespace Team1_Project {
             timerSliding.Start();
         }
 
-        //패널에 유저 컨트롤 세팅
-        public void controllView(UserControl uc, string viewName) {
 
-            panelCenter.Controls.Clear();
-
-            if (!panelCenter.Controls.ContainsKey(viewName)) {
-                uc.Dock = DockStyle.Fill;
-                panelCenter.Controls.Add(uc);
-            }
-        }
 
         //슬라이더 버튼 이벤트
         private void btnHome_Click(object sender, EventArgs e) {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e) {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e) {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e) {
-
+            //this.ResetText();
+            this.Text = "홈";
+            controllView(new UcHome(ba, checkCtype), UC_HOMEUSER);
         }
 
         private void btnLesson_Click(object sender, EventArgs e) {
-            controllView(new UcLecture(ba), UC_LECTURE);
+            //this.ResetText();
+            this.Text = "강좌";
+            controllView(new UcLecture(ba, checkCtype), UC_LECTURE);
         }
 
-        private void button3_Click(object sender, EventArgs e) {
 
-        }
-
-        private void button2_Click(object sender, EventArgs e) {
-
-        }
 
 
 
         private void btnLogIn_Click(object sender, EventArgs e) {
+            this.ResetText();
+            this.Text = "로그인";
 
             if (btnLogIn.Text.Equals("로그인")) {
+
                 controllView(new UcLogin(ba, this), UC_HOMEUSER);
             }
-            else {
+
+            if (btnLogIn.Text.Equals("로그아웃")) {
                 
-                controllView(new UcHome(ba), UC_HOMEUSER);
+                controllView(new UcHome(ba,this,0), UC_HOMEUSER);
+                labelLogName.Text = string.Empty;
+                labelLogName.Visible= false;
+                btnLogIn.Text = "로그인";
             }
             
         }
@@ -180,6 +166,17 @@ namespace Team1_Project {
 
         private void btnExit_Click(object sender, EventArgs e) {
             Application.Exit();
+        }
+
+        //패널에 유저 컨트롤 세팅
+        public void controllView(UserControl uc, string viewName) {
+
+            panelCenter.Controls.Clear();
+
+            if (!panelCenter.Controls.ContainsKey(viewName)) {
+                uc.Dock = DockStyle.Fill;
+                panelCenter.Controls.Add(uc);
+            }
         }
     }
 }

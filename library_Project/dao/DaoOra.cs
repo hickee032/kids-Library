@@ -131,8 +131,6 @@ namespace Team1_Project.dao {
             return comList;
         }
 
-        
-
         public Image tableGetimage(string num, string imageTable) {
 
             Image img = null;
@@ -294,7 +292,9 @@ namespace Team1_Project.dao {
                 cmd.ExecuteNonQuery();
                 cmd.Transaction.Commit();
                 Console.WriteLine("데이터 추가 성공!");
+                cmd.Transaction.Commit();
             }
+
             catch (Exception e) {
                 Console.WriteLine("데이터 추가 Err:" + e.Message);
                 cmd.Transaction.Rollback();
@@ -337,6 +337,7 @@ namespace Team1_Project.dao {
                 Console.WriteLine("데이터가 존재하지 않음!");
             }
             dr.Close();
+
             return lecList;
         }
 

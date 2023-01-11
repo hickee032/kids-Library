@@ -187,6 +187,12 @@
     <Compile Include="ui\UcLogin.Designer.cs">
       <DependentUpon>UcLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ui\UcMedia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\UcMedia.Designer.cs">
+      <DependentUpon>UcMedia.cs</DependentUpon>
+    </Compile>
     <Compile Include="utill\DbImage.cs" />
     <Compile Include="utill\VideoPlay.cs" />
     <EmbeddedResource Include="ui\FormAddLecture.resx">
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ui\UcLogin.resx">
       <DependentUpon>UcLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\UcMedia.resx">
+      <DependentUpon>UcMedia.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
@@ -401,6 +410,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_media.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\template.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_needPoster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_class.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_class1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_age.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

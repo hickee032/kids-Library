@@ -35,13 +35,23 @@ namespace Team1_Project.ui {
             suggestBook(0);
         }
 
-        public UcHome(BaseAdapter ba,FormMain formMain,int checkCtype) {
+        public UcHome(BaseAdapter ba, int checkCtype) {
             InitializeComponent();
             this.ba = ba;
             this.checkCtype = checkCtype;
             video = new VideoPlay(panelVideo);
 
+            if (checkCtype == 1) {
+                labelHomeBC.Text = "선생님의 추천 책";
+            }
+            suggestBook(0);
+        }
 
+        public UcHome(BaseAdapter ba,FormMain formMain,int checkCtype) {
+            InitializeComponent();
+            this.ba = ba;
+            this.checkCtype = checkCtype;
+            video = new VideoPlay(panelVideo);
 
             if (checkCtype == 1) {
                 labelHomeBC.Text = "선생님의 추천 책";

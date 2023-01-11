@@ -27,6 +27,7 @@ namespace Team1_Project.ui {
             lTechCbxAdd("mname", "manager");
 
             lNumLabel.Text = LectNum(ba.Ora.tableCount("lecture"));
+
             ba.Ora.tableCount("lecture");
         }
 
@@ -58,7 +59,7 @@ namespace Team1_Project.ui {
         //번호 자동부여
         public string LectNum(int n) {
 
-            string lNum = "L" + (n+1).ToString("000.");
+            string lNum = "L" + (n).ToString("000.");
             Console.WriteLine(lNum);
 
             return lNum;
@@ -90,6 +91,7 @@ namespace Team1_Project.ui {
             ora.lectureImgImg(lNumLabel.Text, openFileImg.FileName);
             ora.insertData(new Lecture(num,title,loc,age,per,time,week,teacher));
 
+
         }
 
         private void btnLectCancel_Click(object sender, EventArgs e) {
@@ -98,31 +100,28 @@ namespace Team1_Project.ui {
 
         //강좌 이미지 버튼
         private void btnLecImgAdd_Click(object sender, EventArgs e) {
-            DaoOra ora = ba.Ora;
-            openFileImg.InitialDirectory = @"C:\";
-            openFileImg.Filter = "jpeg 파일(*.jpg)|*.jpg|" +
-                "png 파일(*.png)|*.png|" +
-                "gif 파일(*.gif)|*.gif|" +
-                "모든 파일(*.*)|*.*";
-            openFileImg.FilterIndex = 0;
-            openFileImg.RestoreDirectory = true;
-            openFileImg.ShowDialog();
-            string imgPath = openFileImg.FileName;
-            
-            Image img = Image.FromFile(imgPath);
-            piclecPoster.SizeMode = PictureBoxSizeMode.StretchImage;
-            piclecPoster.Image = img;
+            try {
+                DaoOra ora = ba.Ora;
+                openFileImg.InitialDirectory = @"C:\";
+                openFileImg.Filter = "jpeg 파일(*.jpg)|*.jpg|" +
+                    "png 파일(*.png)|*.png|" +
+                    "gif 파일(*.gif)|*.gif|" +
+                    "모든 파일(*.*)|*.*";
+                openFileImg.FilterIndex = 0;
+                openFileImg.RestoreDirectory = true;
+                openFileImg.ShowDialog();
+                string imgPath = openFileImg.FileName;
 
-            
+                Image img = Image.FromFile(imgPath);
+                piclecPoster.SizeMode = PictureBoxSizeMode.StretchImage;
+                piclecPoster.Image = img;
+            }
+            catch (Exception) {
 
-            /*
-            ora.saveImg(saveImgName.Text, openFileImg.FileName);
-            List<string> list = ora.getImgName();
-            cbImgName.Items.Clear();
-            foreach (var n in list) cbImgName.Items.Add(n);
-            cbImgName.Text = "이미지 선택";
-            tbImgName.Text = "";
-            */
+                piclecPoster.Image = Properties.Resources.pic_empty_lecture;
+            }
+
+
         }
 
         private void btnLecImgDel_Click(object sender, EventArgs e) {

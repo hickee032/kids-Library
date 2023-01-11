@@ -25,24 +25,24 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.non1 = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnReBook = new System.Windows.Forms.Button();
             this.btnLesson = new System.Windows.Forms.Button();
             this.btnMedia = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.cbxSlider = new System.Windows.Forms.CheckBox();
             this.timerSliding = new System.Windows.Forms.Timer(this.components);
             this.panelCenter = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogIn = new System.Windows.Forms.Label();
             this.myProfile = new System.Windows.Forms.Label();
             this.labelLogName = new System.Windows.Forms.Label();
-            this.non1 = new System.Windows.Forms.Button();
             this.btnMainExit = new System.Windows.Forms.Button();
-            this.cbxSlider = new System.Windows.Forms.CheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
+            this.panelCenter.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +62,21 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(264, 600);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // non1
+            // 
+            this.non1.AutoSize = true;
+            this.non1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.non1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.non1.Enabled = false;
+            this.non1.FlatAppearance.BorderSize = 0;
+            this.non1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.non1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.non1.Location = new System.Drawing.Point(0, 134);
+            this.non1.Name = "non1";
+            this.non1.Size = new System.Drawing.Size(264, 146);
+            this.non1.TabIndex = 7;
+            this.non1.UseVisualStyleBackColor = true;
             // 
             // btnHome
             // 
@@ -93,7 +108,6 @@
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "책 검색";
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnReBook
             // 
@@ -109,7 +123,6 @@
             this.btnReBook.TabIndex = 3;
             this.btnReBook.Text = "책 반납";
             this.btnReBook.UseVisualStyleBackColor = true;
-            this.btnReBook.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnLesson
             // 
@@ -141,7 +154,6 @@
             this.btnMedia.TabIndex = 5;
             this.btnMedia.Text = "영상관";
             this.btnMedia.UseVisualStyleBackColor = true;
-            this.btnMedia.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnExit
             // 
@@ -159,16 +171,52 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // cbxSlider
+            // 
+            this.cbxSlider.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbxSlider.BackColor = System.Drawing.Color.Transparent;
+            this.cbxSlider.BackgroundImage = global::Team1_Project.Properties.Resources.icon_backward;
+            this.cbxSlider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cbxSlider.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbxSlider.FlatAppearance.BorderSize = 0;
+            this.cbxSlider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxSlider.Location = new System.Drawing.Point(0, 0);
+            this.cbxSlider.Name = "cbxSlider";
+            this.cbxSlider.Size = new System.Drawing.Size(264, 64);
+            this.cbxSlider.TabIndex = 1;
+            this.cbxSlider.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cbxSlider.UseVisualStyleBackColor = false;
+            this.cbxSlider.CheckedChanged += new System.EventHandler(this.checkBoxHide_CheckedChanged);
+            // 
             // timerSliding
             // 
             this.timerSliding.Tick += new System.EventHandler(this.timerSliding_Tick);
             // 
             // panelCenter
             // 
+            this.panelCenter.Controls.Add(this.panel1);
             this.panelCenter.Location = new System.Drawing.Point(291, 60);
             this.panelCenter.Name = "panelCenter";
             this.panelCenter.Size = new System.Drawing.Size(987, 600);
             this.panelCenter.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::Team1_Project.Properties.Resources.bord_Pink;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(3, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 600);
+            this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(171, 211);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnLogIn
             // 
@@ -210,21 +258,6 @@
             this.labelLogName.Text = "label1";
             this.labelLogName.Visible = false;
             // 
-            // non1
-            // 
-            this.non1.AutoSize = true;
-            this.non1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.non1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.non1.Enabled = false;
-            this.non1.FlatAppearance.BorderSize = 0;
-            this.non1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.non1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.non1.Location = new System.Drawing.Point(0, 134);
-            this.non1.Name = "non1";
-            this.non1.Size = new System.Drawing.Size(264, 146);
-            this.non1.TabIndex = 7;
-            this.non1.UseVisualStyleBackColor = true;
-            // 
             // btnMainExit
             // 
             this.btnMainExit.BackgroundImage = global::Team1_Project.Properties.Resources.icon_cancel;
@@ -236,53 +269,6 @@
             this.btnMainExit.TabIndex = 3;
             this.btnMainExit.UseVisualStyleBackColor = true;
             this.btnMainExit.Click += new System.EventHandler(this.btnMainExit_Click);
-            // 
-            // cbxSlider
-            // 
-            this.cbxSlider.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbxSlider.BackColor = System.Drawing.Color.Transparent;
-            this.cbxSlider.BackgroundImage = global::Team1_Project.Properties.Resources.icon_backward;
-            this.cbxSlider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cbxSlider.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbxSlider.FlatAppearance.BorderSize = 0;
-            this.cbxSlider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxSlider.Location = new System.Drawing.Point(0, 0);
-            this.cbxSlider.Name = "cbxSlider";
-            this.cbxSlider.Size = new System.Drawing.Size(264, 64);
-            this.cbxSlider.TabIndex = 1;
-            this.cbxSlider.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.cbxSlider.UseVisualStyleBackColor = false;
-            this.cbxSlider.CheckedChanged += new System.EventHandler(this.checkBoxHide_CheckedChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::Team1_Project.Properties.Resources.bord_Pink;
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(84, 60);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 600);
-            this.panel1.TabIndex = 1;
-            // 
-            // button8
-            // 
-            this.button8.BackgroundImage = global::Team1_Project.Properties.Resources.icon_profile;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.ForeColor = System.Drawing.Color.Transparent;
-            this.button8.Location = new System.Drawing.Point(152, 208);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(32, 32);
-            this.button8.TabIndex = 1;
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(13, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(171, 211);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // FormMain
             // 
@@ -296,12 +282,12 @@
             this.Controls.Add(this.btnMainExit);
             this.Controls.Add(this.panelCenter);
             this.Controls.Add(this.panelSideMenu);
-            this.Controls.Add(this.panel1);
             this.Name = "FormMain";
             this.Padding = new System.Windows.Forms.Padding(0, 60, 20, 20);
-            this.Text = "Form1";
+            this.Text = "홈";
             this.panelSideMenu.ResumeLayout(false);
             this.panelSideMenu.PerformLayout();
+            this.panelCenter.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -320,8 +306,6 @@
         private System.Windows.Forms.Button btnLesson;
         private System.Windows.Forms.Button btnMedia;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panelCenter;
         private System.Windows.Forms.Button btnMainExit;
@@ -329,6 +313,7 @@
         private System.Windows.Forms.Label myProfile;
         public System.Windows.Forms.Label labelLogName;
         private System.Windows.Forms.Button non1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

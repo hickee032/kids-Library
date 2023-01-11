@@ -47,11 +47,14 @@ namespace Team1_Project.ui {
 
             //일반회원인지 관리자 인지 체크
             string checkCM =cmNum.Substring(0,1);
+
             Console.WriteLine("첫번째 글자 확인 :" + checkCM);
 
-            if (checkCM.Equals("m")) {
+            if (checkCM.Equals("m")|| checkCM.Equals("M")) {
                 cnumList = ba.Ora.tableGetColumn("mnum", "manager");
-                checkCtype = 5;
+                FormMain.checkCtype = 5;
+
+                Console.WriteLine(FormMain.checkCtype);
             }
             else {
                 cnumList = ba.Ora.tableGetColumn("cnum", "customer");
@@ -74,47 +77,59 @@ namespace Team1_Project.ui {
         private void btnUcLogIn_Click(object sender, EventArgs e) {
 
             string checkPW;
+            string cName;
 
-            if (checkCtype ==5) {
+            if (FormMain.checkCtype == 5) {
+
                 checkPW = ba.Ora.tableGetColumn("mpw", "manager", "mnum", cmNum);
             }
             else {
                 checkPW = ba.Ora.tableGetColumn("cpw", "customer", "cnum", cmNum);
             }
 
-            if (tbxPW.Text.Equals(checkPW)) { 
-                string cAge = ba.Ora.tableGetColumn("ctype", "customer", "cnum", cmNum);
-                string cSchool = ba.Ora.tableGetColumn("cschool", "customer", "cnum", cmNum);
-                string cName = ba.Ora.tableGetColumn("cname", "customer", "cnum", cmNum);
+            if (tbxPW.Text.Equals(checkPW)) {
 
-                Console.WriteLine("무언가 있나 : "+cSchool);
+                if (FormMain.checkCtype != 5) {
+                    string cAge = ba.Ora.tableGetColumn("ctype", "customer", "cnum", cmNum);
+                    string cSchool = ba.Ora.tableGetColumn("cschool", "customer", "cnum", cmNum);
+                    cName = ba.Ora.tableGetColumn("cname", "customer", "cnum", cmNum);
 
-                if (cAge.Equals("성인") && !cSchool.Equals(string.Empty) ) {
+                    if (cAge.Equals("성인") && !cSchool.Equals(string.Empty)) {
 
-                    Console.WriteLine("선생님");
-                    checkCtype = 2;
-                    formMain.controllView(new UcHome(ba, formMain, 2), FormMain.UC_HOMEUSER);
+                        Console.WriteLine("선생님");
+                        FormMain.checkCtype = 2;
+                        formMain.controllView(new UcHome(ba, formMain, 2), FormMain.UC_HOMEUSER);
 
-                }
-                
-                else if (cAge.Equals("성인") && cSchool.Equals(string.Empty)) {
-                    Console.WriteLine("일반");
-                    checkCtype = 3;
-                    formMain.controllView(new UcHome(ba, formMain, 3), FormMain.UC_HOMEUSER);
- 
+                    }
+                    else if (cAge.Equals("성인") && cSchool.Equals(string.Empty)) {
+                        Console.WriteLine("일반");
+                        FormMain.checkCtype = 3;
+                        formMain.controllView(new UcHome(ba, formMain, 3), FormMain.UC_HOMEUSER);
+
+                    }
+                    else {
+                        Console.WriteLine("어린이");
+                        FormMain.checkCtype = 1;
+                        formMain.controllView(new UcHome(ba, formMain, 1), FormMain.UC_HOMEUSER);
+
+                    }
+
+                    formMain.btnLogIn.Text = "로그아웃";
+                    formMain.cbxSlider.Checked = true;
+                    formMain.cbxSlider.Checked = true;
+                    formMain.labelLogName.Visible = true;
+                    formMain.labelLogName.Text = $"{cName} 님 환영합니다.";
                 }
                 else {
-                    Console.WriteLine("어린이");
-                    checkCtype = 1;
-                    formMain.controllView(new UcHome(ba, formMain, 1), FormMain.UC_HOMEUSER);
-                     
-                }
 
-                formMain.btnLogIn.Text = "로그아웃";
-                formMain.cbxSlider.Checked = true;
-                formMain.cbxSlider.Checked = true;
-                formMain.labelLogName.Visible = true;
-                formMain.labelLogName.Text = $"{cName} 님 환영합니다.";
+                    cName = ba.Ora.tableGetColumn("mname", "manager", "mnum", cmNum);
+
+                    formMain.btnLogIn.Text = "로그아웃";
+                    formMain.cbxSlider.Checked = true;
+                    formMain.cbxSlider.Checked = true;
+                    formMain.labelLogName.Visible = true;
+                    formMain.labelLogName.Text = $"{cName} 님 환영합니다.";
+                }
 
             }
             else {

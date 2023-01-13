@@ -131,12 +131,41 @@ namespace Team1_Project.dao {
             return comList;
         }
 
+        public Image tableGetimage(string imageTable) {
+
+            Image img = null;
+
+            cmd.Connection = conn;
+            cmd.CommandText = $"select imgdata from {imageTable}";
+            cmd.CommandType = CommandType.Text;
+            OracleDataReader dr = cmd.ExecuteReader();
+
+            if (dr.HasRows) {
+                while (dr.Read()) {
+                    byte[] byteData = (byte[])dr["imgdata"];
+                    if (byteData.Length > 0) {
+                        MemoryStream ms = new MemoryStream(byteData);
+                        img = Image.FromStream(ms);
+                    }
+                    else {
+                        img = null;
+                    }
+                }
+            }
+            else {
+                Console.WriteLine("데이터가 존재하지 않음!");
+                MessageBox.Show("데이터가 존재하지 않음!");
+            }
+            return img;
+
+        }
+
         public Image tableGetimage(string num, string imageTable) {
 
             Image img = null;
 
             cmd.Connection = conn;
-            cmd.CommandText= $"select Imgdata from {imageTable} where filename = '{num}'";
+            cmd.CommandText= $"select imgdata from {imageTable} where filename = '{num}'";
             cmd.CommandType= CommandType.Text;
             OracleDataReader dr = cmd.ExecuteReader();
 
@@ -292,7 +321,7 @@ namespace Team1_Project.dao {
                 cmd.ExecuteNonQuery();
                 cmd.Transaction.Commit();
                 Console.WriteLine("데이터 추가 성공!");
-                cmd.Transaction.Commit();
+                
             }
 
             catch (Exception e) {

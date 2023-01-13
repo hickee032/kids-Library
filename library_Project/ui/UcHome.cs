@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,9 +25,14 @@ namespace Team1_Project.ui {
         BaseAdapter ba;
         //이미지 플래그 변수 
         int changeCount = 0;
-        
+        int loop = 0;
+
         //배너에 이미지URL 보여주기
-        string [] panelimageAdd = new string[] { "https://raw.githubusercontent.com/hickee032/ImageRepo/main/f20220308A05x.jpg", "https://www.nlcy.go.kr/popups/f20210601kvqy.jpg","https://www.nlcy.go.kr/popups/f202212215cQT.png" };
+        string [] panelimageAdd = new string[] { "https://www.nlcy.go.kr/attach/together/40016/THUM1117851_20211027152006541_1.jpg",
+                                                 "https://www.nlcy.go.kr/attach/together/40016/THUM1073373_20200804110649236_1.jpg",
+                                                 "https://www.nlcy.go.kr/attach/together/40016/THUM1045534_20190108134416948_1.jpg" };
+
+
 
         public UcHome(BaseAdapter ba) {
             InitializeComponent();
@@ -79,19 +85,18 @@ namespace Team1_Project.ui {
             
         }
 
-
         //이미지를 바꾸는 타이머
         private void postChange_Tick(object sender, EventArgs e) {
 
             postChange.Interval = 2000;
 
+            
             if (changeCount == 0) {
-                
                 pbHomeBan1.ImageLocation = panelimageAdd[0];
                 pbHomeBan1.Load(panelimageAdd[0]);
                 changeCount++;
             }
-            else if (changeCount == 1) {
+            else if (changeCount == 1) {            
                 pbHomeBan1.ImageLocation = panelimageAdd[1];
                 pbHomeBan1.Load(panelimageAdd[1]);
                 changeCount++;
@@ -100,9 +105,7 @@ namespace Team1_Project.ui {
                 pbHomeBan1.ImageLocation = panelimageAdd[2];
                 pbHomeBan1.Load(panelimageAdd[2]);
                 changeCount = 0;
-            }
-
-
+            }            
         }
 
         private void btnMap_Click(object sender, EventArgs e) {
@@ -114,13 +117,10 @@ namespace Team1_Project.ui {
             System.Diagnostics.Process.Start("https://www.youtube.com/@user-be3jf5yg9x");
         }
 
-        private void picLibStory_Click(object sender, EventArgs e) {
-            FormStory fs = new FormStory();
-            fs.ShowDialog();
-        }
+
 
         private void pbHomeBan1_Click(object sender, EventArgs e) {
-
+            //formMain.controllView(new UcLecture(ba, checkCtype), formMain.);
         }
     }
 }

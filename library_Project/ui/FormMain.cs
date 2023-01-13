@@ -24,10 +24,10 @@ namespace Team1_Project {
         int _posSliding = 264;
 
         //유저 컨트롤 변수
-        public const string UC_HOMEUSER = "UcHome";
-        const string UC_LECTURE = "UcLecture";
-        public const string UC_LOGIN = "UcLogIn";
-        public const string UC_ADDUSER = "UcAddUser";
+        private const string uC_HOMEUSER = "UcHome";
+        private const string uC_LECTURE = "UcLecture";
+        private const string uC_LOGIN = "UcLogIn";
+        private const string uC_ADDUSER = "UcAddUser";
         /*
         const string UC_SIGNUSER = "UCSign";
         const string UC_GRADEUSER = "UCGrade";
@@ -39,6 +39,9 @@ namespace Team1_Project {
         */
 
         BaseAdapter ba = new BaseAdapter();
+
+        internal BaseAdapter Ba { get => ba; set => ba = value; }
+
 
         public FormMain() {
             InitializeComponent();
@@ -177,6 +180,19 @@ namespace Team1_Project {
                 uc.Dock = DockStyle.Fill;
                 panelCenter.Controls.Add(uc);
             }
+        }
+
+        public static string UC_HOMEUSER => uC_HOMEUSER;
+
+        public static string UC_LECTURE => uC_LECTURE;
+
+        public static string UC_LOGIN => uC_LOGIN;
+
+        public static string UC_ADDUSER => uC_ADDUSER;
+
+        private void picLibStory_Click(object sender, EventArgs e) {
+            FormStory fs = new FormStory();
+            fs.ShowDialog();
         }
     }
 }

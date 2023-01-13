@@ -328,36 +328,6 @@
     <None Include="Resources\icon_back.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Story\7.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Story\8.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Story\9.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Story\0.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Story\1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Story\2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Story\3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Story\4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Story\5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Story\6.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\YesoRYes.wmv" />
   </ItemGroup>
   <ItemGroup>
@@ -437,6 +407,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_age.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_dadogi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

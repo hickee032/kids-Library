@@ -88,8 +88,8 @@ namespace Team1_Project.ui {
             Console.WriteLine(week);
             Console.WriteLine(time);
             Console.WriteLine(teacher);
-            ora.lectureImgImg(lNumLabel.Text, openFileImg.FileName);
-            ora.insertData(new Lecture(num,title,loc,age,per,time,week,teacher));
+            ba.Ora.lectureImgImg(lNumLabel.Text, openFileImg.FileName);
+            ba.Ora.insertData(new Lecture(num,title,loc,age,per,time,week,teacher));
 
 
         }

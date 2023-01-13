@@ -28,6 +28,8 @@
             this.lecImgList = new System.Windows.Forms.ImageList(this.components);
             this.btnLecAdd = new System.Windows.Forms.Button();
             this.lecSubPnl1 = new System.Windows.Forms.Panel();
+            this.labelAge1 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelTime1 = new System.Windows.Forms.Label();
@@ -36,6 +38,8 @@
             this.labelDate1 = new System.Windows.Forms.Label();
             this.labelClass1 = new System.Windows.Forms.Label();
             this.lecSubPnl2 = new System.Windows.Forms.Panel();
+            this.labelAge2 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelTime2 = new System.Windows.Forms.Label();
@@ -44,6 +48,8 @@
             this.labelDate2 = new System.Windows.Forms.Label();
             this.labelClass2 = new System.Windows.Forms.Label();
             this.lecSubPnl3 = new System.Windows.Forms.Panel();
+            this.labelAge3 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.labelTime3 = new System.Windows.Forms.Label();
@@ -52,6 +58,8 @@
             this.labelDate3 = new System.Windows.Forms.Label();
             this.labelClass3 = new System.Windows.Forms.Label();
             this.lecSubPnl4 = new System.Windows.Forms.Panel();
+            this.labelAge4 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelTime4 = new System.Windows.Forms.Label();
@@ -70,27 +78,23 @@
             this.lecPbx2 = new System.Windows.Forms.PictureBox();
             this.lecPbx1 = new System.Windows.Forms.PictureBox();
             this.lecPbx0 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.labelAge1 = new System.Windows.Forms.Label();
-            this.labelAge2 = new System.Windows.Forms.Label();
-            this.labelAge3 = new System.Windows.Forms.Label();
-            this.labelAge4 = new System.Windows.Forms.Label();
             this.lecSubPnl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPicTime1)).BeginInit();
             this.lecSubPnl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPicTime2)).BeginInit();
             this.lecSubPnl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPicTime3)).BeginInit();
             this.lecSubPnl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPicTime4)).BeginInit();
@@ -98,10 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.SuspendLayout();
             // 
             // lecImgList
@@ -123,7 +123,7 @@
             // 
             // lecSubPnl1
             // 
-            this.lecSubPnl1.BackColor = System.Drawing.Color.MistyRose;
+            this.lecSubPnl1.BackColor = System.Drawing.Color.LightPink;
             this.lecSubPnl1.Controls.Add(this.labelAge1);
             this.lecSubPnl1.Controls.Add(this.pictureBox9);
             this.lecSubPnl1.Controls.Add(this.pictureBox5);
@@ -137,6 +137,26 @@
             this.lecSubPnl1.Name = "lecSubPnl1";
             this.lecSubPnl1.Size = new System.Drawing.Size(219, 194);
             this.lecSubPnl1.TabIndex = 16;
+            // 
+            // labelAge1
+            // 
+            this.labelAge1.AutoSize = true;
+            this.labelAge1.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelAge1.Location = new System.Drawing.Point(44, 10);
+            this.labelAge1.Name = "labelAge1";
+            this.labelAge1.Size = new System.Drawing.Size(31, 15);
+            this.labelAge1.TabIndex = 13;
+            this.labelAge1.Text = "나이";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox9.Location = new System.Drawing.Point(6, 10);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox9.TabIndex = 10;
+            this.pictureBox9.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -225,6 +245,26 @@
             this.lecSubPnl2.Size = new System.Drawing.Size(219, 194);
             this.lecSubPnl2.TabIndex = 17;
             // 
+            // labelAge2
+            // 
+            this.labelAge2.AutoSize = true;
+            this.labelAge2.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelAge2.Location = new System.Drawing.Point(44, 10);
+            this.labelAge2.Name = "labelAge2";
+            this.labelAge2.Size = new System.Drawing.Size(31, 15);
+            this.labelAge2.TabIndex = 14;
+            this.labelAge2.Text = "나이";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox10.Location = new System.Drawing.Point(6, 10);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox10.TabIndex = 11;
+            this.pictureBox10.TabStop = false;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
@@ -296,7 +336,7 @@
             // 
             // lecSubPnl3
             // 
-            this.lecSubPnl3.BackColor = System.Drawing.Color.MistyRose;
+            this.lecSubPnl3.BackColor = System.Drawing.Color.LightPink;
             this.lecSubPnl3.Controls.Add(this.labelAge3);
             this.lecSubPnl3.Controls.Add(this.pictureBox11);
             this.lecSubPnl3.Controls.Add(this.pictureBox7);
@@ -310,6 +350,26 @@
             this.lecSubPnl3.Name = "lecSubPnl3";
             this.lecSubPnl3.Size = new System.Drawing.Size(219, 194);
             this.lecSubPnl3.TabIndex = 18;
+            // 
+            // labelAge3
+            // 
+            this.labelAge3.AutoSize = true;
+            this.labelAge3.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelAge3.Location = new System.Drawing.Point(44, 10);
+            this.labelAge3.Name = "labelAge3";
+            this.labelAge3.Size = new System.Drawing.Size(31, 15);
+            this.labelAge3.TabIndex = 15;
+            this.labelAge3.Text = "나이";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox11.Location = new System.Drawing.Point(6, 10);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox11.TabIndex = 12;
+            this.pictureBox11.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -396,6 +456,26 @@
             this.lecSubPnl4.Name = "lecSubPnl4";
             this.lecSubPnl4.Size = new System.Drawing.Size(219, 194);
             this.lecSubPnl4.TabIndex = 19;
+            // 
+            // labelAge4
+            // 
+            this.labelAge4.AutoSize = true;
+            this.labelAge4.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelAge4.Location = new System.Drawing.Point(44, 10);
+            this.labelAge4.Name = "labelAge4";
+            this.labelAge4.Size = new System.Drawing.Size(31, 15);
+            this.labelAge4.TabIndex = 16;
+            this.labelAge4.Text = "나이";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox12.BackgroundImage")));
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox12.Location = new System.Drawing.Point(6, 10);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox12.TabIndex = 13;
+            this.pictureBox12.TabStop = false;
             // 
             // pictureBox8
             // 
@@ -589,86 +669,6 @@
             this.lecPbx0.TabIndex = 7;
             this.lecPbx0.TabStop = false;
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox9.Location = new System.Drawing.Point(6, 10);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox9.TabIndex = 10;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox10.Location = new System.Drawing.Point(6, 10);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox10.TabIndex = 11;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox11.Location = new System.Drawing.Point(6, 10);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox11.TabIndex = 12;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox12.BackgroundImage")));
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox12.Location = new System.Drawing.Point(6, 10);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox12.TabIndex = 13;
-            this.pictureBox12.TabStop = false;
-            // 
-            // labelAge1
-            // 
-            this.labelAge1.AutoSize = true;
-            this.labelAge1.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.labelAge1.Location = new System.Drawing.Point(44, 10);
-            this.labelAge1.Name = "labelAge1";
-            this.labelAge1.Size = new System.Drawing.Size(31, 15);
-            this.labelAge1.TabIndex = 13;
-            this.labelAge1.Text = "나이";
-            // 
-            // labelAge2
-            // 
-            this.labelAge2.AutoSize = true;
-            this.labelAge2.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.labelAge2.Location = new System.Drawing.Point(44, 10);
-            this.labelAge2.Name = "labelAge2";
-            this.labelAge2.Size = new System.Drawing.Size(31, 15);
-            this.labelAge2.TabIndex = 14;
-            this.labelAge2.Text = "나이";
-            // 
-            // labelAge3
-            // 
-            this.labelAge3.AutoSize = true;
-            this.labelAge3.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.labelAge3.Location = new System.Drawing.Point(44, 10);
-            this.labelAge3.Name = "labelAge3";
-            this.labelAge3.Size = new System.Drawing.Size(31, 15);
-            this.labelAge3.TabIndex = 15;
-            this.labelAge3.Text = "나이";
-            // 
-            // labelAge4
-            // 
-            this.labelAge4.AutoSize = true;
-            this.labelAge4.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.labelAge4.Location = new System.Drawing.Point(44, 10);
-            this.labelAge4.Name = "labelAge4";
-            this.labelAge4.Size = new System.Drawing.Size(31, 15);
-            this.labelAge4.TabIndex = 16;
-            this.labelAge4.Text = "나이";
-            // 
             // UcLecture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -694,21 +694,25 @@
             this.Load += new System.EventHandler(this.UcLecture_Load);
             this.lecSubPnl1.ResumeLayout(false);
             this.lecSubPnl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPicTime1)).EndInit();
             this.lecSubPnl2.ResumeLayout(false);
             this.lecSubPnl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPicTime2)).EndInit();
             this.lecSubPnl3.ResumeLayout(false);
             this.lecSubPnl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPicTime3)).EndInit();
             this.lecSubPnl4.ResumeLayout(false);
             this.lecSubPnl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPicTime4)).EndInit();
@@ -716,10 +720,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.ResumeLayout(false);
 
         }

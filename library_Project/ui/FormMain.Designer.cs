@@ -37,14 +37,18 @@
             this.panelCenter = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.picLibStory = new System.Windows.Forms.PictureBox();
             this.btnLogIn = new System.Windows.Forms.Label();
             this.myProfile = new System.Windows.Forms.Label();
             this.labelLogName = new System.Windows.Forms.Label();
             this.btnMainExit = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
-            this.panelCenter.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLibStory)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -66,21 +70,23 @@
             // non1
             // 
             this.non1.AutoSize = true;
+            this.non1.BackColor = System.Drawing.Color.MistyRose;
             this.non1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.non1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.non1.Enabled = false;
             this.non1.FlatAppearance.BorderSize = 0;
             this.non1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.non1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.non1.Location = new System.Drawing.Point(0, 134);
+            this.non1.Location = new System.Drawing.Point(0, 125);
             this.non1.Name = "non1";
-            this.non1.Size = new System.Drawing.Size(264, 146);
+            this.non1.Size = new System.Drawing.Size(264, 155);
             this.non1.TabIndex = 7;
-            this.non1.UseVisualStyleBackColor = true;
+            this.non1.UseVisualStyleBackColor = false;
             // 
             // btnHome
             // 
             this.btnHome.AutoSize = true;
+            this.btnHome.BackColor = System.Drawing.Color.LightPink;
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHome.FlatAppearance.BorderSize = 0;
@@ -91,12 +97,13 @@
             this.btnHome.Size = new System.Drawing.Size(264, 64);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "메인";
-            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnSearch
             // 
             this.btnSearch.AutoSize = true;
+            this.btnSearch.BackColor = System.Drawing.Color.LightPink;
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSearch.FlatAppearance.BorderSize = 0;
@@ -107,11 +114,12 @@
             this.btnSearch.Size = new System.Drawing.Size(264, 64);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "책 검색";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // btnReBook
             // 
             this.btnReBook.AutoSize = true;
+            this.btnReBook.BackColor = System.Drawing.Color.MistyRose;
             this.btnReBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReBook.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnReBook.FlatAppearance.BorderSize = 0;
@@ -122,11 +130,12 @@
             this.btnReBook.Size = new System.Drawing.Size(264, 64);
             this.btnReBook.TabIndex = 3;
             this.btnReBook.Text = "책 반납";
-            this.btnReBook.UseVisualStyleBackColor = true;
+            this.btnReBook.UseVisualStyleBackColor = false;
             // 
             // btnLesson
             // 
             this.btnLesson.AutoSize = true;
+            this.btnLesson.BackColor = System.Drawing.Color.LightPink;
             this.btnLesson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLesson.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLesson.FlatAppearance.BorderSize = 0;
@@ -137,12 +146,13 @@
             this.btnLesson.Size = new System.Drawing.Size(264, 64);
             this.btnLesson.TabIndex = 4;
             this.btnLesson.Text = "교실";
-            this.btnLesson.UseVisualStyleBackColor = true;
+            this.btnLesson.UseVisualStyleBackColor = false;
             this.btnLesson.Click += new System.EventHandler(this.btnLesson_Click);
             // 
             // btnMedia
             // 
             this.btnMedia.AutoSize = true;
+            this.btnMedia.BackColor = System.Drawing.Color.MistyRose;
             this.btnMedia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMedia.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnMedia.FlatAppearance.BorderSize = 0;
@@ -153,11 +163,12 @@
             this.btnMedia.Size = new System.Drawing.Size(264, 64);
             this.btnMedia.TabIndex = 5;
             this.btnMedia.Text = "영상관";
-            this.btnMedia.UseVisualStyleBackColor = true;
+            this.btnMedia.UseVisualStyleBackColor = false;
             // 
             // btnExit
             // 
             this.btnExit.AutoSize = true;
+            this.btnExit.BackColor = System.Drawing.Color.LightPink;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnExit.FlatAppearance.BorderSize = 0;
@@ -168,13 +179,13 @@
             this.btnExit.Size = new System.Drawing.Size(264, 64);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "종료";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // cbxSlider
             // 
             this.cbxSlider.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbxSlider.BackColor = System.Drawing.Color.Transparent;
+            this.cbxSlider.BackColor = System.Drawing.Color.MistyRose;
             this.cbxSlider.BackgroundImage = global::Team1_Project.Properties.Resources.icon_backward;
             this.cbxSlider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cbxSlider.Dock = System.Windows.Forms.DockStyle.Top;
@@ -194,29 +205,65 @@
             // 
             // panelCenter
             // 
-            this.panelCenter.Controls.Add(this.panel1);
-            this.panelCenter.Location = new System.Drawing.Point(291, 60);
+            this.panelCenter.BackColor = System.Drawing.Color.MistyRose;
+            this.panelCenter.Location = new System.Drawing.Point(270, 60);
             this.panelCenter.Name = "panelCenter";
-            this.panelCenter.Size = new System.Drawing.Size(987, 600);
+            this.panelCenter.Size = new System.Drawing.Size(1008, 600);
             this.panelCenter.TabIndex = 2;
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::Team1_Project.Properties.Resources.bord_Pink;
+            this.panel1.BackColor = System.Drawing.Color.LightPink;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 0);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.picLibStory);
+            this.panel1.Location = new System.Drawing.Point(63, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 600);
+            this.panel1.Size = new System.Drawing.Size(200, 597);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::Team1_Project.Properties.Resources.char_dadogi;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 387);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(171, 211);
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.Size = new System.Drawing.Size(172, 193);
+            this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::Team1_Project.Properties.Resources.icon_book;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox4.TabIndex = 14;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(57, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 23);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "도서관 이야기";
+            // 
+            // picLibStory
+            // 
+            this.picLibStory.BackgroundImage = global::Team1_Project.Properties.Resources.libStory12;
+            this.picLibStory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picLibStory.Location = new System.Drawing.Point(0, 50);
+            this.picLibStory.Name = "picLibStory";
+            this.picLibStory.Size = new System.Drawing.Size(200, 319);
+            this.picLibStory.TabIndex = 12;
+            this.picLibStory.TabStop = false;
+            this.picLibStory.Click += new System.EventHandler(this.picLibStory_Click);
             // 
             // btnLogIn
             // 
@@ -282,14 +329,18 @@
             this.Controls.Add(this.btnMainExit);
             this.Controls.Add(this.panelCenter);
             this.Controls.Add(this.panelSideMenu);
+            this.Controls.Add(this.panel1);
             this.Name = "FormMain";
             this.Padding = new System.Windows.Forms.Padding(0, 60, 20, 20);
+            this.Resizable = false;
             this.Text = "홈";
             this.panelSideMenu.ResumeLayout(false);
             this.panelSideMenu.PerformLayout();
-            this.panelCenter.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLibStory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,6 +364,9 @@
         private System.Windows.Forms.Label myProfile;
         public System.Windows.Forms.Label labelLogName;
         private System.Windows.Forms.Button non1;
+        private System.Windows.Forms.PictureBox picLibStory;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

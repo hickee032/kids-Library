@@ -30,23 +30,6 @@ namespace Team1_Project.model {
             this.clast = clast;
         }
 
-        /*
-        public Customer(string cnum, string cname, string cage, string cgen, string ctel, 
-            string ctype, string pnum, string tnum, string cschool, string cint, string lnum)
-        {
-            this.cnum = cnum;
-            this.cname = cname;
-            this.cage = cage;
-            this.cgen = cgen;
-            this.ctel = ctel;
-            this.ctype = ctype;
-            this.pnum = pnum;
-            this.tnum = tnum;
-            this.cschool = cschool;
-            this.cint = cint;
-            this.lnum= lnum;
-        }*/
-
         public Customer(string cnum, string cpw, string cname, string cage, string cgen, string ctel,
             string ctype, string pnum, string cschool, string cint) {
             this.cnum = cnum;
@@ -108,6 +91,8 @@ namespace Team1_Project.model {
         public string Cschool { get => cschool; set => cschool = value; }
         public string Cint { get => cint; set => cint = value; }
         public string Lnum { get => lnum; set => lnum = value; }
+
+
 
     }
 }

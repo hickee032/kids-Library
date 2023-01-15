@@ -27,6 +27,9 @@ namespace Team1_Project.ui {
         int changeCount = 0;
         int loop = 0;
 
+        string loginId = string.Empty;
+
+
         //배너에 이미지URL 보여주기
         string [] panelimageAdd = new string[] { "https://www.nlcy.go.kr/attach/together/40016/THUM1117851_20211027152006541_1.jpg",
                                                  "https://www.nlcy.go.kr/attach/together/40016/THUM1073373_20200804110649236_1.jpg",
@@ -38,6 +41,7 @@ namespace Team1_Project.ui {
             InitializeComponent();
             this.ba = ba;
             video = new VideoPlay(panelVideo);
+            //formMain.myProfile.Visible = false;
             suggestBook(0);
         }
 
@@ -50,10 +54,16 @@ namespace Team1_Project.ui {
             if (checkCtype == 1) {
                 labelHomeBC.Text = "선생님의 추천 책";
             }
+            else if (checkCtype == 5) {
+
+            }
+            else if (checkCtype == 0) {
+               
+            }
             suggestBook(0);
         }
 
-        public UcHome(BaseAdapter ba,FormMain formMain,int checkCtype) {
+        public UcHome(BaseAdapter ba, FormMain formMain, int checkCtype) {
             InitializeComponent();
             this.ba = ba;
             this.checkCtype = checkCtype;
@@ -61,6 +71,29 @@ namespace Team1_Project.ui {
 
             if (checkCtype == 1) {
                 labelHomeBC.Text = "선생님의 추천 책";
+            }
+            else if (checkCtype == 5) {
+
+            }
+            else if (checkCtype == 0) {
+                formMain.myProfile.Visible = false;
+            }
+            suggestBook(0);
+        }
+
+        public UcHome(BaseAdapter ba,FormMain formMain,int checkCtype, string loginId) {
+            InitializeComponent();
+            this.ba = ba;
+            this.checkCtype = checkCtype;
+            this.loginId = loginId;
+            
+            video = new VideoPlay(panelVideo);
+            if (checkCtype == 1) {
+                labelHomeBC.Text = "선생님의 추천 책";
+            }
+            else if (checkCtype == 5) {
+
+                
             }
             suggestBook(0);
         }

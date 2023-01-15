@@ -13,7 +13,11 @@ using Team1_Project.ui;
 namespace Team1_Project {
     
     public partial class FormMain : MetroFramework.Forms.MetroForm {
+
         public static int checkCtype = 0;
+        private string CHECK_ID = string.Empty;
+
+        #region 슬라이더
 
         //슬라이더 변수
         const int MAX_SLIDING_WIDTH = 264;
@@ -22,31 +26,6 @@ namespace Team1_Project {
         const int STEP_SLIDING = 68;
         //최초 슬라이딩 메뉴 크기
         int _posSliding = 264;
-
-        //유저 컨트롤 변수
-        private const string uC_HOMEUSER = "UcHome";
-        private const string uC_LECTURE = "UcLecture";
-        private const string uC_LOGIN = "UcLogIn";
-        private const string uC_ADDUSER = "UcAddUser";
-        /*
-        const string UC_SIGNUSER = "UCSign";
-        const string UC_GRADEUSER = "UCGrade";
-        const string UC_VIEWUSER = "UCView";
-        const string UC_MAILUSER = "UCMail";
-        const string UC_SETTINGUSER = "UCSetting";
-        const string UC_ADMINUSER = "UCAdmin";
-        const string UC_HELPUSER = "UCHelp";
-        */
-
-        BaseAdapter ba = new BaseAdapter();
-
-        internal BaseAdapter Ba { get => ba; set => ba = value; }
-
-
-        public FormMain() {
-            InitializeComponent();
-            controllView(new UcHome(ba), UC_HOMEUSER);
-        }
 
         //슬라이더 동작
         private void timerSliding_Tick(object sender, EventArgs e) {
@@ -57,11 +36,11 @@ namespace Team1_Project {
                 if (_posSliding <= MIN_SLIDING_WIDTH)
                     //button1.Size = new System.Drawing.Size(MIN_SLIDING_WIDTH, 54);
 
-                timerSliding.Stop();
-               // button1.BackgroundImage = Properties.Resources.bImage_home;
+                    timerSliding.Stop();
+                // button1.BackgroundImage = Properties.Resources.bImage_home;
             }
             else {
-                
+
                 //슬라이딩 메뉴를 숨기는 동작
                 _posSliding += STEP_SLIDING;
 
@@ -83,22 +62,22 @@ namespace Team1_Project {
                 btnHome.BackgroundImage = null;
 
                 btnSearch.Text = "책 검색";
-                btnSearch.BackgroundImage= null;
+                btnSearch.BackgroundImage = null;
                 btnReBook.Text = "책 반납";
                 btnReBook.BackgroundImage = null;
                 btnLesson.Text = "교실";
-                btnLesson.BackgroundImage= null;
+                btnLesson.BackgroundImage = null;
 
                 btnMedia.Text = "영상관";
-                btnMedia.BackgroundImage= null;
+                btnMedia.BackgroundImage = null;
                 btnExit.Text = "종료";
-                btnExit.BackgroundImage= null;
+                btnExit.BackgroundImage = null;
 
-                
+
             }
             else {
                 //슬라이딩 메뉴가 접혔을 때, 메뉴 버튼의 표시
-                
+
                 cbxSlider.BackgroundImage = Properties.Resources.icon_forward;
 
                 btnHome.BackgroundImage = Properties.Resources.icon_home;
@@ -106,9 +85,9 @@ namespace Team1_Project {
 
                 btnSearch.Text = string.Empty;
                 btnSearch.BackgroundImage = Properties.Resources.icon_searchBook;
-                btnReBook.Text= string.Empty;
+                btnReBook.Text = string.Empty;
                 btnReBook.BackgroundImage = Properties.Resources.icon_returnBook;
-               
+
                 btnLesson.Text = string.Empty;
                 btnLesson.BackgroundImage = Properties.Resources.icon_lesson;
                 btnMedia.Text = string.Empty;
@@ -126,6 +105,37 @@ namespace Team1_Project {
         }
 
 
+        #endregion
+
+
+
+        //유저 컨트롤 변수
+        public const string UC_HOMEUSER = "UcHome";
+        public const string UC_LECTURE = "UcLecture";
+        public const string UC_LOGIN = "UcLogIn";
+        public const string UC_ADDUSER = "UcAddUser";
+        /*
+        const string UC_SIGNUSER = "UCSign";
+        const string UC_GRADEUSER = "UCGrade";
+        const string UC_VIEWUSER = "UCView";
+        const string UC_MAILUSER = "UCMail";
+        const string UC_SETTINGUSER = "UCSetting";
+        const string UC_ADMINUSER = "UCAdmin";
+        const string UC_HELPUSER = "UCHelp";
+        */
+
+        BaseAdapter ba = new BaseAdapter();
+
+        internal BaseAdapter Ba { get => ba; set => ba = value; }
+
+
+
+        public FormMain() {
+            InitializeComponent();
+            
+            controllView(new UcHome(ba), UC_HOMEUSER);
+            myProfile.Visible= false;
+        }
 
         //슬라이더 버튼 이벤트
         private void btnHome_Click(object sender, EventArgs e) {
@@ -145,12 +155,15 @@ namespace Team1_Project {
 
 
         private void btnLogIn_Click(object sender, EventArgs e) {
-            this.ResetText();
+
             this.Text = "로그인";
+
+
 
             if (btnLogIn.Text.Equals("로그인")) {
 
-                controllView(new UcLogin(ba, this), UC_HOMEUSER);
+                controllView(new UcLogin(ba,this), UC_HOMEUSER);
+
             }
 
             if (btnLogIn.Text.Equals("로그아웃")) {
@@ -182,17 +195,33 @@ namespace Team1_Project {
             }
         }
 
-        public static string UC_HOMEUSER => uC_HOMEUSER;
+        public void controllView(UserControl uc, string viewName, string id) {
+            this.CHECK_ID = id;
 
-        public static string UC_LECTURE => uC_LECTURE;
+            panelCenter.Controls.Clear();
 
-        public static string UC_LOGIN => uC_LOGIN;
-
-        public static string UC_ADDUSER => uC_ADDUSER;
+            if (!panelCenter.Controls.ContainsKey(viewName)) {
+                uc.Dock = DockStyle.Fill;
+                panelCenter.Controls.Add(uc);
+            }
+        }
 
         private void picLibStory_Click(object sender, EventArgs e) {
             FormStory fs = new FormStory();
             fs.ShowDialog();
         }
+
+        private void myProfile_Click(object sender, EventArgs e) {
+            FormEditPfil fep = new FormEditPfil(ba, CHECK_ID);
+            fep.ShowDialog();
+        }
+
+        public static string UC_HOMEUSER1 => UC_HOMEUSER;
+
+        public static string UC_LECTURE1 => UC_LECTURE;
+
+        public static string UC_LOGIN1 => UC_LOGIN;
+
+        public static string UC_ADDUSER1 => UC_ADDUSER;
     }
 }

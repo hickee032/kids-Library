@@ -27,6 +27,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelVideo = new System.Windows.Forms.Panel();
             this.panelHome = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,7 +52,11 @@
             this.btnMap = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.postChange = new System.Windows.Forms.Timer(this.components);
-            this.homeImgList = new System.Windows.Forms.ImageList(this.components);
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.labelManager = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelHome.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -64,6 +72,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBook1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHomeBan1)).BeginInit();
             this.panel7.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,6 +97,9 @@
             // panelHome
             // 
             this.panelHome.BackColor = System.Drawing.Color.MistyRose;
+            this.panelHome.Controls.Add(this.panel14);
+            this.panelHome.Controls.Add(this.panel13);
+            this.panelHome.Controls.Add(this.panel12);
             this.panelHome.Controls.Add(this.panel6);
             this.panelHome.Controls.Add(this.panel5);
             this.panelHome.Controls.Add(this.panel4);
@@ -99,6 +113,34 @@
             this.panelHome.Size = new System.Drawing.Size(987, 600);
             this.panelHome.TabIndex = 12;
             // 
+            // panel11
+            // 
+            this.panel11.Location = new System.Drawing.Point(162, 117);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(40, 101);
+            this.panel11.TabIndex = 18;
+            // 
+            // panel10
+            // 
+            this.panel10.Location = new System.Drawing.Point(116, 70);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(40, 148);
+            this.panel10.TabIndex = 17;
+            // 
+            // panel8
+            // 
+            this.panel8.Location = new System.Drawing.Point(70, 92);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(40, 126);
+            this.panel8.TabIndex = 16;
+            // 
+            // panel9
+            // 
+            this.panel9.Location = new System.Drawing.Point(24, 46);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(40, 172);
+            this.panel9.TabIndex = 15;
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.LightPink;
@@ -111,7 +153,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::Team1_Project.Properties.Resources.pic_lesson;
+            this.pictureBox2.BackgroundImage = global::Team1_Project.Properties.Resources.icon_bell;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Name = "pictureBox2";
@@ -126,9 +168,9 @@
             this.label2.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(48, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 23);
+            this.label2.Size = new System.Drawing.Size(48, 23);
             this.label2.TabIndex = 1;
-            this.label2.Text = "현재 모집중 강좌";
+            this.label2.Text = "알림";
             // 
             // panel5
             // 
@@ -203,7 +245,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Team1_Project.Properties.Resources.pic_lesson;
+            this.pictureBox1.BackgroundImage = global::Team1_Project.Properties.Resources.icon_party;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -218,9 +260,9 @@
             this.label1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(48, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 23);
+            this.label1.Size = new System.Drawing.Size(111, 23);
             this.label1.TabIndex = 1;
-            this.label1.Text = "현재 모집중 강좌";
+            this.label1.Text = "도서관 행사";
             // 
             // panel2
             // 
@@ -314,11 +356,53 @@
             // 
             this.postChange.Tick += new System.EventHandler(this.postChange_Tick);
             // 
-            // homeImgList
+            // panel12
             // 
-            this.homeImgList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.homeImgList.ImageSize = new System.Drawing.Size(16, 16);
-            this.homeImgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.panel12.Location = new System.Drawing.Point(718, 319);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(220, 249);
+            this.panel12.TabIndex = 19;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.panel8);
+            this.panel13.Controls.Add(this.panel9);
+            this.panel13.Controls.Add(this.panel11);
+            this.panel13.Controls.Add(this.panel10);
+            this.panel13.Location = new System.Drawing.Point(718, 66);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(220, 249);
+            this.panel13.TabIndex = 20;
+            // 
+            // labelManager
+            // 
+            this.labelManager.AutoSize = true;
+            this.labelManager.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelManager.Location = new System.Drawing.Point(43, 9);
+            this.labelManager.Name = "labelManager";
+            this.labelManager.Size = new System.Drawing.Size(111, 23);
+            this.labelManager.TabIndex = 0;
+            this.labelManager.Text = "관리자 메뉴";
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.LightPink;
+            this.panel14.Controls.Add(this.pictureBox5);
+            this.panel14.Controls.Add(this.labelManager);
+            this.panel14.Location = new System.Drawing.Point(718, 319);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(220, 40);
+            this.panel14.TabIndex = 12;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::Team1_Project.Properties.Resources.icon_bell;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox5.TabIndex = 2;
+            this.pictureBox5.TabStop = false;
             // 
             // UcHome
             // 
@@ -348,6 +432,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbHomeBan1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -378,6 +466,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ImageList homeImgList;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label labelManager;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
     }
 }

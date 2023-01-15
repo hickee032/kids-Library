@@ -27,15 +27,16 @@
             this.cnumCheck = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.mLogIn = new System.Windows.Forms.Label();
             this.btnUcLogIn = new System.Windows.Forms.Label();
             this.SignUp = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.LogInPWlabel = new System.Windows.Forms.Label();
             this.tbxPW = new System.Windows.Forms.TextBox();
-            this.LogInID = new System.Windows.Forms.TextBox();
+            this.tbxID = new System.Windows.Forms.TextBox();
             this.LogInBox1 = new System.Windows.Forms.RichTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ctelCheck
@@ -45,7 +46,7 @@
             this.ctelCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ctelCheck.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ctelCheck.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ctelCheck.Location = new System.Drawing.Point(229, 416);
+            this.ctelCheck.Location = new System.Drawing.Point(237, 393);
             this.ctelCheck.Name = "ctelCheck";
             this.ctelCheck.Size = new System.Drawing.Size(138, 15);
             this.ctelCheck.TabIndex = 26;
@@ -58,7 +59,7 @@
             this.cnumCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cnumCheck.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.cnumCheck.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cnumCheck.Location = new System.Drawing.Point(572, 416);
+            this.cnumCheck.Location = new System.Drawing.Point(580, 393);
             this.cnumCheck.Name = "cnumCheck";
             this.cnumCheck.Size = new System.Drawing.Size(111, 15);
             this.cnumCheck.TabIndex = 25;
@@ -70,7 +71,7 @@
             this.label5.BackColor = System.Drawing.Color.MediumPurple;
             this.label5.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(556, 289);
+            this.label5.Location = new System.Drawing.Point(564, 266);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 17);
             this.label5.TabIndex = 24;
@@ -82,25 +83,11 @@
             this.label4.BackColor = System.Drawing.Color.MediumPurple;
             this.label4.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(578, 257);
+            this.label4.Location = new System.Drawing.Point(586, 234);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 17);
             this.label4.TabIndex = 23;
             this.label4.Text = "아직 회원으로";
-            // 
-            // mLogIn
-            // 
-            this.mLogIn.AutoSize = true;
-            this.mLogIn.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.mLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.mLogIn.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.mLogIn.ForeColor = System.Drawing.SystemColors.Control;
-            this.mLogIn.Location = new System.Drawing.Point(773, 525);
-            this.mLogIn.Name = "mLogIn";
-            this.mLogIn.Padding = new System.Windows.Forms.Padding(25, 11, 15, 11);
-            this.mLogIn.Size = new System.Drawing.Size(148, 39);
-            this.mLogIn.TabIndex = 22;
-            this.mLogIn.Text = "   관리자 로그인";
             // 
             // btnUcLogIn
             // 
@@ -109,7 +96,7 @@
             this.btnUcLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUcLogIn.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnUcLogIn.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUcLogIn.Location = new System.Drawing.Point(248, 363);
+            this.btnUcLogIn.Location = new System.Drawing.Point(256, 340);
             this.btnUcLogIn.Name = "btnUcLogIn";
             this.btnUcLogIn.Padding = new System.Windows.Forms.Padding(25, 11, 25, 11);
             this.btnUcLogIn.Size = new System.Drawing.Size(100, 39);
@@ -124,7 +111,7 @@
             this.SignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SignUp.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.SignUp.ForeColor = System.Drawing.SystemColors.Control;
-            this.SignUp.Location = new System.Drawing.Point(572, 363);
+            this.SignUp.Location = new System.Drawing.Point(580, 340);
             this.SignUp.Name = "SignUp";
             this.SignUp.Padding = new System.Windows.Forms.Padding(25, 11, 25, 11);
             this.SignUp.Size = new System.Drawing.Size(114, 39);
@@ -137,7 +124,7 @@
             this.richTextBox1.BackColor = System.Drawing.Color.MediumPurple;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.richTextBox1.Location = new System.Drawing.Point(498, 101);
+            this.richTextBox1.Location = new System.Drawing.Point(505, 99);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(258, 366);
             this.richTextBox1.TabIndex = 19;
@@ -149,7 +136,7 @@
             this.label1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.label1.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(198, 267);
+            this.label1.Location = new System.Drawing.Point(206, 244);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 18;
@@ -161,7 +148,7 @@
             this.LogInPWlabel.BackColor = System.Drawing.Color.MediumTurquoise;
             this.LogInPWlabel.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.LogInPWlabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LogInPWlabel.Location = new System.Drawing.Point(198, 311);
+            this.LogInPWlabel.Location = new System.Drawing.Point(206, 288);
             this.LogInPWlabel.Name = "LogInPWlabel";
             this.LogInPWlabel.Size = new System.Drawing.Size(64, 17);
             this.LogInPWlabel.TabIndex = 17;
@@ -170,53 +157,63 @@
             // tbxPW
             // 
             this.tbxPW.BackColor = System.Drawing.SystemColors.Window;
-            this.tbxPW.Location = new System.Drawing.Point(269, 310);
+            this.tbxPW.Location = new System.Drawing.Point(277, 287);
             this.tbxPW.Name = "tbxPW";
             this.tbxPW.PasswordChar = '●';
             this.tbxPW.Size = new System.Drawing.Size(100, 21);
             this.tbxPW.TabIndex = 16;
             // 
-            // LogInID
+            // tbxID
             // 
-            this.LogInID.BackColor = System.Drawing.SystemColors.Window;
-            this.LogInID.Location = new System.Drawing.Point(269, 266);
-            this.LogInID.Name = "LogInID";
-            this.LogInID.Size = new System.Drawing.Size(100, 21);
-            this.LogInID.TabIndex = 15;
-            this.LogInID.Leave += new System.EventHandler(this.LogInID_Leave);
+            this.tbxID.BackColor = System.Drawing.SystemColors.Window;
+            this.tbxID.Location = new System.Drawing.Point(277, 243);
+            this.tbxID.Name = "tbxID";
+            this.tbxID.Size = new System.Drawing.Size(100, 21);
+            this.tbxID.TabIndex = 15;
+            this.tbxID.Leave += new System.EventHandler(this.LogInID_Leave);
             // 
             // LogInBox1
             // 
             this.LogInBox1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.LogInBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LogInBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.LogInBox1.Location = new System.Drawing.Point(165, 101);
+            this.LogInBox1.Location = new System.Drawing.Point(172, 99);
             this.LogInBox1.Name = "LogInBox1";
             this.LogInBox1.Size = new System.Drawing.Size(258, 366);
             this.LogInBox1.TabIndex = 14;
             this.LogInBox1.Text = "";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MistyRose;
+            this.panel1.Controls.Add(this.ctelCheck);
+            this.panel1.Controls.Add(this.tbxID);
+            this.panel1.Controls.Add(this.cnumCheck);
+            this.panel1.Controls.Add(this.tbxPW);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.LogInPWlabel);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnUcLogIn);
+            this.panel1.Controls.Add(this.SignUp);
+            this.panel1.Controls.Add(this.LogInBox1);
+            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(974, 600);
+            this.panel1.TabIndex = 27;
+            // 
             // UcLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ctelCheck);
-            this.Controls.Add(this.cnumCheck);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.mLogIn);
-            this.Controls.Add(this.btnUcLogIn);
-            this.Controls.Add(this.SignUp);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.LogInPWlabel);
-            this.Controls.Add(this.tbxPW);
-            this.Controls.Add(this.LogInID);
-            this.Controls.Add(this.LogInBox1);
+            this.Controls.Add(this.panel1);
             this.Name = "UcLogin";
             this.Size = new System.Drawing.Size(974, 600);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -226,14 +223,14 @@
         private System.Windows.Forms.Label cnumCheck;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label mLogIn;
         private System.Windows.Forms.Label btnUcLogIn;
         private System.Windows.Forms.Label SignUp;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LogInPWlabel;
         private System.Windows.Forms.TextBox tbxPW;
-        private System.Windows.Forms.TextBox LogInID;
+        private System.Windows.Forms.TextBox tbxID;
         private System.Windows.Forms.RichTextBox LogInBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -32,20 +32,22 @@
             this.btnLesson = new System.Windows.Forms.Button();
             this.btnMedia = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.cbxSlider = new System.Windows.Forms.CheckBox();
             this.timerSliding = new System.Windows.Forms.Timer(this.components);
             this.panelCenter = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.picLibStory = new System.Windows.Forms.PictureBox();
             this.btnLogIn = new System.Windows.Forms.Label();
             this.myProfile = new System.Windows.Forms.Label();
             this.labelLogName = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cbxSlider = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.picLibStory = new System.Windows.Forms.PictureBox();
             this.btnMainExit = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLibStory)).BeginInit();
@@ -182,23 +184,6 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // cbxSlider
-            // 
-            this.cbxSlider.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbxSlider.BackColor = System.Drawing.Color.MistyRose;
-            this.cbxSlider.BackgroundImage = global::Team1_Project.Properties.Resources.icon_backward;
-            this.cbxSlider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cbxSlider.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cbxSlider.FlatAppearance.BorderSize = 0;
-            this.cbxSlider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxSlider.Location = new System.Drawing.Point(0, 0);
-            this.cbxSlider.Name = "cbxSlider";
-            this.cbxSlider.Size = new System.Drawing.Size(264, 64);
-            this.cbxSlider.TabIndex = 1;
-            this.cbxSlider.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.cbxSlider.UseVisualStyleBackColor = false;
-            this.cbxSlider.CheckedChanged += new System.EventHandler(this.checkBoxHide_CheckedChanged);
-            // 
             // timerSliding
             // 
             this.timerSliding.Tick += new System.EventHandler(this.timerSliding_Tick);
@@ -223,6 +208,87 @@
             this.panel1.Size = new System.Drawing.Size(200, 597);
             this.panel1.TabIndex = 1;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(57, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 23);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "도서관 이야기";
+            // 
+            // btnLogIn
+            // 
+            this.btnLogIn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogIn.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnLogIn.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLogIn.Location = new System.Drawing.Point(1103, 7);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Padding = new System.Windows.Forms.Padding(25, 11, 25, 11);
+            this.btnLogIn.Size = new System.Drawing.Size(131, 37);
+            this.btnLogIn.TabIndex = 4;
+            this.btnLogIn.Text = "로그인";
+            this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
+            // 
+            // myProfile
+            // 
+            this.myProfile.AutoSize = true;
+            this.myProfile.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.myProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.myProfile.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.myProfile.ForeColor = System.Drawing.SystemColors.Control;
+            this.myProfile.Location = new System.Drawing.Point(989, 7);
+            this.myProfile.Name = "myProfile";
+            this.myProfile.Padding = new System.Windows.Forms.Padding(25, 11, 25, 11);
+            this.myProfile.Size = new System.Drawing.Size(97, 37);
+            this.myProfile.TabIndex = 5;
+            this.myProfile.Text = "내 정보";
+            this.myProfile.Click += new System.EventHandler(this.myProfile_Click);
+            // 
+            // labelLogName
+            // 
+            this.labelLogName.AutoSize = true;
+            this.labelLogName.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.labelLogName.Location = new System.Drawing.Point(807, 18);
+            this.labelLogName.Name = "labelLogName";
+            this.labelLogName.Size = new System.Drawing.Size(43, 15);
+            this.labelLogName.TabIndex = 6;
+            this.labelLogName.Text = "label1";
+            this.labelLogName.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightPink;
+            this.panel2.Controls.Add(this.labelLogName);
+            this.panel2.Controls.Add(this.btnMainExit);
+            this.panel2.Controls.Add(this.myProfile);
+            this.panel2.Controls.Add(this.btnLogIn);
+            this.panel2.Location = new System.Drawing.Point(0, 7);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1289, 49);
+            this.panel2.TabIndex = 7;
+            // 
+            // cbxSlider
+            // 
+            this.cbxSlider.Appearance = System.Windows.Forms.Appearance.Button;
+            this.cbxSlider.BackColor = System.Drawing.Color.MistyRose;
+            this.cbxSlider.BackgroundImage = global::Team1_Project.Properties.Resources.icon_backward;
+            this.cbxSlider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cbxSlider.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbxSlider.FlatAppearance.BorderSize = 0;
+            this.cbxSlider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxSlider.Location = new System.Drawing.Point(0, 0);
+            this.cbxSlider.Name = "cbxSlider";
+            this.cbxSlider.Size = new System.Drawing.Size(264, 64);
+            this.cbxSlider.TabIndex = 1;
+            this.cbxSlider.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cbxSlider.UseVisualStyleBackColor = false;
+            this.cbxSlider.CheckedChanged += new System.EventHandler(this.checkBoxHide_CheckedChanged);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Team1_Project.Properties.Resources.char_dadogi;
@@ -243,17 +309,6 @@
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(57, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 23);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "도서관 이야기";
-            // 
             // picLibStory
             // 
             this.picLibStory.BackgroundImage = global::Team1_Project.Properties.Resources.libStory12;
@@ -265,52 +320,12 @@
             this.picLibStory.TabStop = false;
             this.picLibStory.Click += new System.EventHandler(this.picLibStory_Click);
             // 
-            // btnLogIn
-            // 
-            this.btnLogIn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogIn.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnLogIn.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLogIn.Location = new System.Drawing.Point(1103, 12);
-            this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Padding = new System.Windows.Forms.Padding(25, 11, 25, 11);
-            this.btnLogIn.Size = new System.Drawing.Size(131, 37);
-            this.btnLogIn.TabIndex = 4;
-            this.btnLogIn.Text = "로그인";
-            this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
-            // 
-            // myProfile
-            // 
-            this.myProfile.AutoSize = true;
-            this.myProfile.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.myProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.myProfile.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.myProfile.ForeColor = System.Drawing.SystemColors.Control;
-            this.myProfile.Location = new System.Drawing.Point(1000, 12);
-            this.myProfile.Name = "myProfile";
-            this.myProfile.Padding = new System.Windows.Forms.Padding(25, 11, 25, 11);
-            this.myProfile.Size = new System.Drawing.Size(97, 37);
-            this.myProfile.TabIndex = 5;
-            this.myProfile.Text = "내 정보";
-            // 
-            // labelLogName
-            // 
-            this.labelLogName.AutoSize = true;
-            this.labelLogName.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.labelLogName.Location = new System.Drawing.Point(813, 23);
-            this.labelLogName.Name = "labelLogName";
-            this.labelLogName.Size = new System.Drawing.Size(43, 15);
-            this.labelLogName.TabIndex = 6;
-            this.labelLogName.Text = "label1";
-            this.labelLogName.Visible = false;
-            // 
             // btnMainExit
             // 
             this.btnMainExit.BackgroundImage = global::Team1_Project.Properties.Resources.icon_cancel;
             this.btnMainExit.FlatAppearance.BorderSize = 0;
             this.btnMainExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMainExit.Location = new System.Drawing.Point(1246, 12);
+            this.btnMainExit.Location = new System.Drawing.Point(1246, 7);
             this.btnMainExit.Name = "btnMainExit";
             this.btnMainExit.Size = new System.Drawing.Size(32, 32);
             this.btnMainExit.TabIndex = 3;
@@ -323,13 +338,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1288, 680);
             this.ControlBox = false;
-            this.Controls.Add(this.labelLogName);
-            this.Controls.Add(this.myProfile);
-            this.Controls.Add(this.btnLogIn);
-            this.Controls.Add(this.btnMainExit);
             this.Controls.Add(this.panelCenter);
             this.Controls.Add(this.panelSideMenu);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "FormMain";
             this.Padding = new System.Windows.Forms.Padding(0, 60, 20, 20);
             this.Resizable = false;
@@ -338,11 +350,12 @@
             this.panelSideMenu.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLibStory)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -361,13 +374,14 @@
         private System.Windows.Forms.Panel panelCenter;
         private System.Windows.Forms.Button btnMainExit;
         public System.Windows.Forms.Label btnLogIn;
-        private System.Windows.Forms.Label myProfile;
+        public System.Windows.Forms.Label myProfile;
         public System.Windows.Forms.Label labelLogName;
         private System.Windows.Forms.Button non1;
         private System.Windows.Forms.PictureBox picLibStory;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

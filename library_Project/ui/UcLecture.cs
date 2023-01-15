@@ -75,8 +75,12 @@ namespace Team1_Project.ui {
         }
 
         private void lecBackBtn_Click(object sender, EventArgs e) {
+
+            Console.WriteLine("btnCount :" + btnCount);
+
             try {
                 btnCount -= 4;
+                Console.WriteLine("btnCount :" + btnCount);
                 GetImageListView(lectureData, btnCount);
             }
             catch (Exception) {
@@ -87,8 +91,12 @@ namespace Team1_Project.ui {
         }
 
         private void lecNextBtn_Click(object sender, EventArgs e) {
+
+            Console.WriteLine("btnCount :" + btnCount);
+
             try {
                 btnCount += 4;
+                Console.WriteLine("btnCount :" + btnCount);
                 GetImageListView(lectureData, btnCount);
             }
             catch (Exception) {
@@ -137,7 +145,7 @@ namespace Team1_Project.ui {
         }
 
         public void pbxAddImgList(List<Lecture> LectureList, ImageList imgList, List<PictureBox> pbx,
-            List<Label> lage,List<Label> lclass,List<Label> ldate, List<Label> ldays, List<Label> ltimes,
+            List<Label> lage, List<Label> lclass, List<Label> ldate, List<Label> ldays, List<Label> ltimes,
             int btnCount) {
 
             int n = LectureList.Count / pbx.Count;
@@ -149,18 +157,73 @@ namespace Team1_Project.ui {
             Console.WriteLine("btnCount" + btnCount);
 
             if (btnCount != 0) {
-                Console.WriteLine("btnCount != 0");
+                Console.WriteLine("btnCount :" + btnCount);
                 if (n != 0) {
 
+                    Console.WriteLine("n :" + n);
+                    Console.WriteLine("m : " + m);
+
+                    for (int i = 0; i < pbx.Count; i++) {
+
+                        if (i < m) {
+                            Console.WriteLine("if");
+
+                            pbx[i].Image = imgList.Images[i + btnCount];
+                            lage[i].Text = LectureList[i + btnCount].LTar;
+                            lclass[i].Text = LectureList[i + btnCount].LLoc;
+                            ldate[i].Text = LectureList[i + btnCount].LPer;
+                            ldays[i].Text = LectureList[i + btnCount].LDay;
+                            ltimes[i].Text = LectureList[i + btnCount].LTime;
+                            
+
+
+                        }
+                        else {
+                            Console.WriteLine("else");
+                            pbx[i].Image = Properties.Resources.pic_empty_lecture;
+                            lage[i].Text = null;
+                            lclass[i].Text = null;
+                            ldate[i].Text = null;
+                            ldays[i].Text = null;
+                            ltimes[i].Text = null;
+                        }
+                    }
+                    n -= 1;
                 }
                 else {
+                    for (int i = 0; i < pbx.Count; i++) {
 
+                        if (i < m) {
+                            Console.WriteLine("else/if");
+                            pbx[i].Image = Properties.Resources.pic_empty_lecture;
+                            lage[i].Text = null;
+                            lclass[i].Text = null;
+                            ldate[i].Text = null;
+                            ldays[i].Text = null;
+                            ltimes[i].Text = null;
+                        }
+                        else {
+
+                        }
+                    }
                 }
             }
             else {
                 Console.WriteLine("btnCount == 0");
                 if (n != 0) {
-                    Console.WriteLine("n != 0");
+                    Console.WriteLine("n :" + n);
+                    Console.WriteLine("m : " + m);
+
+                    for (int i = 0; i < pbx.Count; i++) {
+
+                        Console.WriteLine("if");
+                        pbx[i].Image = imgList.Images[i];
+                        lage[i].Text = LectureList[i].LTar;
+                        lclass[i].Text = LectureList[i].LLoc;
+                        ldate[i].Text = LectureList[i].LPer;
+                        ldays[i].Text = LectureList[i].LDay;
+                        ltimes[i].Text = LectureList[i].LTime;
+                    }
                 }
                 else {
                     Console.WriteLine("n == 0");
@@ -193,7 +256,7 @@ namespace Team1_Project.ui {
             }
 
         }
-
-
     }
+
 }
+

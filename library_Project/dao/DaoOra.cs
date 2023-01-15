@@ -74,6 +74,10 @@ namespace Team1_Project.dao {
         }
         #endregion
 
+
+        #region 테이블에서 칼럼 데이터를 가져오기 (오버로딩)
+        
+
         public int tableCount(string table) {
 
             int count = 1;
@@ -99,9 +103,6 @@ namespace Team1_Project.dao {
             return count;
         }
 
-
-
-        //테이블에서 칼럼 데이터를 가져오기
         public List<string> tableGetColumn(string column , string table) {
 
             string query = $"select {column} from {table}";
@@ -218,6 +219,132 @@ namespace Team1_Project.dao {
             return getColumn;
         }
 
+        #endregion
+
+
+        #region 회원 CUSTOMER TABLE
+
+        //회원정보 보여주기
+        public List<Customer> showProfile(string cnum) {
+            string query = $"select * from Customer where cnum = '{cnum}'";
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            cmd.CommandType = System.Data.CommandType.Text;
+            OracleDataReader dr = cmd.ExecuteReader();
+            List<Customer> cusList = new List<Customer>();
+            if (dr.HasRows) {
+                while (dr.Read()) {
+                    Console.WriteLine($"회원번호: {dr["cnum"]}");
+                    Console.WriteLine($"이름: {dr["cname"]}");
+                    Console.WriteLine($"나이: {dr["cage"]}");
+                    Console.WriteLine($"성별: {dr["cgen"]}");
+                    Console.WriteLine($"연락처: {dr["ctel"]}");
+                    Console.WriteLine($"마지막접속일: {dr["clast"]}");
+                    Console.WriteLine($"회원타입: {dr["ctype"]}");
+                    Console.WriteLine($"부모번호: {dr["pnum"]}");
+                    Console.WriteLine($"교사번호: {dr["tnum"]}");
+                    Console.WriteLine($"소속: {dr["cschool"]}");
+                    Console.WriteLine($"관심사: {dr["cint"]}");
+                    Console.WriteLine($"수강강좌: {dr["lnum"]}");
+                    Console.WriteLine("-------------------");
+                    cusList.Add(new Customer(
+                        dr["cnum"].ToString(),
+                        dr["cpw"].ToString(),
+                        dr["cname"].ToString(),
+                        dr["cage"].ToString(),
+                        dr["cgen"].ToString(),
+                        dr["ctel"].ToString(),
+                        dr["clast"].ToString(),
+                        dr["ctype"].ToString(),
+                        dr["pnum"].ToString(),
+                        dr["tnum"].ToString(),
+                        dr["cschool"].ToString(),
+                        dr["cint"].ToString(),
+                        dr["lnum"].ToString()));
+                }
+            }
+            else {
+                Console.WriteLine("데이터가 존재하지 않음!");
+            }
+            dr.Close();
+            return cusList;
+        }
+        //회원정보 입력
+        public void insertProfile(Customer cus) {
+            try {
+                string sql = $"insert into customer values ('{cus.Cnum}', '{cus.Cpw}', '{cus.Cname}', '{cus.Cage}', '{cus.Cgen}', '{cus.Ctel}', '{cus.Clast}', '{cus.Ctype}', '{cus.Pnum}', '{cus.Tnum}', '{cus.Cschool}', '{cus.Cint}', '{cus.Lnum}')";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                Console.WriteLine(" 데이터 추가 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine(" 데이터 추가 오류: " + e.Message);
+                cmd.Transaction.Rollback();
+            }
+        }
+
+        public void insertProfile(string cnum, string cpw, string cname, string cage, string cgen, string ctel, string ctype, string pnum, string cschool, string cint) {
+            try {
+
+                string sql = $"insert into Customer values ('{cnum}', '{cpw}', '{cname}', '{cage}', '{cgen}', '{ctel}', '{ctype}', '{pnum}', '{cschool}', '{cint}')";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                Console.WriteLine(" 데이터 추가 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine(" 데이터 추가 오류: " + e.Message);
+                cmd.Transaction.Rollback();
+            }
+        }
+
+        //회원정보 찾기
+        public string searchProfile(string cnum1) {
+            string query = $"select * from customer where cnum = '{cnum1}'";
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            cmd.CommandType = System.Data.CommandType.Text;
+            OracleDataReader dr = cmd.ExecuteReader();
+            //List<Customer> cusList = new List<Customer>();
+            if (dr.HasRows) {
+                Console.WriteLine("데이터가 존재!");
+                cnum1 = "0";
+            }
+            else {
+                Console.WriteLine("데이터가 존재하지 않음!");
+            }
+            dr.Close();
+            return cnum1;
+        }
+        //회원정보 수정 업데이트
+        public List<Customer> updateProfile(string cnum, Customer cus) {
+            try {
+                string sql = "update Customer set " +
+                    $"cnum = '{cus.Cnum}', cpw = '{cus.Cpw}', cname = '{cus.Cname}', cage = '{cus.Cage}', cgen = '{cus.Cgen}', ctel = '{cus.Ctel}', ctype = '{cus.Ctype}'" +
+                    $", pnum = '{cus.Pnum}', cschool = '{cus.Cschool}', cint = '{cus.Cint}'" +
+                    $" where cnum ='{cnum}'";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                Console.WriteLine("데이터 업데이트 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine("데이터 업데이트 오류: " + e.Message);
+                cmd.Transaction.Rollback();
+            }
+            List<Customer> list = showProfile(cnum);
+            return list;
+        }
+
+        #endregion
+
 
         #region 도서 BOOK TABLE
 
@@ -306,6 +433,7 @@ namespace Team1_Project.dao {
 
 
         #endregion
+
 
         #region 강좌 LECTURE TABLE
 

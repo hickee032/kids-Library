@@ -137,6 +137,18 @@
     <Compile Include="ui\FormAddLecture.Designer.cs">
       <DependentUpon>FormAddLecture.cs</DependentUpon>
     </Compile>
+    <Compile Include="ui\FormEditPfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormEditPfil.Designer.cs">
+      <DependentUpon>FormEditPfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\FormIDPermitted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormIDPermitted.Designer.cs">
+      <DependentUpon>FormIDPermitted.cs</DependentUpon>
+    </Compile>
     <Compile Include="ui\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +209,12 @@
     <Compile Include="utill\VideoPlay.cs" />
     <EmbeddedResource Include="ui\FormAddLecture.resx">
       <DependentUpon>FormAddLecture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\FormEditPfil.resx">
+      <DependentUpon>FormEditPfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\FormIDPermitted.resx">
+      <DependentUpon>FormIDPermitted.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ui\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
@@ -413,6 +431,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_party.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_btx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_btx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_bell.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

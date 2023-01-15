@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library_Manager", "Team1_Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winformtest", "winformtest\winformtest.csproj", "{FC595D88-1D1C-4211-9272-EBC80E9A8002}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadingWindow", "LoadingWindow\LoadingWindow.csproj", "{6D4458B7-906D-46FE-A83E-DFBD4CF03EE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FC595D88-1D1C-4211-9272-EBC80E9A8002}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC595D88-1D1C-4211-9272-EBC80E9A8002}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC595D88-1D1C-4211-9272-EBC80E9A8002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D4458B7-906D-46FE-A83E-DFBD4CF03EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D4458B7-906D-46FE-A83E-DFBD4CF03EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D4458B7-906D-46FE-A83E-DFBD4CF03EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D4458B7-906D-46FE-A83E-DFBD4CF03EE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

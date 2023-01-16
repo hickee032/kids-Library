@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Team1_Project.model;
@@ -132,6 +133,97 @@ namespace Team1_Project.dao {
             return comList;
         }
 
+        public List<string> tableGetColumn(string column, string table, string whereCom) {
+
+            List<string> comList = new List<string>();
+
+            string query = $"select {column} from {table} where {whereCom} != 0 and rownum<=2 order by {whereCom} desc";
+
+            Console.WriteLine(query);
+
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            cmd.CommandType = System.Data.CommandType.Text;
+
+            OracleDataReader dr = cmd.ExecuteReader();
+            string getColumn = string.Empty;
+
+            if (dr.HasRows) {
+                while (dr.Read()) {
+
+                    comList.Add(dr[column].ToString());
+                }
+            }
+            else {
+                Console.WriteLine("데이터가 존재하지 않습니다");
+
+            }
+
+            Console.WriteLine(getColumn);
+
+            return comList;
+        }
+
+        public List<string> tableGetColumn(string column, string table,int count, string whereCom) {
+
+            List<string> comList = new List<string>();
+
+            string query = $"select {column} from {table} where rownum <={count} order by {whereCom} desc";
+
+            Console.WriteLine(query);
+
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            cmd.CommandType = System.Data.CommandType.Text;
+
+            OracleDataReader dr = cmd.ExecuteReader();
+            string getColumn = string.Empty;
+
+            if (dr.HasRows) {
+                while (dr.Read()) {
+
+                    comList.Add(dr[column].ToString());
+                }
+            }
+            else {
+                Console.WriteLine("데이터가 존재하지 않습니다");
+
+            }
+
+            Console.WriteLine(getColumn);
+
+            return comList;
+        }
+
+        public string tableGetColumn(string column, string table, string whereCom, string whereVal) {
+
+            string query = $"select {column} from {table} where {whereCom} = '{whereVal}'";
+
+            Console.WriteLine(query);
+
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            cmd.CommandType = System.Data.CommandType.Text;
+
+            OracleDataReader dr = cmd.ExecuteReader();
+            string getColumn = string.Empty;
+
+            if (dr.HasRows) {
+                while (dr.Read()) {
+                    //Console.WriteLine($"이름 : {dr[column]}");
+                    getColumn = dr[column].ToString();
+                }
+            }
+            else {
+                Console.WriteLine("데이터가 존재하지 않습니다");
+
+            }
+
+            Console.WriteLine(getColumn);
+
+            return getColumn;
+        }
+
         public Image tableGetimage(string imageTable) {
 
             Image img = null;
@@ -190,33 +282,33 @@ namespace Team1_Project.dao {
 
         }
 
-        public string tableGetColumn(string column, string table, string whereCom, string whereVal) {
+        public Image tableGetimage( string imgCalm ,string imageTable,string whereVal) {
 
-            string query = $"select {column} from {table} where {whereCom} = '{whereVal}'";
-
-            Console.WriteLine(query);
+            Image img = null;
 
             cmd.Connection = conn;
-            cmd.CommandText = query;
-            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = $"select {imgCalm} from {imageTable} where bnum = '{whereVal}'";
+            cmd.CommandType = CommandType.Text;
 
             OracleDataReader dr = cmd.ExecuteReader();
-            string getColumn = string.Empty;
 
             if (dr.HasRows) {
                 while (dr.Read()) {
-                    //Console.WriteLine($"이름 : {dr[column]}");
-                    getColumn = dr[column].ToString();
+                    byte[] byteData = (byte[])dr["bdimg"];
+                    if (byteData.Length > 0) {
+                        MemoryStream ms = new MemoryStream(byteData);
+                        img = Image.FromStream(ms);
+                    }
+                    else {
+                        img = null;
+                    }
                 }
             }
             else {
-                Console.WriteLine("데이터가 존재하지 않습니다");
-
+                Console.WriteLine("데이터가 존재하지 않음!");
+               
             }
-
-            Console.WriteLine(getColumn);
-
-            return getColumn;
+            return img;
         }
 
         #endregion
@@ -345,7 +437,6 @@ namespace Team1_Project.dao {
 
         #endregion
 
-
         #region 도서 BOOK TABLE
 
         public List<Book> bookShow() {
@@ -365,6 +456,8 @@ namespace Team1_Project.dao {
                         dr["byear"].ToString(),
                         dr["bcat"].ToString(),
                         dr["bdiv"].ToString(),
+                        dr["bnob"].ToString(),
+                        dr["bnobob"].ToString(),
                         dr["bdcount"].ToString()));
                 }
             }
@@ -375,7 +468,7 @@ namespace Team1_Project.dao {
             return bookList;
         }
 
-        public List<Book> bookSearch(string searchTag, string searchText) {
+        public List<Book> searchBook(string searchTag, string searchText) {
             List<Book> searchList = new List<Book>();
             try {
                 string tag = null;
@@ -415,7 +508,245 @@ namespace Team1_Project.dao {
                             dr["byear"].ToString(),
                             dr["bcat"].ToString(),
                             dr["bdiv"].ToString(),
+                            dr["bnob"].ToString(),
+                            dr["bnobob"].ToString(),
                             dr["bdcount"].ToString()));
+                    }
+                }
+                else {
+                    Console.WriteLine("searchData 오류!");
+                }
+                dr.Close();
+
+            }
+            catch (OracleException e) {
+                Console.WriteLine("데이터 검색 에러 :" + e.Message);
+                Console.WriteLine("검색 정보가 누락되어있습니다.");
+                cmd.Transaction.Rollback();
+            }
+            return searchList;
+        }
+
+        public void bookGetImg(PictureBox pic, string name) {
+            cmd.Connection = conn;
+            cmd.CommandText = $"select * from book where bname='{name}'";
+            cmd.CommandType = CommandType.Text;
+            OracleDataReader dr = cmd.ExecuteReader();
+            try {
+                if (dr.HasRows) {
+                    while (dr.Read()) {
+                        byte[] byteData = (byte[])dr["bdimg"]; // book 테이블 bdimg 칼럼  null 이면 예외처리 오류 발생함.
+                        if (byteData.Length > 0) {
+                            MemoryStream ms = new MemoryStream(byteData);
+                            pic.Image = Image.FromStream(ms);
+                        }
+                        else {
+                            pic.Image = null;
+                        }
+                    }
+                }
+                else {
+                    Console.WriteLine("getImg 이미지가 존재하지 않음!");
+                }
+                dr.Close();
+            }
+            catch (OracleException e) {
+                Console.WriteLine("getImg 오류 발생 :" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+
+        }
+
+        //추천
+
+        public void insertRecommend(Recommend recommend) {
+            try {
+                string sql = "insert into recommendedbooks values " +
+                    $"('{recommend.Tnum}', '{recommend.Bnum}')";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                Console.WriteLine("추천 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine("추천 추가 Err:" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+        }
+
+        //----------------------------------------
+
+        #endregion
+
+        #region 대출 DAECHUL TABLE
+
+        public string borrowBook() {
+            string query = "select dnum from daechul order by dnum desc";
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            cmd.CommandType = System.Data.CommandType.Text;
+            OracleDataReader dr = cmd.ExecuteReader();
+            string dnum = string.Empty;
+            if (dr.HasRows) {
+                if (dr.Read()) {
+                    string receiveddnum = dr["dnum"].ToString();
+                    string tempStr = Regex.Replace(receiveddnum, @"\D", "");
+
+                    int rstint = int.Parse(tempStr);
+                    dnum = "D" + (rstint + 1).ToString("0000.");
+                }
+            }
+            else {
+                dnum = "D0001";
+            }
+            dr.Close();
+            return dnum;
+        }
+
+        public void insertDaechul(Daechul daechul) {
+            try {
+                string sql = "insert into daechul values " +
+                    $"('{daechul.Dnum}', '{daechul.Cnum}', '{daechul.Bnum}', " +
+                    $"'{daechul.Ddate}', '{daechul.Dreturn}', '{daechul.Dreturned}')";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                Console.WriteLine("대출 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine("대출 추가 Err:" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+        }
+
+        public List<NoBook> addBnobobBdcount(string dbbnum) {
+            string query = $"select bnum, bnobob, bdcount from book where bnum = '{dbbnum}'";
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            cmd.CommandType = System.Data.CommandType.Text;
+            OracleDataReader dr = cmd.ExecuteReader();
+            List<NoBook> booknobobList = new List<NoBook>();
+            if (dr.HasRows) {
+                while (dr.Read()) {
+                    string receiveBnobob = dr["bnobob"].ToString();
+                    int sumReceiveBnobob = int.Parse(receiveBnobob) + 1;
+                    string returnBnobob = sumReceiveBnobob.ToString();
+
+                    string receiveBdcount = dr["bdcount"].ToString();
+                    int sumReceiveBdcount = int.Parse(receiveBdcount) + 1;
+                    string returnBdcount = sumReceiveBdcount.ToString();
+
+                    booknobobList.Add(new NoBook(
+                        dr["bnum"].ToString(),
+                        returnBnobob,
+                        returnBdcount));
+                }
+            }
+            else {
+                Console.WriteLine("도서 정보가 존재하지 않음");
+            }
+            dr.Close();
+            return booknobobList;
+        }
+
+        public void updateBnobBdcount(List<NoBook> bnobobBdcount) {
+            try {
+                string sql = $"update book set bnobob = '{bnobobBdcount[0].Bnobob}', " +
+                    $"bdcount = '{bnobobBdcount[0].Bdcount}' " +
+                    $"where bnum = '{bnobobBdcount[0].Bnum}'";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                Console.WriteLine("대출 횟수 추가 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine("대출 횟수 추가 Err:" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+        }
+
+        public List<DaechulBook> DaechulShow(string id) {
+
+            string query = $"select d.bnum, bname, baut, ddate, dreturn, dnum " +
+                "from daechul d inner join book b " +
+                $"on d.bnum = b.bnum and cnum = '{id}' and dreturned is null " +
+                "order by dreturn, dnum";
+
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            cmd.CommandType = System.Data.CommandType.Text;
+            OracleDataReader dr = cmd.ExecuteReader();
+            List<DaechulBook> DCBookList = new List<DaechulBook>();
+            if (dr.HasRows) {
+                while (dr.Read()) {
+                    DCBookList.Add(new DaechulBook(
+                        dr["bnum"].ToString(),
+                        dr["bname"].ToString(),
+                        dr["baut"].ToString(),
+                        dr["ddate"].ToString(),
+                        dr["dreturn"].ToString(),
+                        dr["dnum"].ToString()));
+                }
+            }
+            else {
+                Console.WriteLine("대출 정보가 존재하지 않음");
+            }
+            dr.Close();
+            return DCBookList;
+        }
+
+        public List<DaechulBook> DaechulSearch(string searchTag, string searchText) {
+            List<DaechulBook> searchList = new List<DaechulBook>();
+            try {
+                string tag = null;
+                if (searchTag == "도서번호") {
+                    tag = "b.bnum";
+                }
+                else if (searchTag == "도서제목") {
+                    tag = "b.bname";
+                }
+                else if (searchTag == "저자") {
+                    tag = "b.baut";
+                }
+                else if (searchTag == "대출일") {
+                    tag = "d.ddate";
+                }
+                else if (searchTag == "반납예정일") {
+                    tag = "d.dreturn";
+                }
+                /*오라클 select문 select d.bnum, bname, baut, ddate, dreturn, dnum 
+                 * from daechul d inner join book b 
+                 * on d.bnum = b.bnum and cnum = 'C0002' and dreturned is null
+                 * and {tag} like '%{searchText}%' order by dreturn, dnum;*/
+                string sql = $"select b.bnum, bname, baut, ddate, dreturn, dnum " +
+                    $"from daechul d inner join book b " +
+                    $"on d.bnum = b.bnum and cnum = 'C0002' and dreturned is null " +
+                    $"and {tag} like '%{searchText}%' order by dreturn, dnum";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                OracleDataReader dr = cmd.ExecuteReader();
+
+                Console.WriteLine("데이터 검색 성공!");
+
+                if (dr.HasRows) {
+                    while (dr.Read()) {
+                        searchList.Add(new DaechulBook(
+                            dr["bnum"].ToString(),
+                            dr["bname"].ToString(),
+                            dr["baut"].ToString(),
+                            dr["ddate"].ToString(),
+                            dr["dreturn"].ToString(),
+                            dr["dnum"].ToString()));
                     }
                 }
                 else {
@@ -426,14 +757,68 @@ namespace Team1_Project.dao {
             }
             catch (OracleException e) {
                 Console.WriteLine("데이터 검색 에러 :" + e.Message);
+                Console.WriteLine("검색 정보가 누락되어있습니다.");
                 cmd.Transaction.Rollback();
             }
             return searchList;
         }
 
+        public void DaechulReturn(Daechul daechul) {
+            try {
+                string sql = $"update daechul set dreturned = '{daechul.Dreturned}' " +
+                    $"where dnum = '{daechul.Dnum}'";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                Console.WriteLine("반납 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine("도서 반납 Err:" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+        }
+
+        public string SubBnobob(string dbbnum) {
+            string query = $"select bnobob from book where bnum = '{dbbnum}'";
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            cmd.CommandType = System.Data.CommandType.Text;
+            OracleDataReader dr = cmd.ExecuteReader();
+            string returnbnobob = string.Empty;
+            if (dr.HasRows) {
+                while (dr.Read()) {
+                    string dbBnobob = dr["bnobob"].ToString();
+                    int subdbBnobob = int.Parse(dbBnobob) - 1;
+                    returnbnobob = subdbBnobob.ToString();
+                }
+            }
+            else {
+                Console.WriteLine("도서 정보가 존재하지 않음");
+            }
+            dr.Close();
+            return returnbnobob;
+        }
+
+        public void returnBnobob(string dbbnum, string dbbnobob) {
+            try {
+                string sql = $"update book set bnobob = '{dbbnobob}' " +
+                    $"where bnum = '{dbbnum}'";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                Console.WriteLine("대여중인 장서량 감소 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine("대여중인 장서량 감소 Err:" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+        }
 
         #endregion
-
 
         #region 강좌 LECTURE TABLE
 

@@ -1,10 +1,12 @@
-﻿using System;
+﻿using LoadingWindow;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Team1_Project.adapter;
@@ -107,34 +109,62 @@ namespace Team1_Project {
 
         #endregion
 
-
-
         //유저 컨트롤 변수
         public const string UC_HOMEUSER = "UcHome";
         public const string UC_LECTURE = "UcLecture";
         public const string UC_LOGIN = "UcLogIn";
         public const string UC_ADDUSER = "UcAddUser";
-        /*
-        const string UC_SIGNUSER = "UCSign";
-        const string UC_GRADEUSER = "UCGrade";
-        const string UC_VIEWUSER = "UCView";
-        const string UC_MAILUSER = "UCMail";
-        const string UC_SETTINGUSER = "UCSetting";
-        const string UC_ADMINUSER = "UCAdmin";
-        const string UC_HELPUSER = "UCHelp";
-        */
+
+        const string UC_BOOKSEARCH = "UcSearchBook";
+        const string UC_BOOKRETURN = "UcBookReturn";
+
+        const string UC_MEMVERVIEW = "UcMemberView";
 
         BaseAdapter ba = new BaseAdapter();
 
         internal BaseAdapter Ba { get => ba; set => ba = value; }
-
-
 
         public FormMain() {
             InitializeComponent();
             
             controllView(new UcHome(ba), UC_HOMEUSER);
             myProfile.Visible= false;
+
+            int sleepTime = 1600;
+            Thread splashthread = new Thread(new ThreadStart(LoadingScreen.ShowSplashScreen));
+
+            splashthread.IsBackground = true;
+            splashthread.Start();
+
+            Thread.Sleep(sleepTime);
+
+            /*
+            LoadingScreen.updateStatusText("Loading 1..");
+
+            try {
+                Thread.Sleep(sleepTime);
+                LoadingScreen.updateStatusTextWithStatus("Loading 1 ok", TypeOfMessage.Success);
+                Thread.Sleep(sleepTime);
+            }
+            catch (Exception ex) {
+
+                LoadingScreen.updateStatusTextWithStatus("Loading 1 Fail", TypeOfMessage.Error);
+            }
+
+            LoadingScreen.updateStatusText("Loading 2..");
+
+            try {
+                Thread.Sleep(sleepTime);
+                LoadingScreen.updateStatusTextWithStatus("Loading 2 ok", TypeOfMessage.Success);
+                Thread.Sleep(sleepTime);
+            }
+            catch (Exception ex) {
+
+                LoadingScreen.updateStatusTextWithStatus("Loading 2 Fail", TypeOfMessage.Error);
+            }
+            */
+
+            LoadingScreen.CloseSplashScreen();
         }
 
         //슬라이더 버튼 이벤트
@@ -144,15 +174,16 @@ namespace Team1_Project {
             controllView(new UcHome(ba, checkCtype), UC_HOMEUSER);
         }
 
+        private void btnSearch_Click(object sender, EventArgs e) {
+            controllView(new UcBookSearch(ba), UC_BOOKSEARCH);
+            this.Text = "도서 검색";
+        }
+
         private void btnLesson_Click(object sender, EventArgs e) {
             //this.ResetText();
             this.Text = "강좌";
             controllView(new UcLecture(ba, checkCtype), UC_LECTURE);
         }
-
-
-
-
 
         private void btnLogIn_Click(object sender, EventArgs e) {
 
@@ -206,6 +237,8 @@ namespace Team1_Project {
             }
         }
 
+        #region 버튼 이벤트
+
         private void picLibStory_Click(object sender, EventArgs e) {
             FormStory fs = new FormStory();
             fs.ShowDialog();
@@ -216,6 +249,8 @@ namespace Team1_Project {
             fep.ShowDialog();
         }
 
+        #endregion
+
         public static string UC_HOMEUSER1 => UC_HOMEUSER;
 
         public static string UC_LECTURE1 => UC_LECTURE;
@@ -223,5 +258,21 @@ namespace Team1_Project {
         public static string UC_LOGIN1 => UC_LOGIN;
 
         public static string UC_ADDUSER1 => UC_ADDUSER;
+
+        public static string UC_BOOKSEARCH1 => UC_BOOKSEARCH;
+
+        public static string UC_BOOKRETURN1 => UC_BOOKRETURN;
+
+        private void btnReBook_Click(object sender, EventArgs e) {
+            if (CHECK_ID.Equals(string.Empty)) {
+
+                MessageBox.Show("로그인이 필요합니다.");
+            }
+            else {
+                controllView(new UcBookReturn(ba), UC_BOOKRETURN);
+            }
+
+            
+        }
     }
 }

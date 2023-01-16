@@ -27,10 +27,24 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelVideo = new System.Windows.Forms.Panel();
             this.panelHome = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.panelManager = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.labelManager = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnMInfo = new System.Windows.Forms.Button();
+            this.btnMemLook = new System.Windows.Forms.Button();
+            this.btxAddLec = new System.Windows.Forms.Button();
+            this.btnAddBook = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,13 +66,12 @@
             this.btnMap = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.postChange = new System.Windows.Forms.Timer(this.components);
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.labelManager = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelHome.SuspendLayout();
+            this.panelManager.SuspendLayout();
+            this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel13.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -72,9 +85,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBook1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHomeBan1)).BeginInit();
             this.panel7.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,9 +107,9 @@
             // panelHome
             // 
             this.panelHome.BackColor = System.Drawing.Color.MistyRose;
-            this.panelHome.Controls.Add(this.panel14);
+            this.panelHome.Controls.Add(this.panelManager);
+            this.panelHome.Controls.Add(this.panel15);
             this.panelHome.Controls.Add(this.panel13);
-            this.panelHome.Controls.Add(this.panel12);
             this.panelHome.Controls.Add(this.panel6);
             this.panelHome.Controls.Add(this.panel5);
             this.panelHome.Controls.Add(this.panel4);
@@ -113,19 +123,148 @@
             this.panelHome.Size = new System.Drawing.Size(987, 600);
             this.panelHome.TabIndex = 12;
             // 
-            // panel11
+            // panelManager
             // 
-            this.panel11.Location = new System.Drawing.Point(162, 117);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(40, 101);
-            this.panel11.TabIndex = 18;
+            this.panelManager.Controls.Add(this.panel14);
+            this.panelManager.Controls.Add(this.label8);
+            this.panelManager.Controls.Add(this.label7);
+            this.panelManager.Controls.Add(this.label6);
+            this.panelManager.Controls.Add(this.label5);
+            this.panelManager.Controls.Add(this.btnMInfo);
+            this.panelManager.Controls.Add(this.btnMemLook);
+            this.panelManager.Controls.Add(this.btxAddLec);
+            this.panelManager.Controls.Add(this.btnAddBook);
+            this.panelManager.Location = new System.Drawing.Point(718, 333);
+            this.panelManager.Name = "panelManager";
+            this.panelManager.Size = new System.Drawing.Size(220, 249);
+            this.panelManager.TabIndex = 19;
             // 
-            // panel10
+            // panel14
             // 
-            this.panel10.Location = new System.Drawing.Point(116, 70);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(40, 148);
-            this.panel10.TabIndex = 17;
+            this.panel14.BackColor = System.Drawing.Color.LightPink;
+            this.panel14.Controls.Add(this.pictureBox5);
+            this.panel14.Controls.Add(this.labelManager);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(220, 40);
+            this.panel14.TabIndex = 12;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::Team1_Project.Properties.Resources.icon_bell;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(34, 34);
+            this.pictureBox5.TabIndex = 2;
+            this.pictureBox5.TabStop = false;
+            // 
+            // labelManager
+            // 
+            this.labelManager.AutoSize = true;
+            this.labelManager.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelManager.Location = new System.Drawing.Point(43, 9);
+            this.labelManager.Name = "labelManager";
+            this.labelManager.Size = new System.Drawing.Size(111, 23);
+            this.labelManager.TabIndex = 0;
+            this.labelManager.Text = "관리자 메뉴";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label8.Location = new System.Drawing.Point(114, 154);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 15);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "정보 보기";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label7.Location = new System.Drawing.Point(44, 154);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 15);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "회원 보기";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(114, 63);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 15);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "강의 등록";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(44, 63);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 15);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "도서 등록";
+            // 
+            // btnMInfo
+            // 
+            this.btnMInfo.Location = new System.Drawing.Point(116, 171);
+            this.btnMInfo.Name = "btnMInfo";
+            this.btnMInfo.Size = new System.Drawing.Size(64, 64);
+            this.btnMInfo.TabIndex = 3;
+            this.btnMInfo.Text = "button5";
+            this.btnMInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnMemLook
+            // 
+            this.btnMemLook.Location = new System.Drawing.Point(46, 171);
+            this.btnMemLook.Name = "btnMemLook";
+            this.btnMemLook.Size = new System.Drawing.Size(64, 64);
+            this.btnMemLook.TabIndex = 2;
+            this.btnMemLook.Text = "button4";
+            this.btnMemLook.UseVisualStyleBackColor = true;
+            // 
+            // btxAddLec
+            // 
+            this.btxAddLec.Location = new System.Drawing.Point(116, 81);
+            this.btxAddLec.Name = "btxAddLec";
+            this.btxAddLec.Size = new System.Drawing.Size(64, 64);
+            this.btxAddLec.TabIndex = 1;
+            this.btxAddLec.Text = "button3";
+            this.btxAddLec.UseVisualStyleBackColor = true;
+            // 
+            // btnAddBook
+            // 
+            this.btnAddBook.Location = new System.Drawing.Point(46, 81);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(64, 64);
+            this.btnAddBook.TabIndex = 0;
+            this.btnAddBook.Text = "button2";
+            this.btnAddBook.UseVisualStyleBackColor = true;
+            // 
+            // panel15
+            // 
+            this.panel15.BackgroundImage = global::Team1_Project.Properties.Resources.SplashImg;
+            this.panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel15.Location = new System.Drawing.Point(718, 333);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(220, 249);
+            this.panel15.TabIndex = 21;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.panel8);
+            this.panel13.Controls.Add(this.panel9);
+            this.panel13.Controls.Add(this.panel11);
+            this.panel13.Controls.Add(this.panel10);
+            this.panel13.Location = new System.Drawing.Point(718, 66);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(220, 249);
+            this.panel13.TabIndex = 20;
             // 
             // panel8
             // 
@@ -140,6 +279,20 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(40, 172);
             this.panel9.TabIndex = 15;
+            // 
+            // panel11
+            // 
+            this.panel11.Location = new System.Drawing.Point(162, 117);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(40, 101);
+            this.panel11.TabIndex = 18;
+            // 
+            // panel10
+            // 
+            this.panel10.Location = new System.Drawing.Point(116, 70);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(40, 148);
+            this.panel10.TabIndex = 17;
             // 
             // panel6
             // 
@@ -277,6 +430,7 @@
             // picBook2
             // 
             this.picBook2.BackColor = System.Drawing.Color.White;
+            this.picBook2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBook2.Location = new System.Drawing.Point(207, 54);
             this.picBook2.Name = "picBook2";
             this.picBook2.Size = new System.Drawing.Size(142, 172);
@@ -286,6 +440,7 @@
             // picBook1
             // 
             this.picBook1.BackColor = System.Drawing.Color.White;
+            this.picBook1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBook1.Location = new System.Drawing.Point(28, 54);
             this.picBook1.Name = "picBook1";
             this.picBook1.Size = new System.Drawing.Size(142, 172);
@@ -356,54 +511,6 @@
             // 
             this.postChange.Tick += new System.EventHandler(this.postChange_Tick);
             // 
-            // panel12
-            // 
-            this.panel12.Location = new System.Drawing.Point(718, 319);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(220, 249);
-            this.panel12.TabIndex = 19;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.panel8);
-            this.panel13.Controls.Add(this.panel9);
-            this.panel13.Controls.Add(this.panel11);
-            this.panel13.Controls.Add(this.panel10);
-            this.panel13.Location = new System.Drawing.Point(718, 66);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(220, 249);
-            this.panel13.TabIndex = 20;
-            // 
-            // labelManager
-            // 
-            this.labelManager.AutoSize = true;
-            this.labelManager.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.labelManager.Location = new System.Drawing.Point(43, 9);
-            this.labelManager.Name = "labelManager";
-            this.labelManager.Size = new System.Drawing.Size(111, 23);
-            this.labelManager.TabIndex = 0;
-            this.labelManager.Text = "관리자 메뉴";
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.LightPink;
-            this.panel14.Controls.Add(this.pictureBox5);
-            this.panel14.Controls.Add(this.labelManager);
-            this.panel14.Location = new System.Drawing.Point(718, 319);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(220, 40);
-            this.panel14.TabIndex = 12;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::Team1_Project.Properties.Resources.icon_bell;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(34, 34);
-            this.pictureBox5.TabIndex = 2;
-            this.pictureBox5.TabStop = false;
-            // 
             // UcHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -414,6 +521,12 @@
             this.Load += new System.EventHandler(this.UcHome_Load);
             this.panel1.ResumeLayout(false);
             this.panelHome.ResumeLayout(false);
+            this.panelManager.ResumeLayout(false);
+            this.panelManager.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel13.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -432,10 +545,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbHomeBan1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -474,6 +583,15 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label labelManager;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panelManager;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnMInfo;
+        private System.Windows.Forms.Button btnMemLook;
+        private System.Windows.Forms.Button btxAddLec;
+        private System.Windows.Forms.Button btnAddBook;
     }
 }

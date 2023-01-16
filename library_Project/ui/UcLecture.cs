@@ -42,12 +42,7 @@ namespace Team1_Project.ui {
             this.ba = ba;
             this.lectureData= new List<Lecture>(ba.Ora.lectureShow());
 
-          
-                                                   // Console.WriteLine(lectureData[0].LName);
             this.Load += UcLecture_Load;
-
-            // Console.WriteLine(lectureData.Count);
-            //lectureData = new List<Lecture>(ba.Ora.lectureShow());
 
             if (checkCtype == 5) {
                 btnLecAdd.Visible = true;
@@ -55,9 +50,9 @@ namespace Team1_Project.ui {
             else {               
                 btnLecAdd.Visible= true;
             }
-
-            
         }
+
+
 
         #endregion
 
@@ -70,7 +65,7 @@ namespace Team1_Project.ui {
         #region 버튼이벤트 
 
         private void btnLecAdd_Click(object sender, EventArgs e) {
-            FormAddLecture fal = new FormAddLecture(ba);
+            FormAddLecture fal = new FormAddLecture(ba, this);
             fal.ShowDialog();
         }
 
@@ -108,7 +103,7 @@ namespace Team1_Project.ui {
 
         public void GetImageListView(List<Lecture> lecList,int btnCount) {
 
-            int a,b = 0;
+            //int a,b = 0;
 
             
             //픽쳐박스
@@ -143,6 +138,7 @@ namespace Team1_Project.ui {
             }
            this.Refresh();   
         }
+
 
         public void pbxAddImgList(List<Lecture> LectureList, ImageList imgList, List<PictureBox> pbx,
             List<Label> lage, List<Label> lclass, List<Label> ldate, List<Label> ldays, List<Label> ltimes,

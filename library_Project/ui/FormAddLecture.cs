@@ -18,11 +18,27 @@ namespace Team1_Project.ui {
     partial class FormAddLecture : MetroFramework.Forms.MetroForm {
 
         BaseAdapter ba;
-        
+        UserControl uc;
+
         public FormAddLecture(BaseAdapter ba) {
             InitializeComponent();
             this.ba = ba;
             dateTimePickerSetting();
+
+            //콤보 박스에 데이터 넣기
+            lTechCbxAdd("mname", "manager");
+
+            lNumLabel.Text = LectNum(ba.Ora.tableCount("lecture"));
+
+            ba.Ora.tableCount("lecture");
+        }
+
+        public FormAddLecture(BaseAdapter ba, UserControl uc) {
+            InitializeComponent();
+            this.ba = ba;
+            this.uc = uc;
+            dateTimePickerSetting();
+
             //콤보 박스에 데이터 넣기
             lTechCbxAdd("mname", "manager");
 
@@ -88,10 +104,18 @@ namespace Team1_Project.ui {
             Console.WriteLine(week);
             Console.WriteLine(time);
             Console.WriteLine(teacher);
+
             ba.Ora.lectureImgImg(lNumLabel.Text, openFileImg.FileName);
-            ba.Ora.insertData(new Lecture(num,title,loc,age,per,time,week,teacher));
+            try {
+                ba.Ora.insertData(new Lecture(num, title, loc, age, per, time, week, teacher));
 
+                this.Close();
+                uc.Refresh();
+            }
+            catch (Exception) {
 
+                MessageBox.Show("빈칸이 있습니다.");
+            }
         }
 
         private void btnLectCancel_Click(object sender, EventArgs e) {

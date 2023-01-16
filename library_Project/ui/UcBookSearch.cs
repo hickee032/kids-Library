@@ -16,26 +16,28 @@ namespace Team1_Project.ui {
 
         BaseAdapter ba;
 
-        public UcBookSearch() {
-            InitializeComponent();
-        }
-
         public UcBookSearch(BaseAdapter ba) {
             InitializeComponent();
             this.ba = ba;
+            //enalbeRecommendBookbtn(로그인아이디번호)
         }
 
-        private void BookListView() {
-            DaoOra ora = ba.Ora;
-            List<Book> list = ora.bookShow();
-            updateListView(list);
-        }
-
-        private void SearchBook_Load(object sender, EventArgs e) {
+        private void UcBookSearch_Load(object sender, EventArgs e) {
+            Console.WriteLine("검색에 들어옴");
             BookListView();
         }
 
-        private void updateListView(List<Book> list) {
+        #region 도서 리스트 뷰
+
+        private void BookListView() {
+            Console.WriteLine("검색 list 들어옴");
+            DaoOra ora = ba.Ora;
+            List<Book> list = ora.bookShow();
+            updatebookLView(list);
+        }
+
+
+        private void updatebookLView(List<Book> list) {
             bookLView.BeginUpdate();
             bookLView.Items.Clear();
 #if true
@@ -50,6 +52,8 @@ namespace Team1_Project.ui {
                         list[i].Byear,
                         list[i].Bcat,
                         list[i].Bdiv,
+                        list[i].Bnob,
+                        list[i].Bnobob,
                         list[i].Bdcount
                     }));
             }
@@ -67,57 +71,52 @@ namespace Team1_Project.ui {
                         n.Byear,
                         n.Bcat,
                         n.Bdiv,
+                        n.Bnob,
+                        n.Bnobob,
                         n.Bdcount
                     }));
             }
 #endif
             bookLView.EndUpdate();
         }
+
+        private void bookLView_SelectedIndexChanged(object sender, EventArgs e) {
+            DaoOra ora = ba.Ora;
+            if (bookLView.SelectedItems.Count != 0) {
+                int n = bookLView.SelectedItems[0].Index;
+                string bnum = bookLView.Items[n].SubItems[0].Text;
+                string bname = bookLView.Items[n].SubItems[1].Text;
+                string baut = bookLView.Items[n].SubItems[2].Text;
+                string bpub = bookLView.Items[n].SubItems[3].Text;
+
+                Console.WriteLine("도서 번호 :" + bnum);
+                Console.WriteLine("  도서명  :" + bname);
+                Console.WriteLine("   저자   :" + baut);
+                Console.WriteLine("  출판사  :" + bpub);
+
+
+                if (picview.Image != null) {
+                    picview.Image.Dispose();
+                    picview.Image = null;
+                }
+
+                ora.bookGetImg(picview, bname.ToString());
+            }
+        }
+
+        #endregion
+
+        #region 버튼이벤트
 
         private void searchBookbtn_Click(object sender, EventArgs e) {
             DaoOra ora = ba.Ora;
             List<Book> list = null;
 
             if (ora != null) {
-                list = ora.bookSearch(searchBookComboBox.Text,
-                    searchBookTextBox.Text);
+                list = ora.searchBook(searchBookComboBox.Text, searchBookTextBox.Text);
             }
-            bookLView.BeginUpdate();
-            bookLView.Items.Clear();
-#if true
-            for (int i = 0; i < list.Count; i++) {
-                bookLView.Items.Add(new ListViewItem(
-                    new string[]
-                    {
-                        list[i].Bnum,
-                        list[i].Bname,
-                        list[i].Baut,
-                        list[i].Bpub,
-                        list[i].Byear,
-                        list[i].Bcat,
-                        list[i].Bdiv,
-                        list[i].Bdcount
-                    }));
-            }
-#else
-            int num = 1;
-            foreach(var n in list)
-            {
-                bookLView.Items.Add(new ListViewItem(
-                    new string[]
-                    {
-                        n.Bnum,
-                        n.Bname,
-                        n.Baut,
-                        n.Bpub,
-                        n.Byear,
-                        n.Bcat,
-                        n.Bdiv,
-                        n.Bdcount
-                    }));
-            }
-#endif
-            bookLView.EndUpdate();
+
+            updatebookLView(list);
         }
 
         private void searchBookResetbtn_Click(object sender, EventArgs e) {
@@ -138,11 +137,20 @@ namespace Team1_Project.ui {
                     string year = bookLView.Items[n].SubItems[4].Text;
                     string cat = bookLView.Items[n].SubItems[5].Text;
                     string div = bookLView.Items[n].SubItems[6].Text;
+                    string nob = bookLView.Items[n].SubItems[7].Text;
+                    string nobob = bookLView.Items[n].SubItems[8].Text;
+
+                    int nobInt = int.Parse(nob);
+                    int nobobInt = int.Parse(nobob);
+                    if (nobInt - nobobInt <= 0) {
+                        MessageBox.Show("잔여 장서량이 부족한 도서가 포함되어있습니다.", "잔여 도서 부족");
+                        return;
+                    }
 
                     selectedBookLView.Items.Add(new ListViewItem(
                     new string[]
                     {
-                        num,name,author,pub,year,cat,div
+                        num,name,author,pub,year,cat,div,nob,nobob
                     }));
                 }
             }
@@ -174,27 +182,81 @@ namespace Team1_Project.ui {
             }
         }
 
-        private void RecommendBookbtn_Click(object sender, EventArgs e) {
+        private void BorrowBookbtn_Click(object sender, EventArgs e) {
+            DaoOra ora = ba.Ora;
+            //DateTime nowDate;
 
+            if (MessageBox.Show("담아두신 도서들을 대출하시겠습니까?." +
+                    "\r계속 하시겠습니까?", "도서 대출",
+                    MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                for (int i = 0; i < selectedBookLView.Items.Count; i++) {
+                    string dbdnum = ora.borrowBook();
+                    string dbcnum = "C0002";    // 이후 로그인한 계정의 CNUM으로 수정
+                    string dbbnum = selectedBookLView.Items[i].SubItems[0].Text;
+                    string dbddate = DateTime.Now.ToString("yyyy년MM월dd일");
+                    string dbdreturn = DateTime.Now.AddDays(7).ToString("yyyy년MM월dd일");
+                    string dbdreturned = string.Empty;
+                    ora.insertDaechul(new Daechul(dbdnum, dbcnum, dbbnum, dbddate,
+                        dbdreturn, dbdreturned));
+
+                    List<NoBook> bnobobBdcount = ora.addBnobobBdcount(dbbnum);
+                    ora.updateBnobBdcount(bnobobBdcount);
+                }
+
+                if (selectedBookLView.Items.Count != 0) {
+                    int cancelCount = selectedBookLView.Items.Count;
+                    for (int i = 0; i < cancelCount; i++) {
+                        int index = selectedBookLView.Items[0].Index;
+                        selectedBookLView.Items.RemoveAt(index);
+                    }
+                }
+                else {
+                    MessageBox.Show("선택된 항목이 없습니다.");
+                }
+                BookListView();
+            }
         }
 
-        private void cancelAllBookbtn_Click(object sender, EventArgs e) {
-            {
-                if (MessageBox.Show("선택하신 모든 항목이 삭제 됩니다." +
-                    "\r계속 하시겠습니까?", "항목 삭제",
+        private void RecommendBookbtn_Click(object sender, EventArgs e) {
+            DaoOra ora = ba.Ora;
+
+            if (MessageBox.Show("담아두신 도서들을 추천하시겠습니까?." +
+                    "\r계속 하시겠습니까?", "도서 추천",
                     MessageBoxButtons.YesNo) == DialogResult.Yes) {
-                    if (selectedBookLView.Items.Count != 0) {
-                        int cancelCount = selectedBookLView.Items.Count;
-                        for (int i = 0; i < cancelCount; i++) {
-                            int index = selectedBookLView.Items[0].Index;
-                            selectedBookLView.Items.RemoveAt(index);
-                        }
+                for (int i = 0; i < selectedBookLView.Items.Count; i++) {
+                    string dbtnum = "C0146";    // 이후 로그인한 계정의 CNUM으로 수정
+                    string dbbnum = selectedBookLView.Items[i].SubItems[0].Text;
+                    ora.insertRecommend(new Recommend(dbtnum, dbbnum));
+                }
+
+                if (selectedBookLView.Items.Count != 0) {
+                    int cancelCount = selectedBookLView.Items.Count;
+                    for (int i = 0; i < cancelCount; i++) {
+                        int index = selectedBookLView.Items[0].Index;
+                        selectedBookLView.Items.RemoveAt(index);
                     }
-                    else {
-                        MessageBox.Show("선택된 항목이 없습니다.");
-                    }
+                }
+                else {
+                    MessageBox.Show("선택된 항목이 없습니다.");
                 }
             }
         }
+
+        private void cancelAllBookbtn_Click(object sender, EventArgs e) {
+            if (MessageBox.Show("선택하신 모든 항목이 삭제 됩니다." +
+                    "\r계속 하시겠습니까?", "항목 삭제",
+                    MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                if (selectedBookLView.Items.Count != 0) {
+                    selectedBookLView.Items.Clear();
+                }
+                else {
+                    MessageBox.Show("선택된 항목이 없습니다.");
+                }
+            }
+        }
+
+        #endregion
+
+
     }
 }

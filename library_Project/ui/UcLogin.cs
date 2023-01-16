@@ -14,7 +14,7 @@ namespace Team1_Project.ui {
 
     partial class UcLogin : UserControl {
 
-        int checkCtype = 0;
+        //int checkCtype = 0;
 
         public static string id = string.Empty;
 

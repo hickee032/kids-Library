@@ -21,7 +21,7 @@ namespace Team1_Project.dao {
            "(PORT=1521)))" +
            "(CONNECT_DATA=(SERVER=DEDICATED)" +
            "(SERVICE_NAME=XE)));" +
-           "User Id=test;Password=1234;";
+           "User Id=team1;Password=1234;";
 
         OracleConnection conn;
         OracleCommand cmd;
@@ -413,6 +413,8 @@ namespace Team1_Project.dao {
             dr.Close();
             return cnum1;
         }
+
+
         //회원정보 수정 업데이트
         public List<Customer> updateProfile(string cnum, Customer cus) {
             try {
@@ -432,6 +434,181 @@ namespace Team1_Project.dao {
                 cmd.Transaction.Rollback();
             }
             List<Customer> list = showProfile(cnum);
+            return list;
+        }
+
+        public List<Customer> customerDataShow() {
+            string query = "select * from customer";
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            cmd.CommandType = System.Data.CommandType.Text;
+            OracleDataReader dr = cmd.ExecuteReader();
+            List<Customer> customerList = new List<Customer>();
+            if (dr.HasRows) {
+                while (dr.Read()) {
+                    customerList.Add(new Customer(
+                        dr["cnum"].ToString(),
+                        dr["cname"].ToString(),
+                        dr["cage"].ToString(),
+                        dr["cgen"].ToString(),
+                        dr["ctel"].ToString(),
+                        dr["clast"].ToString(),
+                        dr["ctype"].ToString(),
+                        dr["pnum"].ToString(),
+                        dr["tnum"].ToString(),
+                        dr["cschool"].ToString(),
+                        dr["cint"].ToString(),
+                        dr["lnum"].ToString()));
+                }
+            }
+            else {
+                Console.WriteLine("회원 정보가 존재하지 않음");
+            }
+            dr.Close();
+            return customerList;
+        }
+
+        public List<Customer> customerDataType(string type) {
+            string query = $"select * from customer where ctype LIKE '{type}'";
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            cmd.CommandType = System.Data.CommandType.Text;
+            OracleDataReader dr = cmd.ExecuteReader();
+            List<Customer> customerList = new List<Customer>();
+            if (dr.HasRows) {
+                while (dr.Read()) {
+                    customerList.Add(new Customer(
+                        dr["cnum"].ToString(),
+                        dr["cname"].ToString(),
+                        dr["cage"].ToString(),
+                        dr["cgen"].ToString(),
+                        dr["ctel"].ToString(),
+                        dr["clast"].ToString(),
+                        dr["ctype"].ToString(),
+                        dr["pnum"].ToString(),
+                        dr["tnum"].ToString(),
+                        dr["cschool"].ToString(),
+                        dr["cint"].ToString(),
+                        dr["lnum"].ToString()));
+                }
+            }
+            else {
+                Console.WriteLine("회원 정보가 존재하지 않음");
+            }
+            dr.Close();
+            return customerList;
+        }
+
+        public List<Customer> customerSearch(string searchTag, string searchText) {
+            List<Customer> customerList = new List<Customer>();
+            try {
+                string tag = null;
+                if (searchTag == "회원번호") {
+                    tag = "cnum";
+                }
+                else if (searchTag == "이름") {
+                    tag = "cname";
+                }
+                else if (searchTag == "연락처") {
+                    tag = "ctel";
+                }
+                else if (searchTag == "회원번호") {
+                    tag = "pnum";
+                }
+                else if (searchTag == "회원번호") {
+                    tag = "tnum";
+                }
+                else if (searchTag == "소속") {
+                    tag = "cschool";
+                }
+
+                string sql = $"select * from customer where {tag} like '%{searchText}%'";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                OracleDataReader dr = cmd.ExecuteReader();
+
+                Console.WriteLine("데이터 검색 성공!");
+
+                if (dr.HasRows) {
+                    while (dr.Read()) {
+                        customerList.Add(new Customer(
+                        dr["cnum"].ToString(),
+                        dr["cname"].ToString(),
+                        dr["cage"].ToString(),
+                        dr["cgen"].ToString(),
+                        dr["ctel"].ToString(),
+                        dr["clast"].ToString(),
+                        dr["ctype"].ToString(),
+                        dr["pnum"].ToString(),
+                        dr["tnum"].ToString(),
+                        dr["cschool"].ToString(),
+                        dr["cint"].ToString(),
+                        dr["lnum"].ToString()));
+                    }
+                }
+                else {
+                    Console.WriteLine("데이터가 존재하지 않음!");
+                }
+                dr.Close();
+
+            }
+            catch (OracleException e) {
+                Console.WriteLine("데이터 검색 에러 :" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+            return customerList;
+        }
+
+        public List<Customer> customerDelete(string cname, Customer cst) {
+            try {
+                string sql = $"delete from customer where cname = '{cname}'";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                Console.WriteLine("회원정보 삭제 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine("회원정보 삭제 오류 :" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+            List<Customer> list = customerDataShow();
+            return list;
+        }
+
+        public List<Customer> customerUpdate(string cname, Customer cst) {
+            try {
+                string sql = "update customer set " +
+                    $"Cnum='{cst.Cnum}', " +
+                    $"Cname='{cst.Cname}', " +
+                    $"Cage='{cst.Cage}', " +
+                    $"Cgen='{cst.Cgen}', " +
+                    $"Ctel='{cst.Ctel}', " +
+                    $"Clast='{cst.Clast}',  " +
+                    $"Ctype='{cst.Ctype}', " +
+                    $"Pnum='{cst.Pnum}', " +
+                    $"Tnum='{cst.Tnum}', " +
+                    $"Cschool='{cst.Cschool}', " +
+                    $"Cint='{cst.Cint}', " +
+                    $"Lnum='{cst.Lnum}' " +
+                    $"where cname='{cname}'";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                Console.WriteLine("회원정보 수정 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine("회원정보 수정 에러:" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+            List<Customer> list = customerDataShow();
             return list;
         }
 
@@ -487,6 +664,9 @@ namespace Team1_Project.dao {
                 else if (searchTag == "구분") {
                     tag = "bdiv";
                 }
+                else {
+                    MessageBox.Show("검색항목을 선택해주세요");
+                }
                 string sql = $"select * from book where {tag} like '%{searchText}%'";
                 cmd.Transaction = conn.BeginTransaction();
                 cmd.Connection = conn;
@@ -525,6 +705,25 @@ namespace Team1_Project.dao {
                 cmd.Transaction.Rollback();
             }
             return searchList;
+        }
+
+        public List<Book> deleteBook(string bname, Book bk) {
+            try {
+                string sql = $"delete from BOOK where bname = '{bname}'";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                Console.WriteLine("deleteBook 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine("deleteBook 에러 :" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+            List<Book> list = bookShow();
+            return list;
+
         }
 
         public void bookGetImg(PictureBox pic, string name) {
@@ -579,6 +778,188 @@ namespace Team1_Project.dao {
         //----------------------------------------
 
         #endregion
+
+        public List<Book> updateBook(string bname, Book bk) {
+            try {
+                string sql = "UPDATE book SET " +
+                    $"Bnum='{bk.Bnum}', " +
+                    $"Bname='{bk.Bname}', " +
+                    $"Baut='{bk.Baut}', " +
+                    $"Bpub='{bk.Bpub}', " +
+                    $"Byear='{bk.Byear}', " +
+                    $"Bcat='{bk.Bcat}',  " +
+                    $"Bdiv='{bk.Bdiv}', " +
+                    $"Bnob='{bk.Bnob}', " +
+                    $"Bdimg= :image " +
+                    $"WHERE bname='{bname}'";
+                cmd.Connection = conn;
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.CommandText = sql;
+
+                FileStream fs = new FileStream(bk.Path, FileMode.Open, FileAccess.Read);
+                byte[] buffer = new byte[fs.Length - 1];
+                fs.Read(buffer, 0, buffer.Length);
+                fs.Close();
+                OracleParameter op = new OracleParameter();
+                op.ParameterName = ":image";
+                op.OracleDbType = OracleDbType.Blob;
+                op.Direction = ParameterDirection.Input;
+                op.Size = buffer.Length;
+                op.Value = buffer;
+                cmd.Parameters.Add(op);
+
+                cmd.ExecuteNonQuery();
+                cmd.Parameters.Clear();
+                cmd.Transaction.Commit();
+                Console.WriteLine("updateBook 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine("updateBook 오류 : " + e.Message);
+                cmd.Transaction.Rollback();
+            }
+            List<Book> list = bookShow();
+            return list;
+
+        }
+
+
+        public bool duplicationFind(string searchText) {
+            bool found = false;
+            List<Book> bookList = new List<Book>();
+            try {
+                string sql = $"select * from book where bname like '%{searchText}%'";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                OracleDataReader dr = cmd.ExecuteReader();
+
+                if (dr.HasRows) {
+                    // sql 업데이트문으로 bnob 증가 시키기.
+                    Console.WriteLine("이미 등록된 책입니다. 장서 수를 추가합니다.");
+
+                    //string sqlUpdate = $"UPDATE book SET bnob = bnob + 1 WHERE bname = '{searchText}'";
+                    //Console.WriteLine("bnob 증가 성공! ");
+                    found = true;
+                }
+                else {
+                    Console.WriteLine("데이터가 존재하지 않음!");
+                }
+                dr.Close();
+            }
+            catch (OracleException e) {
+                Console.WriteLine("중복 처리 에러 :" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+            return found;
+        }
+
+        public string AddBnob(string dbbname) {
+            string query = $"select bnob from book where bname = '{dbbname}'";
+            cmd.Connection = conn;
+            cmd.CommandText = query;
+            cmd.CommandType = System.Data.CommandType.Text;
+            OracleDataReader dr = cmd.ExecuteReader();
+            string returnbnob = string.Empty;
+            if (dr.HasRows) {
+                while (dr.Read()) {
+                    string dbBnob = dr["bnob"].ToString();
+                    int subdbBnob = int.Parse(dbBnob) + 1;
+                    returnbnob = subdbBnob.ToString();
+                }
+            }
+            else {
+                Console.WriteLine("도서 정보가 존재하지 않음");
+            }
+            dr.Close();
+            return returnbnob;
+        }
+
+        public void returnBnob(string dbbname, string dbbnob){
+            try {
+                string sql = $"update book set bnob = '{dbbnob}' " +
+                    $"where bname = '{dbbname}'";
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+                cmd.Transaction.Commit();
+                Console.WriteLine("총장서량 증가 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine("총장서량 증가 Err:" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+        }
+
+        public void insertBook(Book bk) {
+            try {
+                string sql = "insert into book values " +
+                    $"('{bk.Bnum}', '{bk.Bname}', '{bk.Baut}', " +
+                    $"'{bk.Bpub}', '{bk.Byear}', '{bk.Bcat}', " +
+                    $"'{bk.Bdiv}','{bk.Bnob}','{bk.Bnobob}', '{bk.Bdcount}', :image)";
+                cmd.Connection = conn;
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.CommandText = sql;
+
+                FileStream fs = new FileStream(bk.Path, FileMode.Open, FileAccess.Read);
+                byte[] buffer = new byte[fs.Length - 1];
+                fs.Read(buffer, 0, buffer.Length);
+                fs.Close();
+                OracleParameter op = new OracleParameter();
+                op.ParameterName = ":image";
+                op.OracleDbType = OracleDbType.Blob;
+                op.Direction = ParameterDirection.Input;
+                op.Size = buffer.Length;
+                op.Value = buffer;
+                cmd.Parameters.Add(op);
+
+                cmd.ExecuteNonQuery();
+                cmd.Parameters.Clear();
+                cmd.Transaction.Commit();
+                Console.WriteLine("insertBook2 성공!");
+                Console.WriteLine("이미지 추가 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine("insertBook2 오류 :" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+        }
+
+        public void bookImgSave(string name, string path) {
+
+            string sql = $"insert into saveimg_t " +
+                $"values ('{name}', :image)";
+            try {
+                cmd.Connection = conn;
+                cmd.Transaction = conn.BeginTransaction();
+                cmd.CommandText = sql;
+                FileStream fs =
+                    new FileStream(path, FileMode.Open,
+                        FileAccess.Read);
+                byte[] buffer = new byte[fs.Length - 1];
+                fs.Read(buffer, 0, buffer.Length);
+                fs.Close();
+                OracleParameter op =
+                    new OracleParameter();
+                op.ParameterName = ":image";
+                op.OracleDbType = OracleDbType.Blob;
+                op.Direction = ParameterDirection.Input;
+                op.Size = buffer.Length;
+                op.Value = buffer;
+                cmd.Parameters.Add(op);
+                cmd.ExecuteNonQuery();
+                cmd.Parameters.Clear();
+                cmd.Transaction.Commit();
+                Console.WriteLine("이미지 추가 성공!");
+            }
+            catch (OracleException e) {
+                Console.WriteLine("이미지 추가 Err:" + e.Message);
+                cmd.Transaction.Rollback();
+            }
+        }
 
         #region 대출 DAECHUL TABLE
 
@@ -701,10 +1082,11 @@ namespace Team1_Project.dao {
             return DCBookList;
         }
 
-        public List<DaechulBook> DaechulSearch(string searchTag, string searchText) {
+        public List<DaechulBook> DaechulSearch(string searchTag, string searchText , string id) {
             List<DaechulBook> searchList = new List<DaechulBook>();
             try {
                 string tag = null;
+
                 if (searchTag == "도서번호") {
                     tag = "b.bnum";
                 }
@@ -720,13 +1102,16 @@ namespace Team1_Project.dao {
                 else if (searchTag == "반납예정일") {
                     tag = "d.dreturn";
                 }
+                else {
+                    MessageBox.Show("검색항목을 선택해주세요");
+                }
                 /*오라클 select문 select d.bnum, bname, baut, ddate, dreturn, dnum 
                  * from daechul d inner join book b 
                  * on d.bnum = b.bnum and cnum = 'C0002' and dreturned is null
                  * and {tag} like '%{searchText}%' order by dreturn, dnum;*/
                 string sql = $"select b.bnum, bname, baut, ddate, dreturn, dnum " +
                     $"from daechul d inner join book b " +
-                    $"on d.bnum = b.bnum and cnum = 'C0002' and dreturned is null " +
+                    $"on d.bnum = b.bnum and cnum = '{id}' and dreturned is null " +
                     $"and {tag} like '%{searchText}%' order by dreturn, dnum";
                 cmd.Transaction = conn.BeginTransaction();
                 cmd.Connection = conn;

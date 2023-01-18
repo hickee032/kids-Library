@@ -21,6 +21,21 @@ namespace Team1_Project.model {
         string cint;
         string lnum;
 
+        public Customer(string cnum, string cname, string cage, string cgen, string ctel, string clast, string ctype, string pnum, string tnum, string cschool, string cint, string lnum) {
+            this.cnum = cnum;
+            this.cname = cname;
+            this.cage = cage;
+            this.cgen = cgen;
+            this.ctel = ctel;
+            this.clast = clast;
+            this.ctype = ctype;
+            this.pnum = pnum;
+            this.tnum = tnum;
+            this.cschool = cschool;
+            this.cint = cint;
+            this.lnum = lnum;
+        }
+
         public Customer(string cnum, string cname, string cage, string ctype, string ctel, string clast) {
             this.cnum = cnum;
             this.cname = cname;
@@ -43,6 +58,7 @@ namespace Team1_Project.model {
             this.cschool = cschool;
             this.cint = cint;
         }
+        /*
         public Customer(string cnum, string cpw, string cname, string cage, string cgen, string ctel,
             string clast, string ctype, string pnum, string tnum, string cschool, string cint) {
             this.cnum = cnum;
@@ -58,9 +74,7 @@ namespace Team1_Project.model {
             this.cschool = cschool;
             this.cint = cint;
         }
-
-
-
+        */
         public Customer(string cnum, string cpw, string cname, string cage, string cgen, string ctel,
             string clast, string ctype, string pnum, string tnum, string cschool, string cint, string lnum) {
             this.cnum = cnum;

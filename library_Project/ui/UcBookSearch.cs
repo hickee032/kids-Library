@@ -15,11 +15,61 @@ namespace Team1_Project.ui {
      partial class UcBookSearch : UserControl {
 
         BaseAdapter ba;
+        string id = string.Empty;
+
+        int checkType = 0;
 
         public UcBookSearch(BaseAdapter ba) {
             InitializeComponent();
             this.ba = ba;
             //enalbeRecommendBookbtn(로그인아이디번호)
+        }
+
+        public UcBookSearch(BaseAdapter ba, string id,int checkType) {
+            InitializeComponent();
+            this.ba = ba;
+            this.checkType = checkType;
+            this.id= id;
+
+            if (checkType == 5) {
+                RecommendBookbtn.Visible = true;
+                BorrowBookbtn.Visible = false;
+            }
+            else if (checkType == 2) {
+                RecommendBookbtn.Visible = true;
+                BorrowBookbtn.Visible = true;
+            }
+            else if (checkType == 0) {
+                RecommendBookbtn.Visible = false;
+                BorrowBookbtn.Visible = false;
+            }
+            else {
+                RecommendBookbtn.Visible = false;
+                BorrowBookbtn.Visible = true;
+            }
+        }
+
+        public UcBookSearch(BaseAdapter ba ,int checkType) {
+            InitializeComponent();
+            this.ba = ba;
+            this.checkType = checkType;
+            //enalbeRecommendBookbtn(로그인아이디번호)
+            if (checkType == 5) {
+                RecommendBookbtn.Visible = true;
+                BorrowBookbtn.Visible=false;
+            }
+            else if (checkType == 2) {
+                RecommendBookbtn.Visible = true;
+                BorrowBookbtn.Visible = true;
+            }
+            else if (checkType == 0) {
+                RecommendBookbtn.Visible = false;
+                BorrowBookbtn.Visible = false;
+            }
+            else {
+                RecommendBookbtn.Visible = false;
+                BorrowBookbtn.Visible = true;
+            }
         }
 
         private void UcBookSearch_Load(object sender, EventArgs e) {
@@ -127,8 +177,11 @@ namespace Team1_Project.ui {
         }
 
         private void selectBookbtn_Click(object sender, EventArgs e) {
+
             if (bookLView.SelectedItems.Count != 0) {
+
                 for (int i = 0; i < bookLView.SelectedItems.Count; i++) {
+
                     int n = bookLView.SelectedItems[i].Index;
                     string num = bookLView.Items[n].SubItems[0].Text;
                     string name = bookLView.Items[n].SubItems[1].Text;
@@ -140,8 +193,15 @@ namespace Team1_Project.ui {
                     string nob = bookLView.Items[n].SubItems[7].Text;
                     string nobob = bookLView.Items[n].SubItems[8].Text;
 
+                    Console.WriteLine(bookLView.Items[n].SubItems[7].Text);
+
+                    Console.WriteLine(bookLView.Items[n].SubItems[8].Text);
+
+
                     int nobInt = int.Parse(nob);
+
                     int nobobInt = int.Parse(nobob);
+
                     if (nobInt - nobobInt <= 0) {
                         MessageBox.Show("잔여 장서량이 부족한 도서가 포함되어있습니다.", "잔여 도서 부족");
                         return;
@@ -183,38 +243,39 @@ namespace Team1_Project.ui {
         }
 
         private void BorrowBookbtn_Click(object sender, EventArgs e) {
+
             DaoOra ora = ba.Ora;
-            //DateTime nowDate;
 
-            if (MessageBox.Show("담아두신 도서들을 대출하시겠습니까?." +
-                    "\r계속 하시겠습니까?", "도서 대출",
-                    MessageBoxButtons.YesNo) == DialogResult.Yes) {
-                for (int i = 0; i < selectedBookLView.Items.Count; i++) {
-                    string dbdnum = ora.borrowBook();
-                    string dbcnum = "C0002";    // 이후 로그인한 계정의 CNUM으로 수정
-                    string dbbnum = selectedBookLView.Items[i].SubItems[0].Text;
-                    string dbddate = DateTime.Now.ToString("yyyy년MM월dd일");
-                    string dbdreturn = DateTime.Now.AddDays(7).ToString("yyyy년MM월dd일");
-                    string dbdreturned = string.Empty;
-                    ora.insertDaechul(new Daechul(dbdnum, dbcnum, dbbnum, dbddate,
-                        dbdreturn, dbdreturned));
+                if (MessageBox.Show("담아두신 도서들을 대출하시겠습니까?." +
+                   "\r계속 하시겠습니까?", "도서 대출",
+                   MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                    for (int i = 0; i < selectedBookLView.Items.Count; i++) {
+                        string dbdnum = ora.borrowBook();
+                        string dbcnum = id;   
 
-                    List<NoBook> bnobobBdcount = ora.addBnobobBdcount(dbbnum);
-                    ora.updateBnobBdcount(bnobobBdcount);
-                }
+                        string dbbnum = selectedBookLView.Items[i].SubItems[0].Text;
+                        string dbddate = DateTime.Now.ToString("yyyy년MM월dd일");
+                        string dbdreturn = DateTime.Now.AddDays(7).ToString("yyyy년MM월dd일");
+                        string dbdreturned = string.Empty;
+                        ora.insertDaechul(new Daechul(dbdnum, dbcnum, dbbnum, dbddate,
+                            dbdreturn, dbdreturned));
 
-                if (selectedBookLView.Items.Count != 0) {
-                    int cancelCount = selectedBookLView.Items.Count;
-                    for (int i = 0; i < cancelCount; i++) {
-                        int index = selectedBookLView.Items[0].Index;
-                        selectedBookLView.Items.RemoveAt(index);
+                        List<NoBook> bnobobBdcount = ora.addBnobobBdcount(dbbnum);
+                        ora.updateBnobBdcount(bnobobBdcount);
                     }
+
+                    if (selectedBookLView.Items.Count != 0) {
+                        int cancelCount = selectedBookLView.Items.Count;
+                        for (int i = 0; i < cancelCount; i++) {
+                            int index = selectedBookLView.Items[0].Index;
+                            selectedBookLView.Items.RemoveAt(index);
+                        }
+                    }
+                    else {
+                        MessageBox.Show("선택된 항목이 없습니다.");
+                    }
+                    BookListView();
                 }
-                else {
-                    MessageBox.Show("선택된 항목이 없습니다.");
-                }
-                BookListView();
-            }
         }
 
         private void RecommendBookbtn_Click(object sender, EventArgs e) {

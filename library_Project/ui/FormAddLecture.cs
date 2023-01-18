@@ -110,7 +110,7 @@ namespace Team1_Project.ui {
                 ba.Ora.insertData(new Lecture(num, title, loc, age, per, time, week, teacher));
 
                 this.Close();
-                uc.Refresh();
+                //uc.Refresh();
             }
             catch (Exception) {
 

@@ -17,7 +17,7 @@ namespace Team1_Project {
     public partial class FormMain : MetroFramework.Forms.MetroForm {
 
         public static int checkCtype = 0;
-        private string CHECK_ID = string.Empty;
+        public static string CHECK_ID = string.Empty;
 
         #region 슬라이더
 
@@ -70,8 +70,8 @@ namespace Team1_Project {
                 btnLesson.Text = "교실";
                 btnLesson.BackgroundImage = null;
 
-                btnMedia.Text = "영상관";
-                btnMedia.BackgroundImage = null;
+                //btnMedia.Text = "영상관";
+                //btnMedia.BackgroundImage = null;
                 btnExit.Text = "종료";
                 btnExit.BackgroundImage = null;
 
@@ -82,20 +82,17 @@ namespace Team1_Project {
 
                 cbxSlider.BackgroundImage = Properties.Resources.icon_forward;
 
-                btnHome.BackgroundImage = Properties.Resources.icon_home;
                 btnHome.Text = string.Empty;
-
+                btnHome.BackgroundImage = Properties.Resources.icon_home;
                 btnSearch.Text = string.Empty;
                 btnSearch.BackgroundImage = Properties.Resources.icon_searchBook;
                 btnReBook.Text = string.Empty;
                 btnReBook.BackgroundImage = Properties.Resources.icon_returnBook;
-
                 btnLesson.Text = string.Empty;
                 btnLesson.BackgroundImage = Properties.Resources.icon_lesson;
-                btnMedia.Text = string.Empty;
-                btnMedia.BackgroundImage = Properties.Resources.icon_media;
+               
                 btnExit.Text = string.Empty;
-                btnExit.BackgroundImage = Properties.Resources.icon_bye;
+                btnExit.BackgroundImage = Properties.Resources.icon_stop;
 
 
                 // button1.Size = new System.Drawing.Size(MIN_SLIDING_WIDTH, 54);
@@ -125,11 +122,13 @@ namespace Team1_Project {
         internal BaseAdapter Ba { get => ba; set => ba = value; }
 
         public FormMain() {
-            InitializeComponent();
-            
+
+            InitializeComponent();  
             controllView(new UcHome(ba), UC_HOMEUSER);
+            labelTitle.Text = "어린이 도서관";
             myProfile.Visible= false;
 
+            #region 스플래쉬 화면 시작
             int sleepTime = 1600;
             Thread splashthread = new Thread(new ThreadStart(LoadingScreen.ShowSplashScreen));
 
@@ -137,63 +136,54 @@ namespace Team1_Project {
             splashthread.Start();
 
             Thread.Sleep(sleepTime);
-
-            /*
-            LoadingScreen.updateStatusText("Loading 1..");
-
-            try {
-                Thread.Sleep(sleepTime);
-                LoadingScreen.updateStatusTextWithStatus("Loading 1 ok", TypeOfMessage.Success);
-                Thread.Sleep(sleepTime);
-            }
-            catch (Exception ex) {
-
-                LoadingScreen.updateStatusTextWithStatus("Loading 1 Fail", TypeOfMessage.Error);
-            }
-
-            LoadingScreen.updateStatusText("Loading 2..");
-
-            try {
-                Thread.Sleep(sleepTime);
-                LoadingScreen.updateStatusTextWithStatus("Loading 2 ok", TypeOfMessage.Success);
-                Thread.Sleep(sleepTime);
-            }
-            catch (Exception ex) {
-
-                LoadingScreen.updateStatusTextWithStatus("Loading 2 Fail", TypeOfMessage.Error);
-            }
-            */
-
             LoadingScreen.CloseSplashScreen();
+            #endregion
         }
 
         //슬라이더 버튼 이벤트
         private void btnHome_Click(object sender, EventArgs e) {
             //this.ResetText();
-            this.Text = "홈";
-            controllView(new UcHome(ba, checkCtype), UC_HOMEUSER);
+            labelTitle.Text = "시작화면 입니다";
+            controllView(new UcHome(ba ,this, checkCtype), UC_HOMEUSER);
         }
 
         private void btnSearch_Click(object sender, EventArgs e) {
-            controllView(new UcBookSearch(ba), UC_BOOKSEARCH);
-            this.Text = "도서 검색";
+
+            controllView(new UcBookSearch(ba, CHECK_ID, checkCtype), UC_BOOKSEARCH);
+
+            labelTitle.Text = "책을 찾습니다";
         }
 
         private void btnLesson_Click(object sender, EventArgs e) {
             //this.ResetText();
-            this.Text = "강좌";
+            labelTitle.Text = "공부를 합니다";
             controllView(new UcLecture(ba, checkCtype), UC_LECTURE);
+        }
+
+        private void btnReBook_Click(object sender, EventArgs e) {
+
+            labelTitle.Text = "책을 반납합니다";
+
+            if (CHECK_ID.Equals(string.Empty)) {
+
+                MessageBox.Show("로그인이 필요합니다. 로그인 창으로 이동합니다.");
+
+                controllView(new UcLogin(ba, this), UC_HOMEUSER);
+            }
+            else {
+                controllView(new UcBookReturn(ba, CHECK_ID), UC_BOOKRETURN);
+            }
+
+
         }
 
         private void btnLogIn_Click(object sender, EventArgs e) {
 
-            this.Text = "로그인";
-
-
+            labelTitle.Text = "로그인 합니다";
 
             if (btnLogIn.Text.Equals("로그인")) {
 
-                controllView(new UcLogin(ba,this), UC_HOMEUSER);
+                controllView(new UcLogin(ba,this,0), UC_HOMEUSER);
 
             }
 
@@ -206,6 +196,8 @@ namespace Team1_Project {
             }
             
         }
+
+
 
         private void btnMainExit_Click(object sender, EventArgs e) {
             Application.Exit();
@@ -227,7 +219,7 @@ namespace Team1_Project {
         }
 
         public void controllView(UserControl uc, string viewName, string id) {
-            this.CHECK_ID = id;
+            CHECK_ID = id;
 
             panelCenter.Controls.Clear();
 
@@ -263,16 +255,6 @@ namespace Team1_Project {
 
         public static string UC_BOOKRETURN1 => UC_BOOKRETURN;
 
-        private void btnReBook_Click(object sender, EventArgs e) {
-            if (CHECK_ID.Equals(string.Empty)) {
 
-                MessageBox.Show("로그인이 필요합니다.");
-            }
-            else {
-                controllView(new UcBookReturn(ba), UC_BOOKRETURN);
-            }
-
-            
-        }
     }
 }

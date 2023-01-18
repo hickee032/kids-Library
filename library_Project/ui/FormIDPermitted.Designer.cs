@@ -41,7 +41,7 @@
             // btnConform
             // 
             this.btnConform.AutoSize = true;
-            this.btnConform.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnConform.BackColor = System.Drawing.Color.OrangeRed;
             this.btnConform.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConform.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnConform.ForeColor = System.Drawing.SystemColors.Control;
@@ -61,6 +61,7 @@
             this.Controls.Add(this.labelSignCK);
             this.Controls.Add(this.btnConform);
             this.Name = "FormIDPermitted";
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             this.ResumeLayout(false);
             this.PerformLayout();
 

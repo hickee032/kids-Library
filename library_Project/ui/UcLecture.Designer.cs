@@ -26,84 +26,79 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcLecture));
             this.lecImgList = new System.Windows.Forms.ImageList(this.components);
-            this.btnLecAdd = new System.Windows.Forms.Button();
             this.lecSubPnl1 = new System.Windows.Forms.Panel();
             this.labelAge1 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelTime1 = new System.Windows.Forms.Label();
             this.labelDay1 = new System.Windows.Forms.Label();
+            this.lecPicTime1 = new System.Windows.Forms.PictureBox();
             this.labelDate1 = new System.Windows.Forms.Label();
             this.labelClass1 = new System.Windows.Forms.Label();
             this.lecSubPnl2 = new System.Windows.Forms.Panel();
             this.labelAge2 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelTime2 = new System.Windows.Forms.Label();
+            this.lecPicTime2 = new System.Windows.Forms.PictureBox();
             this.labelDay2 = new System.Windows.Forms.Label();
             this.labelDate2 = new System.Windows.Forms.Label();
             this.labelClass2 = new System.Windows.Forms.Label();
             this.lecSubPnl3 = new System.Windows.Forms.Panel();
             this.labelAge3 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.labelTime3 = new System.Windows.Forms.Label();
+            this.lecPicTime3 = new System.Windows.Forms.PictureBox();
             this.labelDay3 = new System.Windows.Forms.Label();
             this.labelDate3 = new System.Windows.Forms.Label();
             this.labelClass3 = new System.Windows.Forms.Label();
             this.lecSubPnl4 = new System.Windows.Forms.Panel();
             this.labelAge4 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelTime4 = new System.Windows.Forms.Label();
+            this.lecPicTime4 = new System.Windows.Forms.PictureBox();
             this.labelDay4 = new System.Windows.Forms.Label();
             this.labelDate4 = new System.Windows.Forms.Label();
             this.labelClass4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.lecNextBtn = new System.Windows.Forms.Button();
             this.lecBackBtn = new System.Windows.Forms.Button();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lecPicTime4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lecPicTime3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lecPicTime2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lecPicTime1 = new System.Windows.Forms.PictureBox();
             this.lecPbx3 = new System.Windows.Forms.PictureBox();
             this.lecPbx2 = new System.Windows.Forms.PictureBox();
             this.lecPbx1 = new System.Windows.Forms.PictureBox();
             this.lecPbx0 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.lecSubPnl1.SuspendLayout();
-            this.lecSubPnl2.SuspendLayout();
-            this.lecSubPnl3.SuspendLayout();
-            this.lecSubPnl4.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lecPicTime4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lecPicTime3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lecPicTime2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPicTime1)).BeginInit();
+            this.lecSubPnl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecPicTime2)).BeginInit();
+            this.lecSubPnl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecPicTime3)).BeginInit();
+            this.lecSubPnl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecPicTime4)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx0)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lecImgList
@@ -112,20 +107,9 @@
             this.lecImgList.ImageSize = new System.Drawing.Size(219, 256);
             this.lecImgList.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // btnLecAdd
-            // 
-            this.btnLecAdd.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnLecAdd.Location = new System.Drawing.Point(97, 11);
-            this.btnLecAdd.Name = "btnLecAdd";
-            this.btnLecAdd.Size = new System.Drawing.Size(100, 30);
-            this.btnLecAdd.TabIndex = 15;
-            this.btnLecAdd.Text = "강좌 등록";
-            this.btnLecAdd.UseVisualStyleBackColor = true;
-            this.btnLecAdd.Click += new System.EventHandler(this.btnLecAdd_Click);
-            // 
             // lecSubPnl1
             // 
-            this.lecSubPnl1.BackColor = System.Drawing.Color.LightPink;
+            this.lecSubPnl1.BackColor = System.Drawing.Color.NavajoWhite;
             this.lecSubPnl1.Controls.Add(this.labelAge1);
             this.lecSubPnl1.Controls.Add(this.pictureBox9);
             this.lecSubPnl1.Controls.Add(this.pictureBox5);
@@ -150,6 +134,36 @@
             this.labelAge1.TabIndex = 13;
             this.labelAge1.Text = "나이";
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox9.Location = new System.Drawing.Point(6, 10);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox9.TabIndex = 10;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(6, 48);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.TabIndex = 9;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 95);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // labelTime1
             // 
             this.labelTime1.AutoSize = true;
@@ -169,6 +183,16 @@
             this.labelDay1.Size = new System.Drawing.Size(31, 15);
             this.labelDay1.TabIndex = 6;
             this.labelDay1.Text = "요일";
+            // 
+            // lecPicTime1
+            // 
+            this.lecPicTime1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lecPicTime1.BackgroundImage")));
+            this.lecPicTime1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.lecPicTime1.Location = new System.Drawing.Point(6, 141);
+            this.lecPicTime1.Name = "lecPicTime1";
+            this.lecPicTime1.Size = new System.Drawing.Size(32, 32);
+            this.lecPicTime1.TabIndex = 5;
+            this.lecPicTime1.TabStop = false;
             // 
             // labelDate1
             // 
@@ -217,6 +241,36 @@
             this.labelAge2.TabIndex = 14;
             this.labelAge2.Text = "나이";
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox10.Location = new System.Drawing.Point(6, 10);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox10.TabIndex = 11;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Location = new System.Drawing.Point(6, 48);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox6.TabIndex = 10;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 95);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
             // labelTime2
             // 
             this.labelTime2.AutoSize = true;
@@ -226,6 +280,15 @@
             this.labelTime2.Size = new System.Drawing.Size(31, 15);
             this.labelTime2.TabIndex = 9;
             this.labelTime2.Text = "시간";
+            // 
+            // lecPicTime2
+            // 
+            this.lecPicTime2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lecPicTime2.BackgroundImage")));
+            this.lecPicTime2.Location = new System.Drawing.Point(6, 141);
+            this.lecPicTime2.Name = "lecPicTime2";
+            this.lecPicTime2.Size = new System.Drawing.Size(32, 32);
+            this.lecPicTime2.TabIndex = 6;
+            this.lecPicTime2.TabStop = false;
             // 
             // labelDay2
             // 
@@ -259,7 +322,7 @@
             // 
             // lecSubPnl3
             // 
-            this.lecSubPnl3.BackColor = System.Drawing.Color.LightPink;
+            this.lecSubPnl3.BackColor = System.Drawing.Color.NavajoWhite;
             this.lecSubPnl3.Controls.Add(this.labelAge3);
             this.lecSubPnl3.Controls.Add(this.pictureBox11);
             this.lecSubPnl3.Controls.Add(this.pictureBox7);
@@ -284,6 +347,36 @@
             this.labelAge3.TabIndex = 15;
             this.labelAge3.Text = "나이";
             // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox11.Location = new System.Drawing.Point(6, 10);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox11.TabIndex = 12;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox7.Location = new System.Drawing.Point(6, 48);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox7.TabIndex = 11;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(6, 95);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            // 
             // labelTime3
             // 
             this.labelTime3.AutoSize = true;
@@ -293,6 +386,15 @@
             this.labelTime3.Size = new System.Drawing.Size(31, 15);
             this.labelTime3.TabIndex = 11;
             this.labelTime3.Text = "시간";
+            // 
+            // lecPicTime3
+            // 
+            this.lecPicTime3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lecPicTime3.BackgroundImage")));
+            this.lecPicTime3.Location = new System.Drawing.Point(6, 141);
+            this.lecPicTime3.Name = "lecPicTime3";
+            this.lecPicTime3.Size = new System.Drawing.Size(32, 32);
+            this.lecPicTime3.TabIndex = 7;
+            this.lecPicTime3.TabStop = false;
             // 
             // labelDay3
             // 
@@ -351,6 +453,36 @@
             this.labelAge4.TabIndex = 16;
             this.labelAge4.Text = "나이";
             // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox12.BackgroundImage")));
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox12.Location = new System.Drawing.Point(6, 10);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox12.TabIndex = 13;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox8.Location = new System.Drawing.Point(6, 48);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox8.TabIndex = 12;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 95);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            // 
             // labelTime4
             // 
             this.labelTime4.AutoSize = true;
@@ -360,6 +492,15 @@
             this.labelTime4.Size = new System.Drawing.Size(31, 15);
             this.labelTime4.TabIndex = 13;
             this.labelTime4.Text = "시간";
+            // 
+            // lecPicTime4
+            // 
+            this.lecPicTime4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lecPicTime4.BackgroundImage")));
+            this.lecPicTime4.Location = new System.Drawing.Point(6, 141);
+            this.lecPicTime4.Name = "lecPicTime4";
+            this.lecPicTime4.Size = new System.Drawing.Size(32, 32);
+            this.lecPicTime4.TabIndex = 6;
+            this.lecPicTime4.TabStop = false;
             // 
             // labelDay4
             // 
@@ -393,8 +534,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.LightPink;
-            this.panel6.Controls.Add(this.pictureBox13);
+            this.panel6.BackColor = System.Drawing.Color.NavajoWhite;
             this.panel6.Controls.Add(this.label2);
             this.panel6.Location = new System.Drawing.Point(48, 15);
             this.panel6.Name = "panel6";
@@ -406,21 +546,12 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(48, 9);
+            this.label2.ForeColor = System.Drawing.Color.DarkRed;
+            this.label2.Location = new System.Drawing.Point(21, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "현재 모집중 강좌";
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackgroundImage = global::Team1_Project.Properties.Resources.pic_lesson;
-            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox13.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(34, 34);
-            this.pictureBox13.TabIndex = 2;
-            this.pictureBox13.TabStop = false;
             // 
             // lecNextBtn
             // 
@@ -447,163 +578,6 @@
             this.lecBackBtn.TabIndex = 20;
             this.lecBackBtn.UseVisualStyleBackColor = true;
             this.lecBackBtn.Click += new System.EventHandler(this.lecBackBtn_Click);
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox12.BackgroundImage")));
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox12.Location = new System.Drawing.Point(6, 10);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox12.TabIndex = 13;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Location = new System.Drawing.Point(6, 48);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox8.TabIndex = 12;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 95);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
-            // 
-            // lecPicTime4
-            // 
-            this.lecPicTime4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lecPicTime4.BackgroundImage")));
-            this.lecPicTime4.Location = new System.Drawing.Point(6, 141);
-            this.lecPicTime4.Name = "lecPicTime4";
-            this.lecPicTime4.Size = new System.Drawing.Size(32, 32);
-            this.lecPicTime4.TabIndex = 6;
-            this.lecPicTime4.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox11.Location = new System.Drawing.Point(6, 10);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox11.TabIndex = 12;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(6, 48);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox7.TabIndex = 11;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 95);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            // 
-            // lecPicTime3
-            // 
-            this.lecPicTime3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lecPicTime3.BackgroundImage")));
-            this.lecPicTime3.Location = new System.Drawing.Point(6, 141);
-            this.lecPicTime3.Name = "lecPicTime3";
-            this.lecPicTime3.Size = new System.Drawing.Size(32, 32);
-            this.lecPicTime3.TabIndex = 7;
-            this.lecPicTime3.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox10.Location = new System.Drawing.Point(6, 10);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox10.TabIndex = 11;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(6, 48);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox6.TabIndex = 10;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 95);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lecPicTime2
-            // 
-            this.lecPicTime2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lecPicTime2.BackgroundImage")));
-            this.lecPicTime2.Location = new System.Drawing.Point(6, 141);
-            this.lecPicTime2.Name = "lecPicTime2";
-            this.lecPicTime2.Size = new System.Drawing.Size(32, 32);
-            this.lecPicTime2.TabIndex = 6;
-            this.lecPicTime2.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox9.Location = new System.Drawing.Point(6, 10);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox9.TabIndex = 10;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(6, 48);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.TabIndex = 9;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 95);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lecPicTime1
-            // 
-            this.lecPicTime1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lecPicTime1.BackgroundImage")));
-            this.lecPicTime1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.lecPicTime1.Location = new System.Drawing.Point(6, 141);
-            this.lecPicTime1.Name = "lecPicTime1";
-            this.lecPicTime1.Size = new System.Drawing.Size(32, 32);
-            this.lecPicTime1.TabIndex = 5;
-            this.lecPicTime1.TabStop = false;
             // 
             // lecPbx3
             // 
@@ -638,19 +612,10 @@
             this.lecPbx0.TabIndex = 7;
             this.lecPbx0.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnLecAdd);
-            this.panel1.Location = new System.Drawing.Point(396, 533);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 55);
-            this.panel1.TabIndex = 23;
-            // 
             // UcLecture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.lecNextBtn);
             this.Controls.Add(this.lecBackBtn);
@@ -667,36 +632,34 @@
             this.Load += new System.EventHandler(this.UcLecture_Load);
             this.lecSubPnl1.ResumeLayout(false);
             this.lecSubPnl1.PerformLayout();
-            this.lecSubPnl2.ResumeLayout(false);
-            this.lecSubPnl2.PerformLayout();
-            this.lecSubPnl3.ResumeLayout(false);
-            this.lecSubPnl3.PerformLayout();
-            this.lecSubPnl4.ResumeLayout(false);
-            this.lecSubPnl4.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lecPicTime4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lecPicTime3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lecPicTime2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPicTime1)).EndInit();
+            this.lecSubPnl2.ResumeLayout(false);
+            this.lecSubPnl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecPicTime2)).EndInit();
+            this.lecSubPnl3.ResumeLayout(false);
+            this.lecSubPnl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecPicTime3)).EndInit();
+            this.lecSubPnl4.ResumeLayout(false);
+            this.lecSubPnl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecPicTime4)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecPbx0)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -707,7 +670,6 @@
         private System.Windows.Forms.PictureBox lecPbx1;
         private System.Windows.Forms.PictureBox lecPbx2;
         private System.Windows.Forms.PictureBox lecPbx3;
-        private System.Windows.Forms.Button btnLecAdd;
         private System.Windows.Forms.Panel lecSubPnl1;
         private System.Windows.Forms.Label labelClass1;
         private System.Windows.Forms.Panel lecSubPnl2;
@@ -751,8 +713,6 @@
         private System.Windows.Forms.Label labelAge4;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
     }
 }

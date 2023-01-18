@@ -127,7 +127,7 @@
             // picview
             // 
             this.picview.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picview.BackgroundImage")));
-            this.picview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picview.Location = new System.Drawing.Point(49, 107);
             this.picview.Name = "picview";
             this.picview.Size = new System.Drawing.Size(178, 220);

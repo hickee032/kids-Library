@@ -47,7 +47,7 @@ namespace Team1_Project.ui {
             else if (newCint4.Checked) { cint = "역사"; }
             else if (newCint5.Checked) { cint = "기술과학"; }
             else if (newCint6.Checked) { cint = "철학"; }
-            string clast = DateTime.Now.ToString("yyyy년mm월dd일");
+            string clast = DateTime.Now.ToString("yyyy년MM월dd일");
             string tnum = string.Empty;
             string lnum = string.Empty;
             ora.insertProfile(new Customer(tbxCnum.Text, cpw.Text, cname.Text, NewCage.Text, cgen, ctel, clast, ctype, pnum.Text, tnum, cschool.Text, cint, lnum));

@@ -345,7 +345,7 @@
             this.searchBookbtn.TabIndex = 18;
             this.searchBookbtn.Text = "검색";
             this.searchBookbtn.UseVisualStyleBackColor = true;
-            this.searchBookbtn.Click += new System.EventHandler(this.selectBookbtn_Click);
+            this.searchBookbtn.Click += new System.EventHandler(this.searchBookbtn_Click);
             // 
             // label1
             // 

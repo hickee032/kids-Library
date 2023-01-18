@@ -43,13 +43,6 @@ namespace Team1_Project.ui {
             this.lectureData= new List<Lecture>(ba.Ora.lectureShow());
 
             this.Load += UcLecture_Load;
-
-            if (checkCtype == 5) {
-                btnLecAdd.Visible = true;
-            }
-            else {               
-                btnLecAdd.Visible= true;
-            }
         }
 
 
@@ -134,15 +127,21 @@ namespace Team1_Project.ui {
             }
             //이미지가 있을 경우  4개로 떨어질 경우 1개가 남을경우
             else {
-                    pbxAddImgList(lectureData, lecImgList, picBoxList, labelAge, labelClass, labelDate, labelDay, labelTime, btnCount);
+                PbxAddImgList(lectureData, lecImgList, picBoxList, labelAge, labelClass, labelDate, labelDay, labelTime, btnCount);
             }
            this.Refresh();   
         }
 
 
-        public void pbxAddImgList(List<Lecture> LectureList, ImageList imgList, List<PictureBox> pbx,
-            List<Label> lage, List<Label> lclass, List<Label> ldate, List<Label> ldays, List<Label> ltimes,
-            int btnCount) {
+        public void PbxAddImgList(List<Lecture> LectureList,
+                                  ImageList imgList,
+                                  List<PictureBox> pbx,
+                                  List<Label> lage,
+                                  List<Label> lclass,
+                                  List<Label> ldate,
+                                  List<Label> ldays,
+                                  List<Label> ltimes,
+                                  int btnCount) {
 
             int n = LectureList.Count / pbx.Count;
             int m = LectureList.Count % pbx.Count;

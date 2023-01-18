@@ -34,6 +34,7 @@ namespace Team1_Project.ui {
                                                  "https://www.nlcy.go.kr/attach/together/40016/THUM1073373_20200804110649236_1.jpg",
                                                  "https://www.nlcy.go.kr/attach/together/40016/THUM1045534_20190108134416948_1.jpg" };
 
+        #region 생성자
         public UcHome(BaseAdapter ba) {
             InitializeComponent();
             this.ba = ba;
@@ -56,6 +57,7 @@ namespace Team1_Project.ui {
                 suggestBook(1);
             }
             else if (checkCtype == 5) {
+                formMain.myProfile.Visible = false;
                 panelManager.Visible = true;
                 panelManager.BringToFront();
                 suggestBook(0);
@@ -69,16 +71,20 @@ namespace Team1_Project.ui {
         }
         
         public UcHome(BaseAdapter ba, FormMain formMain, int checkCtype) {
+
             InitializeComponent();
             this.ba = ba;
             this.checkCtype = checkCtype;
             video = new VideoPlay(panelVideo);
+            formMain.labelTitle.Text = "어린이 도서관";
 
             if (checkCtype == 1) {
                 labelHomeBC.Text = "선생님의 추천 책";
                 suggestBook(1);
             }
             else if (checkCtype == 5) {
+
+                formMain.myProfile.Visible = false;
                 panelManager.Visible = true;
                 panelManager.BringToFront();
                 suggestBook(0);
@@ -89,37 +95,40 @@ namespace Team1_Project.ui {
                 suggestBook(0);
             }
         }
+#endregion
 
-        //
         public UcHome(BaseAdapter ba,FormMain formMain,int checkCtype, string loginId) {
+
             InitializeComponent();
             this.ba = ba;
             this.checkCtype = checkCtype;
             this.loginId = loginId;
+            FormMain.CHECK_ID = loginId;
 
             video = new VideoPlay(panelVideo);
             if (checkCtype == 1) {
                 labelHomeBC.Text = "선생님의 추천 책";
+                panelManager.Visible = false;
                 suggestBook(1);
             }
             else if (checkCtype == 5) {
+
+                formMain.myProfile.Visible = false;
                 panelManager.Visible = true;
                 panelManager.BringToFront();
                 suggestBook(0);
             }
-            else if (checkCtype == 0) {
+            else {
                 formMain.myProfile.Visible = false;
                 panelManager.Visible = false;
                 suggestBook(0);
             }
         }
 
-        private void UcHome_Load(object sender, EventArgs e) {
-            
+        private void UcHome_Load(object sender, EventArgs e) {   
             postChange.Start();
         }
 
-        //추천
         private void suggestBook(int n) {
 
             int i = 0;
@@ -146,7 +155,6 @@ namespace Team1_Project.ui {
             
         }
 
-        //이미지를 바꾸는 타이머
         private void postChange_Tick(object sender, EventArgs e) {
 
             postChange.Interval = 2000;
@@ -169,6 +177,8 @@ namespace Team1_Project.ui {
             }            
         }
 
+        #region  버튼이벤트
+
         private void btnMap_Click(object sender, EventArgs e) {
             FormMap formMap = new FormMap();
             formMap.ShowDialog(); //modal 방식
@@ -178,10 +188,27 @@ namespace Team1_Project.ui {
             System.Diagnostics.Process.Start("https://www.youtube.com/@user-be3jf5yg9x");
         }
 
-
-
-        private void pbHomeBan1_Click(object sender, EventArgs e) {
-            //formMain.controllView(new UcLecture(ba, checkCtype), formMain.);
+        //관리자 메뉴
+        private void btxAddLec_Click(object sender, EventArgs e) {
+            FormAddLecture fal = new FormAddLecture(ba);
+            fal.ShowDialog();
         }
+
+        private void btnAddBook_Click(object sender, EventArgs e) {
+            FormAddBook fab = new FormAddBook(ba);
+            fab.ShowDialog();
+        }
+
+        private void btnMemLook_Click(object sender, EventArgs e) {
+            FormMdCustomer fmc = new FormMdCustomer(ba);
+            fmc.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e) {
+            FormMdBook fmb = new FormMdBook(ba);
+            fmb.ShowDialog();
+        }
+
+        #endregion
     }
 }

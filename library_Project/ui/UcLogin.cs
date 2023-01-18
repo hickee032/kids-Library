@@ -22,7 +22,6 @@ namespace Team1_Project.ui {
 
         BaseAdapter ba;
         FormMain formMain;
-
         string cmNum = string.Empty;
 
         
@@ -38,6 +37,15 @@ namespace Team1_Project.ui {
             InitializeComponent();
             this.ba = ba;
             this.formMain = formMain;
+            formMain.Text = "로그인";
+        }
+
+        public UcLogin(BaseAdapter ba, FormMain formMain,int checkCtype) // 로그인 또는 회원가입
+{
+            InitializeComponent();
+            this.ba = ba;
+            this.formMain = formMain;
+            FormMain.checkCtype = 0;
             formMain.Text = "로그인";
         }
 
@@ -59,10 +67,12 @@ namespace Team1_Project.ui {
             Console.WriteLine("첫번째 글자 확인 :" + checkCM);
 
             if (checkCM.Equals("m")|| checkCM.Equals("M")) {
+
                 cnumList = ba.Ora.tableGetColumn("mnum", "manager");
                 FormMain.checkCtype = 5;
 
                 Console.WriteLine(FormMain.checkCtype);
+
             }
             else {
                 cnumList = ba.Ora.tableGetColumn("cnum", "customer");
@@ -84,6 +94,8 @@ namespace Team1_Project.ui {
         //// 1 어린이 2 선생님 3 부모 4 일반 5 관리자
         private void btnUcLogIn_Click(object sender, EventArgs e) {
 
+            string id = string.Empty;
+
             if (tbxID.Text == string.Empty) {
                 if (tbxPW.Text == string.Empty) {
                     MessageBox.Show("아이디와 비밀번호 입력이 필요합니다.");
@@ -97,6 +109,8 @@ namespace Team1_Project.ui {
                 string checkPW;
                 string cName;
 
+
+
                 if (FormMain.checkCtype == 5) {
 
                     checkPW = ba.Ora.tableGetColumn("mpw", "manager", "mnum", cmNum);
@@ -108,6 +122,7 @@ namespace Team1_Project.ui {
                 if (tbxPW.Text.Equals(checkPW)) {
 
                     if (FormMain.checkCtype != 5) {
+
                         string cAge = ba.Ora.tableGetColumn("ctype", "customer", "cnum", cmNum);
                         string cSchool = ba.Ora.tableGetColumn("cschool", "customer", "cnum", cmNum);
                         cName = ba.Ora.tableGetColumn("cname", "customer", "cnum", cmNum);
@@ -116,19 +131,22 @@ namespace Team1_Project.ui {
 
                             Console.WriteLine("선생님");
                             FormMain.checkCtype = 2;
-                            formMain.controllView(new UcHome(ba, formMain, 2, tbxID.Text), FormMain.UC_HOMEUSER, tbxID.Text);
+                            id = tbxID.Text;
+                            formMain.controllView(new UcHome(ba, formMain, 2, id), FormMain.UC_HOMEUSER, tbxID.Text);
 
                         }
                         else if (cAge.Equals("성인") && cSchool.Equals(string.Empty)) {
                             Console.WriteLine("일반");
                             FormMain.checkCtype = 3;
-                            formMain.controllView(new UcHome(ba, formMain, 3, tbxID.Text), FormMain.UC_HOMEUSER, tbxID.Text);
+                            id = tbxID.Text;
+                            formMain.controllView(new UcHome(ba, formMain, 3, id), FormMain.UC_HOMEUSER, tbxID.Text);
 
                         }
                         else {
                             Console.WriteLine("어린이");
                             FormMain.checkCtype = 1;
-                            formMain.controllView(new UcHome(ba, formMain, 1, tbxID.Text), FormMain.UC_HOMEUSER, tbxID.Text);
+                            id = tbxID.Text;
+                            formMain.controllView(new UcHome(ba, formMain, 1, id), FormMain.UC_HOMEUSER, tbxID.Text);
 
                         }
 
@@ -142,6 +160,7 @@ namespace Team1_Project.ui {
                     }
                     else {
 
+                        id = tbxID.Text;
                         cName = ba.Ora.tableGetColumn("mname", "manager", "mnum", cmNum);
 
                         formMain.btnLogIn.Text = "로그아웃";
@@ -150,7 +169,7 @@ namespace Team1_Project.ui {
                         formMain.labelLogName.Visible = true;
                         formMain.myProfile.Visible = true;
                         formMain.labelLogName.Text = $"관리자 {cName} 님 환영합니다.";
-                        formMain.controllView(new UcHome(ba, formMain, 5, tbxID.Text), FormMain.UC_HOMEUSER);
+                        formMain.controllView(new UcHome(ba, formMain, 5, id), FormMain.UC_HOMEUSER);
                         id = tbxID.Text;
                     }
 

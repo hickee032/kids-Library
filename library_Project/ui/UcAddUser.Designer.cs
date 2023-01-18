@@ -67,6 +67,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cgenGroup.SuspendLayout();
             this.cintGroup.SuspendLayout();
             this.ctypeGroup.SuspendLayout();
@@ -74,6 +75,7 @@
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -81,8 +83,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.Color.BlueViolet;
-            this.label1.Location = new System.Drawing.Point(35, 25);
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(30, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 24);
             this.label1.TabIndex = 44;
@@ -110,7 +112,7 @@
             this.NewCnumlb.AutoSize = true;
             this.NewCnumlb.BackColor = System.Drawing.Color.Transparent;
             this.NewCnumlb.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.NewCnumlb.ForeColor = System.Drawing.Color.Indigo;
+            this.NewCnumlb.ForeColor = System.Drawing.Color.DarkRed;
             this.NewCnumlb.Location = new System.Drawing.Point(54, 53);
             this.NewCnumlb.Name = "NewCnumlb";
             this.NewCnumlb.Size = new System.Drawing.Size(50, 17);
@@ -122,7 +124,7 @@
             this.NewCpwlb.AutoSize = true;
             this.NewCpwlb.BackColor = System.Drawing.Color.Transparent;
             this.NewCpwlb.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.NewCpwlb.ForeColor = System.Drawing.Color.Indigo;
+            this.NewCpwlb.ForeColor = System.Drawing.Color.DarkRed;
             this.NewCpwlb.Location = new System.Drawing.Point(54, 98);
             this.NewCpwlb.Name = "NewCpwlb";
             this.NewCpwlb.Size = new System.Drawing.Size(64, 17);
@@ -142,7 +144,7 @@
             this.NewCnamelb.AutoSize = true;
             this.NewCnamelb.BackColor = System.Drawing.Color.Transparent;
             this.NewCnamelb.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.NewCnamelb.ForeColor = System.Drawing.Color.Indigo;
+            this.NewCnamelb.ForeColor = System.Drawing.Color.DarkRed;
             this.NewCnamelb.Location = new System.Drawing.Point(54, 142);
             this.NewCnamelb.Name = "NewCnamelb";
             this.NewCnamelb.Size = new System.Drawing.Size(36, 17);
@@ -162,7 +164,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.ForeColor = System.Drawing.Color.Indigo;
+            this.label2.ForeColor = System.Drawing.Color.DarkRed;
             this.label2.Location = new System.Drawing.Point(54, 187);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 17);
@@ -184,7 +186,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.ForeColor = System.Drawing.Color.Indigo;
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
             this.label3.Location = new System.Drawing.Point(54, 273);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 17);
@@ -196,7 +198,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.ForeColor = System.Drawing.Color.Indigo;
+            this.label4.ForeColor = System.Drawing.Color.DarkRed;
             this.label4.Location = new System.Drawing.Point(22, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 19);
@@ -208,7 +210,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.ForeColor = System.Drawing.Color.Indigo;
+            this.label5.ForeColor = System.Drawing.Color.DarkRed;
             this.label5.Location = new System.Drawing.Point(54, 339);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 17);
@@ -220,7 +222,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.ForeColor = System.Drawing.Color.Indigo;
+            this.label6.ForeColor = System.Drawing.Color.DarkRed;
             this.label6.Location = new System.Drawing.Point(54, 230);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(36, 17);
@@ -261,6 +263,7 @@
             // 
             // cintGroup
             // 
+            this.cintGroup.BackColor = System.Drawing.Color.Bisque;
             this.cintGroup.Controls.Add(this.newCint1);
             this.cintGroup.Controls.Add(this.newCint2);
             this.cintGroup.Controls.Add(this.newCint4);
@@ -341,17 +344,16 @@
             // 
             // btnAddProfile
             // 
-            this.btnAddProfile.AutoSize = true;
-            this.btnAddProfile.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnAddProfile.BackColor = System.Drawing.Color.Transparent;
             this.btnAddProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddProfile.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnAddProfile.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAddProfile.Image = global::Team1_Project.Properties.Resources.icon_addN;
             this.btnAddProfile.Location = new System.Drawing.Point(433, 533);
             this.btnAddProfile.Name = "btnAddProfile";
             this.btnAddProfile.Padding = new System.Windows.Forms.Padding(25, 11, 25, 11);
             this.btnAddProfile.Size = new System.Drawing.Size(114, 39);
             this.btnAddProfile.TabIndex = 60;
-            this.btnAddProfile.Text = "회원등록";
             this.btnAddProfile.Click += new System.EventHandler(this.btnAddProfile_Click);
             // 
             // ctel1
@@ -464,7 +466,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.ForeColor = System.Drawing.Color.Indigo;
+            this.label7.ForeColor = System.Drawing.Color.DarkRed;
             this.label7.Location = new System.Drawing.Point(28, 204);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 19);
@@ -473,6 +475,7 @@
             // 
             // ptnumsGroup
             // 
+            this.ptnumsGroup.BackColor = System.Drawing.Color.Linen;
             this.ptnumsGroup.Controls.Add(this.checkBox2);
             this.ptnumsGroup.Controls.Add(this.checkBox1);
             this.ptnumsGroup.Controls.Add(this.pnum);
@@ -526,7 +529,7 @@
             // btnIdCheck
             // 
             this.btnIdCheck.AutoSize = true;
-            this.btnIdCheck.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnIdCheck.BackColor = System.Drawing.Color.Coral;
             this.btnIdCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIdCheck.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnIdCheck.ForeColor = System.Drawing.SystemColors.Control;
@@ -540,6 +543,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnAddProfile);
@@ -552,7 +556,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.MistyRose;
+            this.panel3.BackColor = System.Drawing.Color.AntiqueWhite;
             this.panel3.Controls.Add(this.NewCnumlb);
             this.panel3.Controls.Add(this.tbxCnum);
             this.panel3.Controls.Add(this.btnIdCheck);
@@ -573,22 +577,32 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.ForeColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(137, 79);
+            this.panel3.Location = new System.Drawing.Point(248, 79);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(472, 425);
             this.panel3.TabIndex = 70;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightPink;
+            this.panel2.BackColor = System.Drawing.Color.NavajoWhite;
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.ctypeGroup);
             this.panel2.Controls.Add(this.ptnumsGroup);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(615, 79);
+            this.panel2.Location = new System.Drawing.Point(726, 79);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 425);
             this.panel2.TabIndex = 69;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Team1_Project.Properties.Resources.pic_charWel;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 79);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(218, 304);
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
             // 
             // UcAddUser
             // 
@@ -611,6 +625,7 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -661,5 +676,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

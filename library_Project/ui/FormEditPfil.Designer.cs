@@ -25,7 +25,6 @@
         private void InitializeComponent() {
             this.modCtype = new System.Windows.Forms.ComboBox();
             this.modCint = new System.Windows.Forms.ComboBox();
-            this.UpdateProfile = new System.Windows.Forms.Label();
             this.profileCnum = new System.Windows.Forms.Label();
             this.ptnumsGroup = new System.Windows.Forms.GroupBox();
             this.modCheckBox2 = new System.Windows.Forms.CheckBox();
@@ -53,17 +52,16 @@
             this.NewCnumlb = new System.Windows.Forms.Label();
             this.modCpw = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelFormEditClose = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.UpdateProfile = new System.Windows.Forms.Label();
             this.ptnumsGroup.SuspendLayout();
             this.modCgenGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // modCtype
@@ -96,20 +94,6 @@
             this.modCint.Size = new System.Drawing.Size(100, 23);
             this.modCint.TabIndex = 95;
             // 
-            // UpdateProfile
-            // 
-            this.UpdateProfile.AutoSize = true;
-            this.UpdateProfile.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.UpdateProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UpdateProfile.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.UpdateProfile.ForeColor = System.Drawing.SystemColors.Control;
-            this.UpdateProfile.Location = new System.Drawing.Point(278, 453);
-            this.UpdateProfile.Name = "UpdateProfile";
-            this.UpdateProfile.Padding = new System.Windows.Forms.Padding(33, 11, 33, 11);
-            this.UpdateProfile.Size = new System.Drawing.Size(102, 39);
-            this.UpdateProfile.TabIndex = 94;
-            this.UpdateProfile.Text = "수정";
-            // 
             // profileCnum
             // 
             this.profileCnum.AutoSize = true;
@@ -124,22 +108,21 @@
             // 
             // ptnumsGroup
             // 
-            this.ptnumsGroup.BackColor = System.Drawing.Color.LightPink;
+            this.ptnumsGroup.BackColor = System.Drawing.Color.DarkOrange;
             this.ptnumsGroup.Controls.Add(this.modCheckBox2);
             this.ptnumsGroup.Controls.Add(this.modCheckBox1);
             this.ptnumsGroup.Controls.Add(this.modPnum);
             this.ptnumsGroup.Controls.Add(this.modCschool);
-            this.ptnumsGroup.Controls.Add(this.label7);
-            this.ptnumsGroup.Location = new System.Drawing.Point(365, 313);
+            this.ptnumsGroup.Location = new System.Drawing.Point(365, 341);
             this.ptnumsGroup.Name = "ptnumsGroup";
-            this.ptnumsGroup.Size = new System.Drawing.Size(342, 95);
+            this.ptnumsGroup.Size = new System.Drawing.Size(260, 68);
             this.ptnumsGroup.TabIndex = 90;
             this.ptnumsGroup.TabStop = false;
             // 
             // modCheckBox2
             // 
             this.modCheckBox2.AutoSize = true;
-            this.modCheckBox2.Location = new System.Drawing.Point(13, 56);
+            this.modCheckBox2.Location = new System.Drawing.Point(13, 38);
             this.modCheckBox2.Name = "modCheckBox2";
             this.modCheckBox2.Size = new System.Drawing.Size(100, 16);
             this.modCheckBox2.TabIndex = 1;
@@ -149,7 +132,7 @@
             // modCheckBox1
             // 
             this.modCheckBox1.AutoSize = true;
-            this.modCheckBox1.Location = new System.Drawing.Point(13, 26);
+            this.modCheckBox1.Location = new System.Drawing.Point(13, 16);
             this.modCheckBox1.Name = "modCheckBox1";
             this.modCheckBox1.Size = new System.Drawing.Size(112, 16);
             this.modCheckBox1.TabIndex = 0;
@@ -160,7 +143,7 @@
             // 
             this.modPnum.BackColor = System.Drawing.SystemColors.Window;
             this.modPnum.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.modPnum.Location = new System.Drawing.Point(145, 23);
+            this.modPnum.Location = new System.Drawing.Point(145, 11);
             this.modPnum.Name = "modPnum";
             this.modPnum.Size = new System.Drawing.Size(100, 21);
             this.modPnum.TabIndex = 18;
@@ -169,7 +152,7 @@
             // 
             this.modCschool.BackColor = System.Drawing.SystemColors.Window;
             this.modCschool.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.modCschool.Location = new System.Drawing.Point(145, 56);
+            this.modCschool.Location = new System.Drawing.Point(145, 38);
             this.modCschool.Name = "modCschool";
             this.modCschool.Size = new System.Drawing.Size(100, 21);
             this.modCschool.TabIndex = 20;
@@ -180,7 +163,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label7.Location = new System.Drawing.Point(1, 0);
+            this.label7.Location = new System.Drawing.Point(366, 321);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 17);
             this.label7.TabIndex = 91;
@@ -399,64 +382,30 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(43, 8);
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(12, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 24);
             this.label1.TabIndex = 72;
             this.label1.Text = "내 정보 수정";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(365, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(342, 217);
-            this.pictureBox1.TabIndex = 93;
-            this.pictureBox1.TabStop = false;
-            // 
-            // labelFormEditClose
-            // 
-            this.labelFormEditClose.AutoSize = true;
-            this.labelFormEditClose.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.labelFormEditClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelFormEditClose.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.labelFormEditClose.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelFormEditClose.Location = new System.Drawing.Point(386, 453);
-            this.labelFormEditClose.Name = "labelFormEditClose";
-            this.labelFormEditClose.Padding = new System.Windows.Forms.Padding(33, 11, 33, 11);
-            this.labelFormEditClose.Size = new System.Drawing.Size(102, 39);
-            this.labelFormEditClose.TabIndex = 97;
-            this.labelFormEditClose.Text = "취소";
-            this.labelFormEditClose.Click += new System.EventHandler(this.labelFormEditClose_Click);
-            // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.LightPink;
-            this.panel4.Controls.Add(this.pictureBox4);
+            this.panel4.BackColor = System.Drawing.Color.NavajoWhite;
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(-1, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(783, 40);
+            this.panel4.Size = new System.Drawing.Size(663, 40);
             this.panel4.TabIndex = 98;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::Team1_Project.Properties.Resources.pic_reko;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(34, 34);
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MistyRose;
+            this.panel1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.panel1.Controls.Add(this.profileCnum);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.labelFormEditClose);
             this.panel1.Controls.Add(this.NewCnumlb);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.UpdateProfile);
             this.panel1.Controls.Add(this.modCtype);
             this.panel1.Controls.Add(this.NewCpwlb);
@@ -479,27 +428,64 @@
             this.panel1.Controls.Add(this.modCgenGroup);
             this.panel1.Location = new System.Drawing.Point(-1, 43);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(783, 528);
+            this.panel1.Size = new System.Drawing.Size(663, 529);
             this.panel1.TabIndex = 99;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Team1_Project.Properties.Resources.pic_charMd;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(365, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(260, 203);
+            this.pictureBox1.TabIndex = 93;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelFormEditClose
+            // 
+            this.labelFormEditClose.BackColor = System.Drawing.Color.Transparent;
+            this.labelFormEditClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelFormEditClose.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelFormEditClose.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelFormEditClose.Image = global::Team1_Project.Properties.Resources.icon_addC;
+            this.labelFormEditClose.Location = new System.Drawing.Point(337, 455);
+            this.labelFormEditClose.Name = "labelFormEditClose";
+            this.labelFormEditClose.Padding = new System.Windows.Forms.Padding(33, 11, 33, 11);
+            this.labelFormEditClose.Size = new System.Drawing.Size(100, 39);
+            this.labelFormEditClose.TabIndex = 97;
+            this.labelFormEditClose.Click += new System.EventHandler(this.labelFormEditClose_Click);
+            // 
+            // UpdateProfile
+            // 
+            this.UpdateProfile.BackColor = System.Drawing.Color.Transparent;
+            this.UpdateProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UpdateProfile.Font = new System.Drawing.Font("나눔고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.UpdateProfile.ForeColor = System.Drawing.SystemColors.Control;
+            this.UpdateProfile.Image = global::Team1_Project.Properties.Resources.btn_mdfy;
+            this.UpdateProfile.Location = new System.Drawing.Point(229, 455);
+            this.UpdateProfile.Name = "UpdateProfile";
+            this.UpdateProfile.Padding = new System.Windows.Forms.Padding(33, 11, 33, 11);
+            this.UpdateProfile.Size = new System.Drawing.Size(100, 39);
+            this.UpdateProfile.TabIndex = 94;
             // 
             // FormEditPfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 570);
+            this.ClientSize = new System.Drawing.Size(661, 570);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Name = "FormEditPfil";
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             this.ptnumsGroup.ResumeLayout(false);
             this.ptnumsGroup.PerformLayout();
             this.modCgenGroup.ResumeLayout(false);
             this.modCgenGroup.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -539,7 +525,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelFormEditClose;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel1;
     }
 }

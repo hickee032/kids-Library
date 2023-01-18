@@ -23,15 +23,26 @@ namespace Team1_Project.ui {
             this.ba = ba;
         }
 
+        public UcBookReturn(BaseAdapter ba, string id) {
+            InitializeComponent();
+            this.ba = ba;
+            this.id = id;
+            Console.WriteLine(id);
+        }
+
         public UcBookReturn(BaseAdapter ba, string id,int checkType) {
             InitializeComponent();
             this.ba = ba;
             this.id = id;
+
+            Console.WriteLine(id);
+
             this.checkType = checkType;
+            this.Load += UcBookReturn_Load;
         }
 
         private void UcBookReturn_Load(object sender, EventArgs e) {
-
+            //this.Refresh();
             DaechulBookListView();
         }
 
@@ -82,7 +93,7 @@ namespace Team1_Project.ui {
 
             if (ora != null) {
                 list = ora.DaechulSearch(searchBookComboBox.Text,
-                    searchBookTextBox.Text);
+                    searchBookTextBox.Text,id);
             }
             daechulBookLView.BeginUpdate();
             daechulBookLView.Items.Clear();

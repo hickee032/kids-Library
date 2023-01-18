@@ -44,6 +44,8 @@
             this.myProfile = new System.Windows.Forms.Label();
             this.labelLogName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnMainExit = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -51,6 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLibStory)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -72,7 +75,7 @@
             // non1
             // 
             this.non1.AutoSize = true;
-            this.non1.BackColor = System.Drawing.Color.MistyRose;
+            this.non1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.non1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.non1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.non1.Enabled = false;
@@ -88,12 +91,13 @@
             // btnHome
             // 
             this.btnHome.AutoSize = true;
-            this.btnHome.BackColor = System.Drawing.Color.LightPink;
+            this.btnHome.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnHome.ForeColor = System.Drawing.Color.DarkRed;
             this.btnHome.Location = new System.Drawing.Point(0, 64);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(264, 64);
@@ -105,12 +109,13 @@
             // btnSearch
             // 
             this.btnSearch.AutoSize = true;
-            this.btnSearch.BackColor = System.Drawing.Color.LightPink;
+            this.btnSearch.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSearch.ForeColor = System.Drawing.Color.DarkRed;
             this.btnSearch.Location = new System.Drawing.Point(0, 280);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(264, 64);
@@ -122,12 +127,13 @@
             // btnReBook
             // 
             this.btnReBook.AutoSize = true;
-            this.btnReBook.BackColor = System.Drawing.Color.MistyRose;
+            this.btnReBook.BackColor = System.Drawing.Color.AntiqueWhite;
             this.btnReBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnReBook.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnReBook.FlatAppearance.BorderSize = 0;
             this.btnReBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReBook.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnReBook.ForeColor = System.Drawing.Color.DarkRed;
             this.btnReBook.Location = new System.Drawing.Point(0, 344);
             this.btnReBook.Name = "btnReBook";
             this.btnReBook.Size = new System.Drawing.Size(264, 64);
@@ -139,12 +145,13 @@
             // btnLesson
             // 
             this.btnLesson.AutoSize = true;
-            this.btnLesson.BackColor = System.Drawing.Color.LightPink;
+            this.btnLesson.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnLesson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLesson.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLesson.FlatAppearance.BorderSize = 0;
             this.btnLesson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLesson.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnLesson.ForeColor = System.Drawing.Color.DarkRed;
             this.btnLesson.Location = new System.Drawing.Point(0, 408);
             this.btnLesson.Name = "btnLesson";
             this.btnLesson.Size = new System.Drawing.Size(264, 64);
@@ -156,7 +163,7 @@
             // btnMedia
             // 
             this.btnMedia.AutoSize = true;
-            this.btnMedia.BackColor = System.Drawing.Color.MistyRose;
+            this.btnMedia.BackColor = System.Drawing.Color.AntiqueWhite;
             this.btnMedia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMedia.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnMedia.FlatAppearance.BorderSize = 0;
@@ -166,18 +173,18 @@
             this.btnMedia.Name = "btnMedia";
             this.btnMedia.Size = new System.Drawing.Size(264, 64);
             this.btnMedia.TabIndex = 5;
-            this.btnMedia.Text = "영상관";
             this.btnMedia.UseVisualStyleBackColor = false;
             // 
             // btnExit
             // 
             this.btnExit.AutoSize = true;
-            this.btnExit.BackColor = System.Drawing.Color.LightPink;
+            this.btnExit.BackColor = System.Drawing.Color.NavajoWhite;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnExit.ForeColor = System.Drawing.Color.DarkRed;
             this.btnExit.Location = new System.Drawing.Point(0, 536);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(264, 64);
@@ -189,7 +196,7 @@
             // cbxSlider
             // 
             this.cbxSlider.Appearance = System.Windows.Forms.Appearance.Button;
-            this.cbxSlider.BackColor = System.Drawing.Color.MistyRose;
+            this.cbxSlider.BackColor = System.Drawing.Color.AntiqueWhite;
             this.cbxSlider.BackgroundImage = global::Team1_Project.Properties.Resources.icon_backward;
             this.cbxSlider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cbxSlider.Dock = System.Windows.Forms.DockStyle.Top;
@@ -209,7 +216,7 @@
             // 
             // panelCenter
             // 
-            this.panelCenter.BackColor = System.Drawing.Color.MistyRose;
+            this.panelCenter.BackColor = System.Drawing.Color.AntiqueWhite;
             this.panelCenter.Location = new System.Drawing.Point(270, 60);
             this.panelCenter.Name = "panelCenter";
             this.panelCenter.Size = new System.Drawing.Size(1008, 600);
@@ -271,7 +278,7 @@
             // 
             // btnLogIn
             // 
-            this.btnLogIn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLogIn.BackColor = System.Drawing.Color.OrangeRed;
             this.btnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogIn.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnLogIn.ForeColor = System.Drawing.SystemColors.Control;
@@ -287,7 +294,7 @@
             // myProfile
             // 
             this.myProfile.AutoSize = true;
-            this.myProfile.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.myProfile.BackColor = System.Drawing.Color.Coral;
             this.myProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.myProfile.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.myProfile.ForeColor = System.Drawing.SystemColors.Control;
@@ -302,32 +309,55 @@
             // labelLogName
             // 
             this.labelLogName.AutoSize = true;
-            this.labelLogName.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.labelLogName.Location = new System.Drawing.Point(807, 18);
+            this.labelLogName.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelLogName.Location = new System.Drawing.Point(764, 15);
             this.labelLogName.Name = "labelLogName";
-            this.labelLogName.Size = new System.Drawing.Size(43, 15);
+            this.labelLogName.Size = new System.Drawing.Size(88, 19);
             this.labelLogName.TabIndex = 6;
-            this.labelLogName.Text = "label1";
+            this.labelLogName.Text = "로그인 속성";
             this.labelLogName.Visible = false;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightPink;
+            this.panel2.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel2.Controls.Add(this.labelTitle);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.labelLogName);
             this.panel2.Controls.Add(this.btnMainExit);
             this.panel2.Controls.Add(this.myProfile);
             this.panel2.Controls.Add(this.btnLogIn);
-            this.panel2.Location = new System.Drawing.Point(0, 7);
+            this.panel2.Location = new System.Drawing.Point(0, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1289, 49);
+            this.panel2.Size = new System.Drawing.Size(1289, 50);
             this.panel2.TabIndex = 7;
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelTitle.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelTitle.Location = new System.Drawing.Point(62, 13);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(47, 24);
+            this.labelTitle.TabIndex = 8;
+            this.labelTitle.Text = "title";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Team1_Project.Properties.Resources.icon_title;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(47, 44);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
             // btnMainExit
             // 
             this.btnMainExit.BackgroundImage = global::Team1_Project.Properties.Resources.icon_cancel;
             this.btnMainExit.FlatAppearance.BorderSize = 0;
             this.btnMainExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMainExit.Location = new System.Drawing.Point(1246, 7);
+            this.btnMainExit.Location = new System.Drawing.Point(1245, 8);
             this.btnMainExit.Name = "btnMainExit";
             this.btnMainExit.Size = new System.Drawing.Size(32, 32);
             this.btnMainExit.TabIndex = 3;
@@ -347,7 +377,9 @@
             this.Name = "FormMain";
             this.Padding = new System.Windows.Forms.Padding(0, 60, 20, 20);
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "홈";
+            this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.panelSideMenu.ResumeLayout(false);
             this.panelSideMenu.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -357,6 +389,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picLibStory)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -384,6 +417,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label labelTitle;
     }
 }
 

@@ -121,6 +121,9 @@
   <data name="icon_time" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="btn_del" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_del.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_party" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_party.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,11 +133,11 @@
   <data name="icon_rebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_rebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pic_charJPG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic_charJPG.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="left_btx" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\left_btx.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_modify" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_modify.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,17 +145,17 @@
   <data name="icon_exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_searchBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_SearchBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bord_Pink" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bord_Pink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="YesoRYes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\YesoRYes.wmv;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="icon_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_backward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_backward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,35 +166,44 @@
   <data name="icon_bye" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_bye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_map" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_date" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_date.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_search1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_search.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_change" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_change.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic_lesson" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic_lesson.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="teacher (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\teacher (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SplashImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SplashImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_reset.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_media" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_media.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SplashImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SplashImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pic_charFa2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic_charFa2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pic_charMd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic_charMd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_book" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_title" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_title.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,6 +217,18 @@
   <data name="icon_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_addRe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_addRe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SplashImg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SplashImg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_culook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_culook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pic_empty_lecture" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\template.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -217,8 +241,8 @@
   <data name="icon_class1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_class1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btn_mdfy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btn_mdfy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_train" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_train.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,25 +262,40 @@
   <data name="right_btx" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\right_btx.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pic_charPNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic_charPNG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_bookmd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_bookmd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pic_pook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic_pook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_backward" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_backward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_lec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_lec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_returnBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_returnBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_map" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pic_charWel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic_charWel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_searchBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_SearchBook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pic_needPoster" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pic_needPoster.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_addbook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_addbook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_stop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Icon_youtube" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_youtube.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SplashImg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SplashImg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pic_charFa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pic_charFa1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

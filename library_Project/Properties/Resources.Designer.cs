@@ -83,9 +83,49 @@ namespace Team1_Project.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap btn_del {
+            get {
+                object obj = ResourceManager.GetObject("btn_del", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_mdfy {
+            get {
+                object obj = ResourceManager.GetObject("btn_mdfy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_reset {
+            get {
+                object obj = ResourceManager.GetObject("btn_reset", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap char_dadogi {
             get {
                 object obj = ResourceManager.GetObject("char_dadogi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_addbook {
+            get {
+                object obj = ResourceManager.GetObject("icon_addbook", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +146,16 @@ namespace Team1_Project.Properties {
         internal static System.Drawing.Bitmap icon_addN {
             get {
                 object obj = ResourceManager.GetObject("icon_addN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_addRe {
+            get {
+                object obj = ResourceManager.GetObject("icon_addRe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +213,16 @@ namespace Team1_Project.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_bookmd {
+            get {
+                object obj = ResourceManager.GetObject("icon_bookmd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_bus {
             get {
                 object obj = ResourceManager.GetObject("icon_bus", resourceCulture);
@@ -193,9 +253,29 @@ namespace Team1_Project.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_change {
+            get {
+                object obj = ResourceManager.GetObject("icon_change", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_class1 {
             get {
                 object obj = ResourceManager.GetObject("icon_class1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_culook {
+            get {
+                object obj = ResourceManager.GetObject("icon_culook", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +323,9 @@ namespace Team1_Project.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap icon_lesson {
+        internal static System.Drawing.Bitmap icon_lec {
             get {
-                object obj = ResourceManager.GetObject("icon_lesson", resourceCulture);
+                object obj = ResourceManager.GetObject("icon_lec", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +333,9 @@ namespace Team1_Project.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap icon_login {
+        internal static System.Drawing.Bitmap icon_lesson {
             get {
-                object obj = ResourceManager.GetObject("icon_login", resourceCulture);
+                object obj = ResourceManager.GetObject("icon_lesson", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,16 +366,6 @@ namespace Team1_Project.Properties {
         internal static System.Drawing.Bitmap icon_minus {
             get {
                 object obj = ResourceManager.GetObject("icon_minus", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap icon_modify {
-            get {
-                object obj = ResourceManager.GetObject("icon_modify", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,9 +433,9 @@ namespace Team1_Project.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap icon_search {
+        internal static System.Drawing.Bitmap icon_search1 {
             get {
-                object obj = ResourceManager.GetObject("icon_search", resourceCulture);
+                object obj = ResourceManager.GetObject("icon_search1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,9 +453,29 @@ namespace Team1_Project.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_stop {
+            get {
+                object obj = ResourceManager.GetObject("icon_stop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_time {
             get {
                 object obj = ResourceManager.GetObject("icon_time", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_title {
+            get {
+                object obj = ResourceManager.GetObject("icon_title", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -426,6 +516,66 @@ namespace Team1_Project.Properties {
         internal static System.Drawing.Bitmap libStory12 {
             get {
                 object obj = ResourceManager.GetObject("libStory12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap pic_charFa1 {
+            get {
+                object obj = ResourceManager.GetObject("pic_charFa1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap pic_charFa2 {
+            get {
+                object obj = ResourceManager.GetObject("pic_charFa2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap pic_charJPG {
+            get {
+                object obj = ResourceManager.GetObject("pic_charJPG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap pic_charMd {
+            get {
+                object obj = ResourceManager.GetObject("pic_charMd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap pic_charPNG {
+            get {
+                object obj = ResourceManager.GetObject("pic_charPNG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap pic_charWel {
+            get {
+                object obj = ResourceManager.GetObject("pic_charWel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -507,26 +657,6 @@ namespace Team1_Project.Properties {
             get {
                 object obj = ResourceManager.GetObject("SplashImg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap teacher__1_ {
-            get {
-                object obj = ResourceManager.GetObject("teacher (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static byte[] YesoRYes {
-            get {
-                object obj = ResourceManager.GetObject("YesoRYes", resourceCulture);
-                return ((byte[])(obj));
             }
         }
     }

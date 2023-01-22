@@ -129,13 +129,41 @@ namespace Team1_Project {
             myProfile.Visible= false;
 
             #region 스플래쉬 화면 시작
-            int sleepTime = 1600;
+            int sleepTime = 1000;
             Thread splashthread = new Thread(new ThreadStart(LoadingScreen.ShowSplashScreen));
 
             splashthread.IsBackground = true;
             splashthread.Start();
 
             Thread.Sleep(sleepTime);
+
+            LoadingScreen.UpdateText("도서관 여는중이에요");
+
+            try {
+                Thread.Sleep(sleepTime);
+                LoadingScreen.UpdateTextStatus("도서관 열었어요", TypeMessage.Success);
+                LoadingScreen.UpdatePic(Properties.Resources.Splash02);
+                Thread.Sleep(sleepTime);
+            }
+            catch (Exception) {
+                LoadingScreen.UpdateTextStatus("도서관 못 열었어요", TypeMessage.Error);
+                Environment.Exit(0);
+            }
+
+            LoadingScreen.UpdateText("책을 가져오고 있어요");
+            LoadingScreen.UpdatePic(Properties.Resources.Splash01);
+
+            try {
+                Thread.Sleep(sleepTime);
+                LoadingScreen.UpdateTextStatus("책을 다 가져왔어요", TypeMessage.Success);
+                LoadingScreen.UpdatePic(Properties.Resources.Splash03);
+                Thread.Sleep(sleepTime);
+            }
+            catch (Exception) {
+                LoadingScreen.UpdateTextStatus("책을 못 가져왔어요", TypeMessage.Error);
+                Environment.Exit(0);
+            }
+
             LoadingScreen.CloseSplashScreen();
             #endregion
         }

@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B411B35-0519-4FFE-9723-4132A8B2DDEA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Team1_Project</RootNamespace>
+    <AssemblyName>Team1_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DirectShowLib, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DirectShowLib.Standard.2.1.0\lib\net45\DirectShowLib.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=2.1.7.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Core.2.1.7\lib\net472\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=2.1.7.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WinForms.2.1.7\lib\net472\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.21.8.0\lib\net462\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.115.5\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.115.5\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adapter\BaseAdapter.cs" />
+    <Compile Include="dao\DaoOra.cs" />
+    <Compile Include="model\Book.cs" />
+    <Compile Include="model\Customer.cs" />
+    <Compile Include="model\Daechul.cs" />
+    <Compile Include="model\DaechulBook.cs" />
+    <Compile Include="model\Lecture.cs" />
+    <Compile Include="model\NoBook.cs" />
+    <Compile Include="model\Recommend.cs" />
+    <Compile Include="ui\FormAddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormAddBook.Designer.cs">
+      <DependentUpon>FormAddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\FormAddLecture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormAddLecture.Designer.cs">
+      <DependentUpon>FormAddLecture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\FormEditPfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormEditPfil.Designer.cs">
+      <DependentUpon>FormEditPfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\FormIDPermitted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormIDPermitted.Designer.cs">
+      <DependentUpon>FormIDPermitted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ui\FormMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormMap.Designer.cs">
+      <DependentUpon>FormMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\FormMdBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormMdBook.Designer.cs">
+      <DependentUpon>FormMdBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\FormMdCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormMdCustomer.Designer.cs">
+      <DependentUpon>FormMdCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\FormStory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormStory.Designer.cs">
+      <DependentUpon>FormStory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\LoadingWindows.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\LoadingWindows.Designer.cs">
+      <DependentUpon>LoadingWindows.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\UcAddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\UcAddUser.Designer.cs">
+      <DependentUpon>UcAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\UcBookReturn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\UcBookReturn.Designer.cs">
+      <DependentUpon>UcBookReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\UcBookSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\UcBookSearch.Designer.cs">
+      <DependentUpon>UcBookSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\UcHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\UcHome.Designer.cs">
+      <DependentUpon>UcHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\UcLecture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\UcLecture.Designer.cs">
+      <DependentUpon>UcLecture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\UcLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\UcLogin.Designer.cs">
+      <DependentUpon>UcLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\UcMedia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\UcMedia.Designer.cs">
+      <DependentUpon>UcMedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utill\LoadingScreen.cs" />
+    <Compile Include="utill\VideoPlay.cs" />
+    <EmbeddedResource Include="ui\FormAddBook.resx">
+      <DependentUpon>FormAddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\FormAddLecture.resx">
+      <DependentUpon>FormAddLecture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\FormEditPfil.resx">
+      <DependentUpon>FormEditPfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\FormIDPermitted.resx">
+      <DependentUpon>FormIDPermitted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ui\FormMap.resx">
+      <DependentUpon>FormMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\FormMdBook.resx">
+      <DependentUpon>FormMdBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\FormMdCustomer.resx">
+      <DependentUpon>FormMdCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\FormStory.resx">
+      <DependentUpon>FormStory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\LoadingWindows.resx">
+      <DependentUpon>LoadingWindows.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\UcAddUser.resx">
+      <DependentUpon>UcAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\UcBookReturn.resx">
+      <DependentUpon>UcBookReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\UcBookSearch.resx">
+      <DependentUpon>UcBookSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\UcHome.resx">
+      <DependentUpon>UcHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\UcLecture.resx">
+      <DependentUpon>UcLecture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\UcLogin.resx">
+      <DependentUpon>UcLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\UcMedia.resx">
+      <DependentUpon>UcMedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bImage_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bord_Pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_modify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_bye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_rebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_lesson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_reko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_pook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_train.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_bus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libStory12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YesoRYes.wmv" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_addN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_addC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_needPoster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-backward.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_searchBook.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_returnBook.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_forward.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_backward.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_backward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_SearchBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_returnBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_lesson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_media.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\template.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_needPoster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_class.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_class1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_age.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_dadogi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_party.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right_btx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_btx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashImg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_addRe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_addbook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_bookmd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_lec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_culook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_del.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mdfy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_reset.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_search.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_charPNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_charJPG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_charMd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_charFa2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_charFa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TitleImg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_charWel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Splash01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Splash02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Splash03.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>

@@ -643,6 +643,36 @@ namespace Team1_Project.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap Splash01 {
+            get {
+                object obj = ResourceManager.GetObject("Splash01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap Splash02 {
+            get {
+                object obj = ResourceManager.GetObject("Splash02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap Splash03 {
+            get {
+                object obj = ResourceManager.GetObject("Splash03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap SplashImg {
             get {
                 object obj = ResourceManager.GetObject("SplashImg", resourceCulture);
@@ -656,6 +686,16 @@ namespace Team1_Project.Properties {
         internal static System.Drawing.Bitmap SplashImg1 {
             get {
                 object obj = ResourceManager.GetObject("SplashImg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap TitleImg {
+            get {
+                object obj = ResourceManager.GetObject("TitleImg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

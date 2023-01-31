@@ -21,7 +21,7 @@ namespace Team1_Project.dao {
            "(PORT=1521)))" +
            "(CONNECT_DATA=(SERVER=DEDICATED)" +
            "(SERVICE_NAME=XE)));" +
-           "User Id=team1;Password=1234;";
+           "User Id=test;Password=1234;";
 
         OracleConnection conn;
         OracleCommand cmd;

@@ -135,6 +135,12 @@
     <Compile Include="model\Lecture.cs" />
     <Compile Include="model\NoBook.cs" />
     <Compile Include="model\Recommend.cs" />
+    <Compile Include="ui\FormAddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormAddBook.Designer.cs">
+      <DependentUpon>FormAddBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="ui\FormAddLecture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,18 @@
     </Compile>
     <Compile Include="ui\FormMap.Designer.cs">
       <DependentUpon>FormMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\FormMdBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormMdBook.Designer.cs">
+      <DependentUpon>FormMdBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\FormMdCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\FormMdCustomer.Designer.cs">
+      <DependentUpon>FormMdCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="ui\FormStory.cs">
       <SubType>Form</SubType>
@@ -221,9 +239,11 @@
     <Compile Include="ui\UcMedia.Designer.cs">
       <DependentUpon>UcMedia.cs</DependentUpon>
     </Compile>
-    <Compile Include="utill\DbImage.cs" />
     <Compile Include="utill\LoadingScreen.cs" />
     <Compile Include="utill\VideoPlay.cs" />
+    <EmbeddedResource Include="ui\FormAddBook.resx">
+      <DependentUpon>FormAddBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ui\FormAddLecture.resx">
       <DependentUpon>FormAddLecture.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +268,12 @@
     </Compile>
     <EmbeddedResource Include="ui\FormMap.resx">
       <DependentUpon>FormMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\FormMdBook.resx">
+      <DependentUpon>FormMdBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\FormMdCustomer.resx">
+      <DependentUpon>FormMdCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ui\FormStory.resx">
       <DependentUpon>FormStory.cs</DependentUpon>
@@ -363,12 +389,6 @@
     <None Include="Resources\icon_exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icon_next.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icon_back.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\YesoRYes.wmv" />
   </ItemGroup>
   <ItemGroup>
@@ -472,6 +492,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SplashImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_addRe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_addbook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_bookmd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_lec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_culook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_del.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_mdfy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_reset.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_search.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_charPNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_charJPG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_charMd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_charFa2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_charFa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TitleImg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic_charWel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Splash01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Splash02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Splash03.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

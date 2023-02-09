@@ -75,7 +75,6 @@ namespace Team1_Project.dao {
         }
         #endregion
 
-
         #region 테이블에서 칼럼 데이터를 가져오기 (오버로딩)
         
 
@@ -312,7 +311,6 @@ namespace Team1_Project.dao {
         }
 
         #endregion
-
 
         #region 회원 CUSTOMER TABLE
 
@@ -781,32 +779,51 @@ namespace Team1_Project.dao {
 
         public List<Book> updateBook(string bname, Book bk) {
             try {
-                string sql = "UPDATE book SET " +
-                    $"Bnum='{bk.Bnum}', " +
-                    $"Bname='{bk.Bname}', " +
-                    $"Baut='{bk.Baut}', " +
-                    $"Bpub='{bk.Bpub}', " +
-                    $"Byear='{bk.Byear}', " +
-                    $"Bcat='{bk.Bcat}',  " +
-                    $"Bdiv='{bk.Bdiv}', " +
-                    $"Bnob='{bk.Bnob}', " +
-                    $"Bdimg= :image " +
-                    $"WHERE bname='{bname}'";
+                string sql = string.Empty;
+                if (bk.Path != "openFileImg") {
+                    sql = "UPDATE book SET " +
+                        $"Bnum='{bk.Bnum}', " +
+                        $"Bname='{bk.Bname}', " +
+                        $"Baut='{bk.Baut}', " +
+                        $"Bpub='{bk.Bpub}', " +
+                        $"Byear='{bk.Byear}', " +
+                        $"Bcat='{bk.Bcat}',  " +
+                        $"Bdiv='{bk.Bdiv}', " +
+                        $"Bnob='{bk.Bnob}', " +
+                        $"Bdimg= :image " +
+                        $"WHERE bname='{bname}'";
+                }
+                else {
+                    sql = "UPDATE book SET " +
+                        $"Bnum='{bk.Bnum}', " +
+                        $"Bname='{bk.Bname}', " +
+                        $"Baut='{bk.Baut}', " +
+                        $"Bpub='{bk.Bpub}', " +
+                        $"Byear='{bk.Byear}', " +
+                        $"Bcat='{bk.Bcat}',  " +
+                        $"Bdiv='{bk.Bdiv}', " +
+                        $"Bnob='{bk.Bnob}' " +
+                        $"WHERE bname='{bname}'";
+                }
                 cmd.Connection = conn;
                 cmd.Transaction = conn.BeginTransaction();
                 cmd.CommandText = sql;
 
-                FileStream fs = new FileStream(bk.Path, FileMode.Open, FileAccess.Read);
-                byte[] buffer = new byte[fs.Length - 1];
-                fs.Read(buffer, 0, buffer.Length);
-                fs.Close();
-                OracleParameter op = new OracleParameter();
-                op.ParameterName = ":image";
-                op.OracleDbType = OracleDbType.Blob;
-                op.Direction = ParameterDirection.Input;
-                op.Size = buffer.Length;
-                op.Value = buffer;
-                cmd.Parameters.Add(op);
+                if (bk.Path != "openFileImg") {
+
+                    FileStream fs = new FileStream(bk.Path, FileMode.Open, FileAccess.Read);
+
+                    byte[] buffer = new byte[fs.Length - 1];
+                    fs.Read(buffer, 0, buffer.Length);
+                    fs.Close();
+                    OracleParameter op = new OracleParameter();
+                    op.ParameterName = ":image";
+                    op.OracleDbType = OracleDbType.Blob;
+                    op.Direction = ParameterDirection.Input;
+                    op.Size = buffer.Length;
+                    op.Value = buffer;
+                    cmd.Parameters.Add(op);
+                }
 
                 cmd.ExecuteNonQuery();
                 cmd.Parameters.Clear();
